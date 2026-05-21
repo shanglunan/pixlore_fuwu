@@ -36,7 +36,7 @@ export const ANIMATIONS = [
   },
   {
     id: 'loader-equalizer',
-    title: 'Equalizer',
+    title: 'Equalizer 鲁南',
     category: 'loader',
     source: 'uiverse',
     author: { name: 'mrhyddenn', profileUrl: 'https://uiverse.io/mrhyddenn' },
