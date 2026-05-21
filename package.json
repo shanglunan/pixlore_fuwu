@@ -1,0 +1,14 @@
+{
+  "name": "pixlore-fuwu",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pixlore 动效 BFF 服务（公网部署，先用本地 mock，可扩展真实 uiverse 抓取）",
+  "scripts": {
+    "dev": "node local-server.mjs",
+    "start": "node local-server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
