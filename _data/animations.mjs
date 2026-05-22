@@ -10,7 +10,7 @@
 export const ANIMATIONS = [
   {
     id: 'loader-spinner',
-    title: 'Spinner',
+    title: 'Spinner 测试',
     category: 'loader',
     source: 'uiverse',
     author: { name: 'alexandruivann', profileUrl: 'https://uiverse.io/alexandruivann' },
@@ -36,7 +36,7 @@ export const ANIMATIONS = [
   },
   {
     id: 'loader-equalizer',
-    title: 'Equalizer',
+    title: 'Equalizer 鲁南',
     category: 'loader',
     source: 'uiverse',
     author: { name: 'mrhyddenn', profileUrl: 'https://uiverse.io/mrhyddenn' },
