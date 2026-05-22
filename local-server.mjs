@@ -1,8 +1,7 @@
 // 本地运行（无需 Vercel CLI）：node local-server.mjs
 // 与线上 Serverless Function 共用同一份数据与过滤逻辑（_data/getAnimations.mjs）。
 import { createServer } from 'node:http';
-import { getAnimations } from './_data/getAnimations.mjs';
-import { ANIMATIONS } from './_data/animations.mjs';
+import { getAnimations, getBaseCount } from './_data/getAnimations.mjs';
 
 const PORT = Number(process.env.PORT) || 3456;
 
@@ -22,7 +21,7 @@ const server = createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   if (url.pathname === '/api/health') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ ok: true, count: ANIMATIONS.length }));
+    res.end(JSON.stringify({ ok: true, count: getBaseCount() }));
     return;
   }
   if (url.pathname === '/api/animations') {
@@ -41,5 +40,5 @@ const server = createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`[pixlore-fuwu] local BFF on http://localhost:${PORT}`);
-  console.log(`[pixlore-fuwu] GET http://localhost:${PORT}/api/animations  (${ANIMATIONS.length} items)`);
+  console.log(`[pixlore-fuwu] GET http://localhost:${PORT}/api/animations  (${getBaseCount()} items)`);
 });

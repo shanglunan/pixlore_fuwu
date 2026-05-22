@@ -1,7 +1,8 @@
 # Pixlore 动效 BFF（pixlore_fuwu）
 
-Pixlore 动效模块的后端服务。先返回本地 mock 动效数据，**无需数据库**，
-预留真实 uiverse.io 抓取扩展点，并自带 fallback。可部署到 Vercel（推荐）或 Render。
+Pixlore 动效模块的后端服务。**无需数据库**：动效数据由构建脚本从 uiverse.io 官方开源镜像
+（[uiverse-io/galaxy](https://github.com/uiverse-io/galaxy)，MIT 许可）预生成为静态目录 `_data/catalog.mjs`，
+运行时直接读取，并以内置 mock（`_data/animations.mjs`）作 fallback。可部署到 Vercel（推荐）或 Render。
 
 ## 接口
 
@@ -49,18 +50,34 @@ New → Web Service → 连接仓库 → Runtime: Node → Start Command: `node 
 - Vercel：`git push` 到主分支会自动重新部署；或 `vercel --prod`。
 - Render：`git push` 自动重部署。
 
-## 扩展真实 uiverse 抓取
+## 数据来源与更新
 
-见 `_data/getAnimations.mjs` 的 `fetchFromUiverse()`：在那里实现服务端抓取并归一化为同样的字段结构即可；
-抓取失败会自动回退到 `_data/animations.mjs` 的 mock。
+数据基底优先级：`_data/catalog.mjs`（真实目录）→ `_data/animations.mjs`（mock 回退）。
+
+**重新生成目录（拉取最新 uiverse 内容）：**
+
+```bash
+node scripts/build-catalog.mjs   # 从 uiverse-io/galaxy 拉取、筛选含动画/交互的元素、归一化
+git add _data/catalog.mjs && git commit -m "chore: 刷新动效目录" && git push   # push 触发自动重部署
+```
+
+- 列表走 GitHub git tree API，下载走 jsDelivr CDN，**通过系统 `curl` 复用本机代理**
+  （Node 内置 fetch 默认不走代理，国内直连 GitHub 不稳）。
+- 每个分类的目标数量、筛选口径在脚本顶部 `SOURCES` 调整。
+- 生成 `.mjs`（而非 `.json`）是为了被 Serverless 静态 `import` 打包；运行时 `readFile` 动态文件不会被 Vercel 包含。
+
+**运行时实时抓取（可选扩展点）：** `_data/getAnimations.mjs` 的 `fetchFromUiverse()` 默认关闭（返回 `null`）。
+如需"永远最新"，在此实现服务端抓取并归一化为同样字段，其结果会覆盖预生成目录；失败自动回退。
 
 ## 目录
 
 ```
-api/animations.js      Serverless Function：GET /api/animations
-api/health.js          探活
-_data/animations.mjs   mock 数据（单一数据源）
-_data/getAnimations.mjs 加载/过滤 + uiverse 扩展点 + fallback
-local-server.mjs       本地/Render 常驻服务（与线上共用数据逻辑）
-public/index.html      根落地页
+api/animations.js        Serverless Function：GET /api/animations
+api/health.js            探活（count 反映当前基底数量）
+scripts/build-catalog.mjs 从 uiverse galaxy 预生成真实目录的构建脚本
+_data/catalog.mjs        预生成的真实动效目录（脚本产物，主数据源）
+_data/animations.mjs     mock 数据（catalog 为空时的 fallback）
+_data/getAnimations.mjs  加载/过滤 + catalog 基底 + uiverse 实时抓取扩展点
+local-server.mjs         本地/Render 常驻服务（与线上共用数据逻辑）
+public/index.html        根落地页
 ```
