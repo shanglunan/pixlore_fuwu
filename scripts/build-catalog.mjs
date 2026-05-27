@@ -31,6 +31,10 @@ const UA = 'pixlore-catalog-builder';
 const REQUEST_TIMEOUT_MS = 20000;
 const POOL_SIZE = 10;
 
+// GitHub Personal Access Token（可选）：设置后将认证请求，限额从 60 → 5000 次/小时。
+// 用法：GITHUB_TOKEN=ghp_xxx node scripts/build-catalog.mjs
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
+
 // galaxy 目录 → 我们的 category 枚举 + 目标数量。
 // 我们的合法 category：loader / button / toggle / checkbox / card / hover / navigation
 const SOURCES = [
@@ -43,8 +47,8 @@ const SOURCES = [
   { dir: 'Tooltips', category: 'hover', target: 25 },
 ];
 
-// 文件列表用 GitHub git tree API（1 次递归调用，省限流配额）；
-// 文件下载用 jsDelivr CDN 镜像（无限流、国内访问更稳）。
+// 文件列表用 GitHub git tree API（Node.js 内置 fetch，走系统代理；支持 GITHUB_TOKEN）；
+// 文件下载用 jsDelivr CDN 镜像（curl execFile，无限流、国内访问更稳）。
 const GIT_TREE = `https://api.github.com/repos/${REPO}/git/trees/${BRANCH}?recursive=1`;
 const JSDELIVR_CDN = `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}`;
 
@@ -53,23 +57,33 @@ function rawUrl(dir, name) {
 }
 
 // 一次性拉取整库文件树，各 collect 复用。
+// GitHub API 用 curl --noproxy 直连（绕过本地代理的 TLS 拦截问题）；
+// 支持 GITHUB_TOKEN 提升限额（匿名 60/h → 认证 5000/h）。
 let fileIndexPromise = null;
 function loadFileIndex() {
   if (!fileIndexPromise) {
-    fileIndexPromise = fetchText(GIT_TREE, 'application/vnd.github+json').then(txt => {
-      const data = JSON.parse(txt);
+    fileIndexPromise = (async () => {
+      const args = [
+        '-fsL', '--max-time', String(Math.round(REQUEST_TIMEOUT_MS / 1000)),
+        '--noproxy', 'api.github.com',
+        '-A', UA,
+        '-H', 'Accept: application/vnd.github+json',
+      ];
+      if (GITHUB_TOKEN) args.push('-H', `Authorization: Bearer ${GITHUB_TOKEN}`);
+      args.push(GIT_TREE);
+      const { stdout } = await execFileP('curl', args, { maxBuffer: 64 * 1024 * 1024 });
+      const data = JSON.parse(stdout);
       if (data.truncated) console.warn('  (注意：文件树较大被截断，使用可见部分取样)');
       return (data.tree || []).filter(n => n.type === 'blob').map(n => n.path); // "Buttons/xxx.html"
-    });
+    })();
   }
   return fileIndexPromise;
 }
 
-// 用系统 curl 下载：复用用户终端已配置的代理（Node 内置 fetch 默认不走代理，
-// 国内直连 GitHub 不稳）。-f：HTTP 错误返回非 0；-sL：静默 + 跟随跳转。
-async function fetchText(url, accept) {
+// 用系统 curl 下载 jsDelivr CDN 文件内容。
+// -f：HTTP 错误返回非 0；-sL：静默 + 跟随跳转。
+async function fetchText(url) {
   const args = ['-fsL', '--max-time', String(Math.round(REQUEST_TIMEOUT_MS / 1000)), '-A', UA];
-  if (accept) args.push('-H', `Accept: ${accept}`);
   args.push(url);
   const { stdout } = await execFileP('curl', args, { maxBuffer: 64 * 1024 * 1024 });
   return stdout;
