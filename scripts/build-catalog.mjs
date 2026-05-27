@@ -116,7 +116,45 @@ function toTitle(slug) {
   return title || base || slug;
 }
 
-/** 解析单个 galaxy .html → 归一化条目；不合格返回 null。 */
+/**
+ * 质量评分：模拟 uiverse 高收藏动效的特征，分数越高越好。
+ * 满分约 100 分，用于在大候选池中优先取高质量条目。
+ */
+function qualityScore(html, css) {
+  let score = 0;
+
+  // 1. @keyframes 数量（每个 +12，上限 5 个）
+  const kfCount = (css.match(/@keyframes/gi) || []).length;
+  score += Math.min(kfCount, 5) * 12;
+
+  // 2. animation 声明数（每个 +6，上限 8 个）
+  const animCount = (css.match(/\banimation\s*:/gi) || []).length;
+  score += Math.min(animCount, 8) * 6;
+
+  // 3. HTML 元素数（每个 +3，上限 10 个；元素多 = 视觉层次丰富）
+  const elCount = (html.match(/<[a-z][^/]/gi) || []).length;
+  score += Math.min(elCount, 10) * 3;
+
+  // 4. CSS 行数（每 10 行 +2，上限 30 分；行数多 = 细节更精细）
+  const lines = css.split('\n').length;
+  score += Math.min(Math.floor(lines / 10) * 2, 30);
+
+  // 5. 高级效果加分（各 +5）
+  if (/transform\s*:/i.test(css)) score += 5;
+  if (/perspective|rotateX|rotateY|rotateZ|rotate3d/i.test(css)) score += 5; // 3D
+  if (/(linear|radial|conic)-gradient/i.test(css)) score += 5;             // 渐变
+  if (/filter\s*:|backdrop-filter/i.test(css)) score += 5;                  // 滤镜
+  if (/box-shadow|drop-shadow/i.test(css)) score += 3;
+  if (/clip-path|mask/i.test(css)) score += 5;
+  if (/border-radius.*%/i.test(css)) score += 2;                            // 有机形状
+
+  // 6. 排除劣质：极短 CSS（< 5 行）直接 0 分
+  if (lines < 5) return 0;
+
+  return score;
+}
+
+/** 解析单个 galaxy .html → 归一化条目（含质量分）；不合格返回 null。 */
 function parseElement(raw, fileName, category) {
   const styleMatch = raw.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
   if (!styleMatch) return null; // 无 <style>：Tailwind / 纯 HTML，跳过
@@ -124,10 +162,14 @@ function parseElement(raw, fileName, category) {
   const html = raw.replace(styleMatch[0], '').trim();
   if (!html || !css) return null;
 
-  // 动效判定（动画优先，也含 hover/transition 交互）。
+  // 动效判定：必须有真实 CSS 动画（hover 纯过渡不算，需要 @keyframes 或 animation）。
   const hasAnim = /@keyframes|animation\s*:/i.test(css);
   const hasInteractive = /transition\s*:|:hover/i.test(css);
   if (!hasAnim && !hasInteractive) return null;
+
+  // 质量评分，< 10 分视为过于简单直接丢弃。
+  const score = qualityScore(html, css);
+  if (score < 10) return null;
 
   // 元数据注释：/* From Uiverse.io by {author}  - Tags: a, b, c */
   const meta = css.match(/From Uiverse\.io by\s+(.+?)(?:\s+-\s+Tags:\s*([^*]*))?\*\//i);
@@ -166,9 +208,10 @@ function parseElement(raw, fileName, category) {
     tags: tagSet,
     previewType: 'css',
     durationMs,
-    accentColor: null, // 真实元素主色各异，第一批不强制改色（前端无 accentColor 即隐藏改色控件）
+    accentColor: null,
     html,
     css,
+    _score: score, // 构建时排序用，输出前删除
   };
 }
 
@@ -195,8 +238,9 @@ async function collect(source) {
     console.warn(`  ! list ${dir} failed: ${e.message}`);
     return [];
   }
-  // 候选取目标的 3 倍（给筛掉的 Tailwind / 无动效留余量）。
-  const candidates = shuffle(names).slice(0, target * 3);
+  // 候选池扩大到 8 倍，再按质量分排序取 top target 条。
+  // 随机打乱保证每次构建有一定多样性，不会总是同一批。
+  const candidates = shuffle(names).slice(0, target * 8);
   const parsed = await mapPool(candidates, POOL_SIZE, async name => {
     try {
       const raw = await fetchText(rawUrl(dir, name));
@@ -205,9 +249,17 @@ async function collect(source) {
       return null;
     }
   });
-  const out = parsed.filter(Boolean).slice(0, target);
-  console.log(`  ${dir} → ${category}: ${out.length}/${target} (scanned ${candidates.length})`);
-  return out;
+  // 按质量分降序，取前 target 条。
+  const valid = parsed.filter(Boolean).sort((a, b) => b._score - a._score);
+  const top = valid.slice(0, target);
+  const topScore = valid[0]?._score ?? 0;
+  const minScore = top[top.length - 1]?._score ?? 0;
+  console.log(
+    `  ${dir} → ${category}: ${top.length}/${target}` +
+    ` (候选 ${candidates.length}, 质量分 ${minScore}~${topScore})`,
+  );
+  // 删除内部 _score 字段再输出
+  return top.map(({ _score, ...rest }) => rest);
 }
 
 async function main() {
