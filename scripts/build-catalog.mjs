@@ -28,7 +28,9 @@ const OUT = join(ROOT, '_data', 'catalog.mjs');
 const REPO = 'uiverse-io/galaxy';
 const BRANCH = 'main';
 const UA = 'pixlore-catalog-builder';
-const REQUEST_TIMEOUT_MS = 20000;
+// git-tree 接口响应体 ~640KB，需要更长超时；单文件下载通常更快。
+const TREE_TIMEOUT_MS   = 60000; // 60s：拉整库文件树
+const REQUEST_TIMEOUT_MS = 30000; // 30s：单文件下载
 const POOL_SIZE = 10;
 
 // GitHub Personal Access Token（可选）：设置后将认证请求，限额从 60 → 5000 次/小时。
@@ -37,14 +39,17 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 
 // galaxy 目录 → 我们的 category 枚举 + 目标数量。
 // 我们的合法 category：loader / button / toggle / checkbox / card / hover / navigation
+//
+// 策略：优先选「简单」分类（loaders / toggle / inputs / notifications），
+// 减少视觉复杂的 Cards / Tooltips 配额。
 const SOURCES = [
-  { dir: 'loaders', category: 'loader', target: 25 },
-  { dir: 'Buttons', category: 'button', target: 25 },
-  { dir: 'Toggle-switches', category: 'toggle', target: 25 },
-  { dir: 'Checkboxes', category: 'checkbox', target: 15 },
-  { dir: 'Radio-buttons', category: 'checkbox', target: 10 }, // 并入 checkbox
-  { dir: 'Cards', category: 'card', target: 25 },
-  { dir: 'Tooltips', category: 'hover', target: 25 },
+  { dir: 'loaders',          category: 'loader',   target: 35 },
+  { dir: 'Buttons',          category: 'button',   target: 30 },
+  { dir: 'Toggle-switches',  category: 'toggle',   target: 25 },
+  { dir: 'Checkboxes',       category: 'checkbox', target: 15 },
+  { dir: 'Radio-buttons',    category: 'checkbox', target: 10 }, // 并入 checkbox
+  { dir: 'Inputs',           category: 'hover',    target: 20 }, // 输入框动效，天然简洁
+  { dir: 'Notifications',    category: 'card',     target: 15 }, // 通知动效，轻量
 ];
 
 // 文件列表用 GitHub git tree API（Node.js 内置 fetch，走系统代理；支持 GITHUB_TOKEN）；
@@ -64,7 +69,7 @@ function loadFileIndex() {
   if (!fileIndexPromise) {
     fileIndexPromise = (async () => {
       const args = [
-        '-fsL', '--max-time', String(Math.round(REQUEST_TIMEOUT_MS / 1000)),
+        '-fsL', '--max-time', String(Math.round(TREE_TIMEOUT_MS / 1000)),
         '--noproxy', 'api.github.com',
         '-A', UA,
         '-H', 'Accept: application/vnd.github+json',
@@ -117,41 +122,61 @@ function toTitle(slug) {
 }
 
 /**
- * 质量评分：模拟 uiverse 高收藏动效的特征，分数越高越好。
- * 满分约 100 分，用于在大候选池中优先取高质量条目。
+ * 简洁度评分：优先选取干净、轻量、视觉清爽的动效。
+ *
+ * 原则：
+ * - CSS 行数在 20~100 行的甜区得分最高（太少=无聊，太多=复杂）
+ * - @keyframes 1~2 个为最佳；超过 3 开始扣分
+ * - HTML 元素越少越好（少即是多）
+ * - 基础 transform / opacity 动效加分；3D / filter / clip-path 扣分
+ * - 必须有真实动画（@keyframes 或 animation 声明）才计分
+ *
+ * 满分约 100，用于在候选池中排序后取 top N。
  */
 function qualityScore(html, css) {
-  let score = 0;
-
-  // 1. @keyframes 数量（每个 +12，上限 5 个）
-  const kfCount = (css.match(/@keyframes/gi) || []).length;
-  score += Math.min(kfCount, 5) * 12;
-
-  // 2. animation 声明数（每个 +6，上限 8 个）
+  const lines     = css.split('\n').length;
+  const kfCount   = (css.match(/@keyframes/gi)    || []).length;
   const animCount = (css.match(/\banimation\s*:/gi) || []).length;
-  score += Math.min(animCount, 8) * 6;
+  const elCount   = (html.match(/<[a-z][^/]/gi)   || []).length;
 
-  // 3. HTML 元素数（每个 +3，上限 10 个；元素多 = 视觉层次丰富）
-  const elCount = (html.match(/<[a-z][^/]/gi) || []).length;
-  score += Math.min(elCount, 10) * 3;
+  // 必须有动画
+  if (kfCount === 0 && animCount === 0) return 0;
+  // CSS 极短（< 12 行）：太简陋，不选
+  if (lines < 12) return 0;
 
-  // 4. CSS 行数（每 10 行 +2，上限 30 分；行数多 = 细节更精细）
-  const lines = css.split('\n').length;
-  score += Math.min(Math.floor(lines / 10) * 2, 30);
+  let score = 40; // 基础分
 
-  // 5. 高级效果加分（各 +5）
-  if (/transform\s*:/i.test(css)) score += 5;
-  if (/perspective|rotateX|rotateY|rotateZ|rotate3d/i.test(css)) score += 5; // 3D
-  if (/(linear|radial|conic)-gradient/i.test(css)) score += 5;             // 渐变
-  if (/filter\s*:|backdrop-filter/i.test(css)) score += 5;                  // 滤镜
-  if (/box-shadow|drop-shadow/i.test(css)) score += 3;
-  if (/clip-path|mask/i.test(css)) score += 5;
-  if (/border-radius.*%/i.test(css)) score += 2;                            // 有机形状
+  // ── 1. CSS 行数（甜区 20~100）────────────────────────────
+  if (lines >= 20 && lines < 50)       score += 25;
+  else if (lines >= 50 && lines < 100) score += 20;
+  else if (lines >= 100 && lines < 140) score += 8;
+  else if (lines >= 140 && lines < 200) score -= 5;
+  else if (lines >= 200)               score -= 20; // 太复杂
 
-  // 6. 排除劣质：极短 CSS（< 5 行）直接 0 分
-  if (lines < 5) return 0;
+  // ── 2. @keyframes 数量（1~2 最优）───────────────────────
+  if (kfCount === 1)      score += 20;
+  else if (kfCount === 2) score += 12;
+  else if (kfCount === 3) score +=  4;
+  else                    score -= (kfCount - 3) * 8; // 超过 3 开始扣
 
-  return score;
+  // ── 3. HTML 元素数（越少越简洁）─────────────────────────
+  if (elCount <= 2)       score += 15;
+  else if (elCount <= 5)  score += 10;
+  else if (elCount <= 9)  score +=  4;
+  else                    score -= (elCount - 9) * 3; // 超过 9 个扣分
+
+  // ── 4. 简单动效关键词（加分）────────────────────────────
+  if (/\bopacity\s*:/i.test(css))                       score += 6;  // 淡入淡出
+  if (/transform\s*:[^;]*(?:scale|translate)/i.test(css)) score += 5; // 基础变形
+  if (/border-radius/i.test(css))                        score += 3;  // 圆角常见于 loader
+
+  // ── 5. 复杂效果（扣分）──────────────────────────────────
+  if (/perspective|rotateX|rotateY|rotateZ|rotate3d/i.test(css)) score -= 12; // 3D
+  if (/filter\s*:|backdrop-filter/i.test(css))                    score -= 10; // 滤镜
+  if (/clip-path|(?<!\w)mask\s*:/i.test(css))                     score -= 10; // clip-path
+  if (/(linear|radial|conic)-gradient/i.test(css))                score -=  4; // 渐变稍微复杂
+
+  return Math.max(0, score);
 }
 
 /** 解析单个 galaxy .html → 归一化条目（含质量分）；不合格返回 null。 */
@@ -167,9 +192,9 @@ function parseElement(raw, fileName, category) {
   const hasInteractive = /transition\s*:|:hover/i.test(css);
   if (!hasAnim && !hasInteractive) return null;
 
-  // 质量评分，< 10 分视为过于简单直接丢弃。
+  // 简洁度评分，< 30 分视为质量不达标（太短/无动画/过于复杂）直接丢弃。
   const score = qualityScore(html, css);
-  if (score < 10) return null;
+  if (score < 30) return null;
 
   // 元数据注释：/* From Uiverse.io by {author}  - Tags: a, b, c */
   const meta = css.match(/From Uiverse\.io by\s+(.+?)(?:\s+-\s+Tags:\s*([^*]*))?\*\//i);
@@ -238,9 +263,9 @@ async function collect(source) {
     console.warn(`  ! list ${dir} failed: ${e.message}`);
     return [];
   }
-  // 候选池扩大到 8 倍，再按质量分排序取 top target 条。
+  // 候选池扩大到 12 倍，评分后取 top target 条（简洁优先策略需要更大样本）。
   // 随机打乱保证每次构建有一定多样性，不会总是同一批。
-  const candidates = shuffle(names).slice(0, target * 8);
+  const candidates = shuffle(names).slice(0, target * 12);
   const parsed = await mapPool(candidates, POOL_SIZE, async name => {
     try {
       const raw = await fetchText(rawUrl(dir, name));
