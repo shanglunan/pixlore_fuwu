@@ -1,18 +1,18 @@
 // 自动生成，请勿手改。重新生成：`node scripts/build-catalog.mjs`
-// 来源：uiverse-io/galaxy（MIT 许可，已带作者署名与原链）。生成时间：2026-05-29T13:47:57.963Z
-// 条目数：150
+// 来源：uiverse-io/galaxy（MIT 许可，已带作者署名与原链）。生成时间：2026-05-30T12:03:53.913Z
+// 条目数：154
 export const CATALOG = [
   {
-    "id": "uiverse-g4b413l_brave-wasp-99",
-    "title": "Brave Wasp",
+    "id": "uiverse-g4b413l_heavy-otter-34",
+    "title": "Heavy Otter",
     "category": "loader",
     "source": "uiverse",
     "author": {
       "name": "G4b413l",
-      "profileUrl": "https://uiverse.io/G4b413l/brave-wasp-99"
+      "profileUrl": "https://uiverse.io/G4b413l/heavy-otter-34"
     },
     "license": "MIT",
-    "description": "Brave Wasp · loader by G4b413l",
+    "description": "Heavy Otter · loader by G4b413l",
     "tags": [
       "loader",
       "animated"
@@ -20,29 +20,8 @@ export const CATALOG = [
     "previewType": "css",
     "durationMs": 1000,
     "accentColor": null,
-    "html": "<div class=\"line-wobble\"></div>",
-    "css": "/* From Uiverse.io by G4b413l - Tags: loader */\n.line-wobble {\n --uib-size: 80px;\n --uib-speed: 1.55s;\n --uib-color: black;\n --uib-line-weight: 5px;\n position: relative;\n display: flex;\n align-items: center;\n justify-content: center;\n height: var(--uib-line-weight);\n width: var(--uib-size);\n border-radius: calc(var(--uib-line-weight) / 2);\n overflow: hidden;\n transform: translate3d(0, 0, 0);\n}\n\n.line-wobble::before {\n content: '';\n position: absolute;\n top: 0;\n left: 0;\n height: 100%;\n width: 100%;\n background-color: var(--uib-color);\n opacity: 0.1;\n}\n\n.line-wobble::after {\n content: '';\n height: 100%;\n width: 100%;\n border-radius: calc(var(--uib-line-weight) / 2);\n animation: wobble var(--uib-speed) ease-in-out infinite;\n transform: translateX(-90%);\n background-color: var(--uib-color);\n}\n\n@keyframes wobble {\n 0%,\n  100% {\n  transform: translateX(-90%);\n }\n\n 50% {\n  transform: translateX(90%);\n }\n}"
-  },
-  {
-    "id": "uiverse-jkhuger_little-falcon-22",
-    "title": "Little Falcon",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "JkHuger",
-      "profileUrl": "https://uiverse.io/JkHuger/little-falcon-22"
-    },
-    "license": "MIT",
-    "description": "Little Falcon · loader by JkHuger",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 850,
-    "accentColor": null,
-    "html": "<div class=\"item\">\n    <div class=\"loader-pulse\"></div>\n</div>",
-    "css": "/* From Uiverse.io by JkHuger - Tags: loader */\n.loader-pulse {\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  background: #8f44fd;\n  animation: load-pulse 0.85s infinite linear;\n}\n\n@keyframes load-pulse {\n  0% {\n    transform: scale(0.15);\n    opacity: 0;\n  }\n\n  50% {\n    opacity: 1;\n  }\n\n  100% {\n    transform: scale(1);\n    opacity: 0;\n  }\n}"
+    "html": "<div class=\"pulsar\"></div>",
+    "css": "/* From Uiverse.io by G4b413l - Tags: loader */\n.pulsar {\n  --uib-size: 40px;\n  --uib-speed: 0.9s;\n  --uib-color: white;\n  position: relative;\n  height: var(--uib-size);\n  width: var(--uib-size);\n}\n\n.pulsar::before,\n.pulsar::after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  border-radius: 50%;\n  background-color: var(--uib-color);\n  animation: pulse9173412 var(--uib-speed) ease-in-out infinite;\n  transform: scale(0);\n}\n\n.pulsar::after {\n  animation-delay: calc(var(--uib-speed) / -2);\n}\n\n@keyframes pulse9173412 {\n  0%,\n  100% {\n    transform: scale(0);\n    opacity: 1;\n  }\n\n  50% {\n    transform: scale(1);\n    opacity: 0.25;\n  }\n}"
   },
   {
     "id": "uiverse-ksaplay_quiet-snake-78",
@@ -64,6 +43,27 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"loader\"></div>",
     "css": "/* From Uiverse.io by KSAplay - Tags: loader */\n.loader {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.loader::before,\n.loader::after {\n  position: absolute;\n  content: \"\";\n  height: 8em;\n  width: 8em;\n  border: 1em solid #0060fa;\n  border-radius: 50%;\n  animation: loader_79178 2s linear infinite;\n}\n\n.loader::after {\n  opacity: 0;\n  animation-delay: 1s;\n}\n\n@keyframes loader_79178 {\n  0% {\n    border: 1em solid #0060fa;\n    transform: scale(0);\n    opacity: 1;\n  }\n\n  100% {\n    border: 0 solid #0060fa;\n    transform: scale(1);\n    opacity: 0;\n  }\n}"
+  },
+  {
+    "id": "uiverse-jkhuger_little-falcon-22",
+    "title": "Little Falcon",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "JkHuger",
+      "profileUrl": "https://uiverse.io/JkHuger/little-falcon-22"
+    },
+    "license": "MIT",
+    "description": "Little Falcon · loader by JkHuger",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 850,
+    "accentColor": null,
+    "html": "<div class=\"item\">\n    <div class=\"loader-pulse\"></div>\n</div>",
+    "css": "/* From Uiverse.io by JkHuger - Tags: loader */\n.loader-pulse {\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  background: #8f44fd;\n  animation: load-pulse 0.85s infinite linear;\n}\n\n@keyframes load-pulse {\n  0% {\n    transform: scale(0.15);\n    opacity: 0;\n  }\n\n  50% {\n    opacity: 1;\n  }\n\n  100% {\n    transform: scale(1);\n    opacity: 0;\n  }\n}"
   },
   {
     "id": "uiverse-gagan-gv_stupid-walrus-23",
@@ -108,133 +108,25 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by G4b413l - Tags: loader */\n.ping {\n --uib-size: 50px;\n --uib-speed: 1s;\n --uib-color: #3950cf;\n position: relative;\n height: var(--uib-size);\n width: var(--uib-size);\n}\n\n.ping::before,\n.ping::after {\n content: '';\n position: absolute;\n top: 0;\n left: 0;\n height: 100%;\n width: 100%;\n border-radius: 50%;\n background-color: var(--uib-color);\n animation: pulse7132 var(--uib-speed) linear infinite;\n transform: scale(0);\n opacity: 0;\n}\n\n.ping::after {\n animation-delay: calc(var(--uib-speed) / -2);\n}\n\n@keyframes pulse7132 {\n 0% {\n  transform: scale(0);\n  opacity: 1;\n }\n\n 100% {\n  transform: scale(1);\n  opacity: 0;\n }\n}"
   },
   {
-    "id": "uiverse-shoh2008_nervous-lizard-11",
-    "title": "Nervous Lizard",
+    "id": "uiverse-victan78_serious-gecko-84",
+    "title": "Serious Gecko",
     "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "Shoh2008",
-      "profileUrl": "https://uiverse.io/Shoh2008/nervous-lizard-11"
+      "name": "Victan78",
+      "profileUrl": "https://uiverse.io/Victan78/serious-gecko-84"
     },
     "license": "MIT",
-    "description": "Nervous Lizard · loader by Shoh2008",
+    "description": "Serious Gecko · loader by Victan78",
     "tags": [
       "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 48px;\n  height: 48px;\n  background: #353535;\n  display: block;\n  margin: 20px auto;\n  position: relative;\n  box-sizing: border-box;\n  animation: rotationBack 1s ease-in-out infinite reverse;\n}\n\n.loader::before {\n  content: '';\n  box-sizing: border-box;\n  left: 0;\n  top: 0;\n  transform: rotate(45deg);\n  position: absolute;\n  width: 48px;\n  height: 48px;\n  background: #2e2e2e;\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);\n}\n\n.loader::after {\n  content: '';\n  box-sizing: border-box;\n  width: 32px;\n  height: 32px;\n  border-radius: 50%;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  background: rgb(0, 0, 0);\n  transform: translate(-50%, -50%);\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);\n}\n\n@keyframes rotationBack {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(-360deg);\n  }\n}"
-  },
-  {
-    "id": "uiverse-satyamchaudharydev_young-puma-4",
-    "title": "Young Puma",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "satyamchaudharydev",
-      "profileUrl": "https://uiverse.io/satyamchaudharydev/young-puma-4"
-    },
-    "license": "MIT",
-    "description": "Young Puma · loader by satyamchaudharydev",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 2000,
-    "accentColor": null,
-    "html": "<div class=\"spinner\">\n</div>",
-    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: loader */\n.spinner {\n --size-of-spinner: 50px;\n --spinner-border-width: 4px;\n --spinner-color: #08c18a;\n --circle-color: #8bc34a24;\n --speed-of-animation: 2s;\n --scale: 1.3;\n width: var(--size-of-spinner);\n height: var(--size-of-spinner);\n background: var(--circle-color);\n border-radius: 50%;\n position: relative;\n}\n\n.spinner::after {\n content: \"\";\n display: block;\n position: absolute;\n border-radius: 50%;\n inset: 0;\n border: var(--spinner-border-width) solid var(--spinner-color);\n border-left-color: transparent;\n border-right-color: transparent;\n animation: spinny var(--speed-of-animation) linear infinite;\n}\n\n@keyframes spinny {\n 0% {\n  transform: rotate(0deg) scale(1)\n }\n\n 50% {\n  transform: rotate(45deg) scale(var(--scale))\n }\n\n 100% {\n  transform: rotate(360deg) scale(1)\n }\n}"
-  },
-  {
-    "id": "uiverse-mrhyddenn_tasty-crab-98",
-    "title": "Tasty Crab",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "mrhyddenn",
-      "profileUrl": "https://uiverse.io/mrhyddenn/tasty-crab-98"
-    },
-    "license": "MIT",
-    "description": "Tasty Crab · loader by mrhyddenn",
-    "tags": [
-      "loader",
-      "progress",
-      "progress bar",
       "animated"
     ],
     "previewType": "css",
     "durationMs": 500,
     "accentColor": null,
-    "html": "<div class=\"progress-loader\">\n    <div class=\"progress\"></div>\n</div>",
-    "css": "/* From Uiverse.io by mrhyddenn - Tags: progress, progress bar, loader */\n.progress-loader {\n  top: 50%;\n  left: 50%;\n  position: absolute;\n  transform: translate(-50%, -50%);\n}\n\n.progress-loader {\n  width: 150px;\n  background: rgba(236, 236, 238, 0.253);\n  height: 3px;\n  border-radius: 7px;\n}\n\n.progress {\n  content: '';\n  width: 1px;\n  height: 3px;\n  border-radius: 7px;\n  background: rgb(255, 255, 255);\n  transition: 0.5s;\n  animation: loading1274 2s ease infinite;\n}\n\n@keyframes loading1274 {\n  0% {\n    width: 0%;\n  }\n\n  10% {\n    width: 10%;\n  }\n\n  50% {\n    width: 40%;\n  }\n\n  60% {\n    width: 60%;\n  }\n\n  100% {\n    width: 100%;\n  }\n}"
-  },
-  {
-    "id": "uiverse-satyamchaudharydev_tough-baboon-84",
-    "title": "Tough Baboon",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "satyamchaudharydev",
-      "profileUrl": "https://uiverse.io/satyamchaudharydev/tough-baboon-84"
-    },
-    "license": "MIT",
-    "description": "Tough Baboon · loader by satyamchaudharydev",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<div class=\"ball\"></div>",
-    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: loader */\n.ball {\n --size: 20px;\n --timing: 0.7s;\n --displace: 70px;\n border-radius: 50%;\n width: var(--size);\n height: var(--size);\n background: #000;\n margin-right: var(--displace);\n animation: animation321 var(--timing) infinite alternate\n    cubic-bezier(0.68, -0.55, 0.265, 1.55);\n}\n\n@keyframes animation321 {\n 0% {\n  background: #4284f3;\n  transform: translateX(var(--displace));\n }\n\n 100% {\n  background: #ea4335;\n  transform: translateX(00px);\n }\n}"
-  },
-  {
-    "id": "uiverse-alexruix_nervous-sheep-18",
-    "title": "Nervous Sheep",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "alexruix",
-      "profileUrl": "https://uiverse.io/alexruix/nervous-sheep-18"
-    },
-    "license": "MIT",
-    "description": "Nervous Sheep · loader by alexruix",
-    "tags": [
-      "loader",
-      "bars",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by alexruix - Tags: loader, bars */\n.loader {\n  width: 8px;\n  height: 40px;\n  border-radius: 4px;\n  display: block;\n  background-color: currentColor;\n  margin: 20px auto;\n  position: relative;\n  color: #f2f2f2;\n  animation: animloader 0.3s 0.3s linear infinite alternate;\n}\n\n.loader::after,\n.loader::before {\n  content: '';\n  width: 8px;\n  height: 40px;\n  border-radius: 4px;\n  background: currentColor;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  left: 20px;\n  animation: animloader 0.3s 0.45s linear infinite alternate;\n}\n\n.loader::before {\n  left: -20px;\n  animation-delay: 0s;\n}\n\n@keyframes animloader {\n  0% {\n    height: 48px;\n  }\n\n  100% {\n    height: 4px;\n  }\n}"
-  },
-  {
-    "id": "uiverse-shoh2008_new-lion-60",
-    "title": "New Lion",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "Shoh2008",
-      "profileUrl": "https://uiverse.io/Shoh2008/new-lion-60"
-    },
-    "license": "MIT",
-    "description": "New Lion · loader by Shoh2008",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 2000,
-    "accentColor": null,
-    "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 84px;\n  height: 84px;\n  position: relative;\n  overflow: hidden;\n}\n\n.loader:before , .loader:after {\n  content: \"\";\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  background: yellow;\n  transform: translate(-50% , 100%)  scale(0);\n  animation: push_4051 2s infinite ease-in;\n}\n\n.loader:after {\n  animation-delay: 1s;\n}\n\n@keyframes push_4051 {\n  0% {\n    transform: translate(-50% , 100%)  scale(1);\n  }\n\n  15% , 25% {\n    transform: translate(-50% , 50%)  scale(1);\n  }\n\n  50% , 75% {\n    transform: translate(-50%, -30%) scale(0.5);\n  }\n\n  80%,  100% {\n    transform: translate(-50%, -50%) scale(0);\n  }\n}"
+    "html": "<div class=\"loader\"></div>\n<div class=\"loader2\"></div>",
+    "css": "/* From Uiverse.io by Victan78 - Tags: loader */\n.loader {\n  width: 100px;\n  height: 100px;\n  border: solid 4px rgba(231, 231, 231, 0);\n  border-top: solid 5px rgb(241, 68, 68);\n  border-radius: 50%;\n  transition: all 0.5s;\n  animation: rotation_51512 1.2s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);\n}\n\n@keyframes rotation_51512 {\n  70% {\n    box-shadow: 0px 0px 10px 50px rgba(241, 57, 57, 0.526);\n  }\n\n  90% {\n    box-shadow: 0px 0px 10px 50px rgba(241, 57, 57, 0.04);\n  }\n\n  100% {\n    opacity: 0.5;\n    transform: rotate(360deg);\n  }\n}"
   },
   {
     "id": "uiverse-rodrypaladin_evil-goat-39",
@@ -264,16 +156,101 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Rodrypaladin - Tags: animation, red, loading, loader, modern, creative, multicolor, bounce animation */\n.loader {\n  width: 100px;\n  height: 100px;\n  background-color: orange;\n  border-radius: 50%;\n  box-shadow: -15px -15px 15px #ff6600, 15px -15px 15px #ff9100, 15px 15px 15px #ff5500, -15px 15px 15px #ffa600, -15px 0 15px #ff6600, 15px 0 15px #ffcc00;\n  animation: rotate 1s infinite;\n  transform: rotate(0) scale(0.8);\n}\n\n@keyframes rotate {\n  0% {\n    transform: rotate(360deg) scale(0.8);\n  }\n\n  50% {\n    transform: rotate(0) scale(1.2);\n  }\n}"
   },
   {
-    "id": "uiverse-mrhyddenn_average-dodo-53",
-    "title": "Average Dodo",
+    "id": "uiverse-shoh2008_lucky-quail-40",
+    "title": "Lucky Quail",
     "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "mrhyddenn",
-      "profileUrl": "https://uiverse.io/mrhyddenn/average-dodo-53"
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/lucky-quail-40"
     },
     "license": "MIT",
-    "description": "Average Dodo · loader by mrhyddenn",
+    "description": "Lucky Quail · loader by Shoh2008",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<span class=\"loader\"></span>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 48px;\n  height: 48px;\n  border: 2px solid #FFF;\n  border-radius: 50%;\n  display: inline-block;\n  position: relative;\n  box-sizing: border-box;\n  animation: rotation_35 1s linear infinite;\n}\n\n.loader::after,\n.loader::before {\n  content: '';\n  box-sizing: border-box;\n  position: absolute;\n  left: 0;\n  top: 0;\n  background: greenyellow;\n  width: 6px;\n  height: 6px;\n  transform: translate(150%, 150%);\n  border-radius: 50%;\n}\n\n.loader::before {\n  left: auto;\n  top: auto;\n  right: 0;\n  bottom: 0;\n  transform: translate(-150%, -150%);\n}\n\n@keyframes rotation_35 {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
+  },
+  {
+    "id": "uiverse-alexruix_nervous-sheep-18",
+    "title": "Nervous Sheep",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "alexruix",
+      "profileUrl": "https://uiverse.io/alexruix/nervous-sheep-18"
+    },
+    "license": "MIT",
+    "description": "Nervous Sheep · loader by alexruix",
+    "tags": [
+      "loader",
+      "bars",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 300,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by alexruix - Tags: loader, bars */\n.loader {\n  width: 8px;\n  height: 40px;\n  border-radius: 4px;\n  display: block;\n  background-color: currentColor;\n  margin: 20px auto;\n  position: relative;\n  color: #f2f2f2;\n  animation: animloader 0.3s 0.3s linear infinite alternate;\n}\n\n.loader::after,\n.loader::before {\n  content: '';\n  width: 8px;\n  height: 40px;\n  border-radius: 4px;\n  background: currentColor;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  left: 20px;\n  animation: animloader 0.3s 0.45s linear infinite alternate;\n}\n\n.loader::before {\n  left: -20px;\n  animation-delay: 0s;\n}\n\n@keyframes animloader {\n  0% {\n    height: 48px;\n  }\n\n  100% {\n    height: 4px;\n  }\n}"
+  },
+  {
+    "id": "uiverse-shoh2008_nervous-lizard-11",
+    "title": "Nervous Lizard",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/nervous-lizard-11"
+    },
+    "license": "MIT",
+    "description": "Nervous Lizard · loader by Shoh2008",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 48px;\n  height: 48px;\n  background: #353535;\n  display: block;\n  margin: 20px auto;\n  position: relative;\n  box-sizing: border-box;\n  animation: rotationBack 1s ease-in-out infinite reverse;\n}\n\n.loader::before {\n  content: '';\n  box-sizing: border-box;\n  left: 0;\n  top: 0;\n  transform: rotate(45deg);\n  position: absolute;\n  width: 48px;\n  height: 48px;\n  background: #2e2e2e;\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);\n}\n\n.loader::after {\n  content: '';\n  box-sizing: border-box;\n  width: 32px;\n  height: 32px;\n  border-radius: 50%;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  background: rgb(0, 0, 0);\n  transform: translate(-50%, -50%);\n  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);\n}\n\n@keyframes rotationBack {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(-360deg);\n  }\n}"
+  },
+  {
+    "id": "uiverse-shoh2008_shaggy-tiger-17",
+    "title": "Shaggy Tiger",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/shaggy-tiger-17"
+    },
+    "license": "MIT",
+    "description": "Shaggy Tiger · loader by Shoh2008",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 4000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  margin: auto;\n  width: 100px;\n  height: 30px;\n  overflow: hidden;\n  position: relative;\n  background: rgba(0, 0, 0, 0.3);\n  border-radius: 5px;\n  box-shadow: 0px 35px 0 -5px #aaa, 0 -5px 0 0px #ddd, 0 -25px 0 -5px #fff,\n    -25px -30px 0 0px #ddd, -25px 30px 0 0px #ddd, 25px -30px 0 0px #ddd,\n    25px 30px 0 0px #ddd, 20px 10px 0 5px #ddd, 20px -10px 0 5px #ddd,\n    -20px -10px 0 5px #ddd, -20px 10px 0 5px #ddd;\n}\n\n.loader:after,\n.loader:before {\n  content: \"\";\n  border-radius: 100%;\n  width: 35px;\n  height: 35px;\n  display: block;\n  position: absolute;\n  border: 4px dashed #fff;\n  bottom: -4px;\n  transform: rotate(0deg);\n  box-sizing: border-box;\n  animation: tape 4s linear infinite;\n}\n\n.loader:before {\n  right: 0;\n  box-shadow: 0 0 0 4px #fff, 0 0 0 34px #000;\n}\n\n.loader:after {\n  left: 0;\n  box-shadow: 0 0 0 4px #fff, 0 0 0 65px #000;\n}\n\n@keyframes tape {\n  0% {\n    transform: rotate(0deg) scale(0.4);\n  }\n\n  100% {\n    transform: rotate(-360deg) scale(0.4);\n  }\n}"
+  },
+  {
+    "id": "uiverse-satyamchaudharydev_young-puma-4",
+    "title": "Young Puma",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "satyamchaudharydev",
+      "profileUrl": "https://uiverse.io/satyamchaudharydev/young-puma-4"
+    },
+    "license": "MIT",
+    "description": "Young Puma · loader by satyamchaudharydev",
     "tags": [
       "loader",
       "animated"
@@ -281,51 +258,122 @@ export const CATALOG = [
     "previewType": "css",
     "durationMs": 2000,
     "accentColor": null,
-    "html": "<div class=\"loader\">\n    <div class=\"circle\"></div>\n</div>",
-    "css": "/* From Uiverse.io by mrhyddenn - Tags: loader */\n.loader {\n  background: transparent;\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.circle {\n  width: 80px;\n  height: 80px;\n  border: 2px solid #ccc;\n  position: absolute;\n  border-radius: 50%;\n  animation: circle14512 2s linear infinite;\n}\n\n.circle::before {\n  content: '';\n  position: absolute;\n  top: -10px;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: #9ae932;\n  box-shadow: 0 0 20px #9ae932, 0 0 60px #9ae932;\n}\n\n@keyframes circle14512 {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
+    "html": "<div class=\"spinner\">\n</div>",
+    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: loader */\n.spinner {\n --size-of-spinner: 50px;\n --spinner-border-width: 4px;\n --spinner-color: #08c18a;\n --circle-color: #8bc34a24;\n --speed-of-animation: 2s;\n --scale: 1.3;\n width: var(--size-of-spinner);\n height: var(--size-of-spinner);\n background: var(--circle-color);\n border-radius: 50%;\n position: relative;\n}\n\n.spinner::after {\n content: \"\";\n display: block;\n position: absolute;\n border-radius: 50%;\n inset: 0;\n border: var(--spinner-border-width) solid var(--spinner-color);\n border-left-color: transparent;\n border-right-color: transparent;\n animation: spinny var(--speed-of-animation) linear infinite;\n}\n\n@keyframes spinny {\n 0% {\n  transform: rotate(0deg) scale(1)\n }\n\n 50% {\n  transform: rotate(45deg) scale(var(--scale))\n }\n\n 100% {\n  transform: rotate(360deg) scale(1)\n }\n}"
   },
   {
-    "id": "uiverse-benjimich_shy-newt-25",
-    "title": "Shy Newt",
+    "id": "uiverse-satyamchaudharydev_tough-baboon-84",
+    "title": "Tough Baboon",
     "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "benjimich",
-      "profileUrl": "https://uiverse.io/benjimich/shy-newt-25"
+      "name": "satyamchaudharydev",
+      "profileUrl": "https://uiverse.io/satyamchaudharydev/tough-baboon-84"
     },
     "license": "MIT",
-    "description": "Shy Newt · loader by benjimich",
-    "tags": [
-      "loader",
-      "color",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 3000,
-    "accentColor": null,
-    "html": "<div class=\"loader\">\n  <div class=\"inner_loader\"></div>\n</div>",
-    "css": "/* From Uiverse.io by benjimich - Tags: loader, color */\n.loader {\n  width: 200px;\n  height: 10px;\n  background: #004643;\n  border-radius: 50px;\n  overflow: hidden;\n}\n\n.inner_loader {\n  width: 60%;\n  height: 100%;\n  background: #f9bc60;\n  border-radius: 50px;\n  animation: moveLeftRight 3s ease-in-out infinite;\n}\n\n@keyframes moveLeftRight {\n  0% {\n    transform: translateX(calc(-100% + 10px));\n  }\n\n  50% {\n    transform: translateX(calc(200px - 10px));\n  }\n\n  100% {\n    transform: translateX(calc(-100% + 10px));\n  }\n}"
-  },
-  {
-    "id": "uiverse-mrhyddenn_fast-bear-60",
-    "title": "Fast Bear",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "mrhyddenn",
-      "profileUrl": "https://uiverse.io/mrhyddenn/fast-bear-60"
-    },
-    "license": "MIT",
-    "description": "Fast Bear · loader by mrhyddenn",
+    "description": "Tough Baboon · loader by satyamchaudharydev",
     "tags": [
       "loader",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 2000,
+    "durationMs": 1000,
     "accentColor": null,
-    "html": "<div class=\"mover\"></div>",
-    "css": "/* From Uiverse.io by mrhyddenn - Tags: loader */\n.mover {\n  background: rgba(248, 25, 25, 0.979);\n  height: 10px;\n  width: 80px;\n  border-radius: 10px;\n  position: relative;\n  animation: mover5 2s ease-in-out infinite;\n}\n\n.mover::before,\n.mover::after {\n  content: '';\n  position: absolute;\n  height: 10px;\n  border-radius: 10px;\n  left: 20px;\n  animation: mover5 2s ease-in-out infinite;\n}\n\n.mover::before {\n  background: rgb(201, 1, 1);\n  top: 20px;\n  width: 50px;\n}\n\n.mover::after {\n  background: rgb(255, 116, 106);\n  top: -20px;\n  width: 60px;\n}\n\n@keyframes mover5 {\n  0% {\n    transform: translateX(30px) scale(1);\n  }\n\n  50% {\n    transform: translateX(-30px) scale(1.1);\n  }\n\n  100% {\n    transform: translateX(30px) scale(1);\n  }\n}"
+    "html": "<div class=\"ball\"></div>",
+    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: loader */\n.ball {\n --size: 20px;\n --timing: 0.7s;\n --displace: 70px;\n border-radius: 50%;\n width: var(--size);\n height: var(--size);\n background: #000;\n margin-right: var(--displace);\n animation: animation321 var(--timing) infinite alternate\n    cubic-bezier(0.68, -0.55, 0.265, 1.55);\n}\n\n@keyframes animation321 {\n 0% {\n  background: #4284f3;\n  transform: translateX(var(--displace));\n }\n\n 100% {\n  background: #ea4335;\n  transform: translateX(00px);\n }\n}"
+  },
+  {
+    "id": "uiverse-juliocodessm_silly-grasshopper-43",
+    "title": "Silly Grasshopper",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "JulioCodesSM",
+      "profileUrl": "https://uiverse.io/JulioCodesSM/silly-grasshopper-43"
+    },
+    "license": "MIT",
+    "description": "Silly Grasshopper · loader by JulioCodesSM",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by JulioCodesSM - Tags: loader */\n/* From uiverse.io by @JulioCodesSM */\n.loader {\n width: 50px;\n height: 50px;\n position: relative;\n transform: translateX(-25px);\n /* Compensating for the left of 50px in the keyframe. */\n}\n\n.loader::before,\n.loader::after {\n content: '';\n position: absolute;\n width: inherit;\n height: inherit;\n border-radius: 50%;\n mix-blend-mode: multiply;\n animation: rotate9 1s infinite cubic-bezier(0.77, 0, 0.175, 1);\n}\n\n.loader::before {\n background-color: #fc3f9e;\n}\n\n.loader::after {\n background-color: #50e8f3;\n animation-delay: .5s;\n}\n\n@keyframes rotate9 {\n 0%,100% {\n  left: 50px;\n }\n\n 25% {\n  transform: scale(.3);\n }\n\n 50% {\n  left: 0;\n }\n\n 75% {\n  transform: scale(1);\n }\n}"
+  },
+  {
+    "id": "uiverse-myselfvenky_giant-impala-58",
+    "title": "Giant Impala",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "myselfvenky",
+      "profileUrl": "https://uiverse.io/myselfvenky/giant-impala-58"
+    },
+    "license": "MIT",
+    "description": "Giant Impala · loader by myselfvenky",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1500,
+    "accentColor": null,
+    "html": "<div class=\"spinner\">\n  <div class=\"inner\">\n  </div>\n</div>",
+    "css": "/* From Uiverse.io by myselfvenky - Tags: loader */\n.spinner {\n width: 40px;\n height: 40px;\n border-radius: 100%;\n background-color: aqua;\n display: grid;\n place-items: center;\n animation: zoomin 1.5s infinite alternate-reverse;\n position: relative;\n}\n\n.inner {\n background-color: #212121;\n width: 80%;\n height: 80%;\n border-radius: 100%;\n}\n\n@keyframes zoomin {\n 0% {\n  transform: scale(1);\n  box-shadow: 0 0 100px 20px rgb(16, 71, 71);\n }\n\n 100% {\n  transform: scale(1.5);\n  box-shadow: 0 0 100px 20px #000;\n }\n}"
+  },
+  {
+    "id": "uiverse-gagan-gv_yellow-panther-46",
+    "title": "Yellow Panther",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "gagan-gv",
+      "profileUrl": "https://uiverse.io/gagan-gv/yellow-panther-46"
+    },
+    "license": "MIT",
+    "description": "Yellow Panther · loader by gagan-gv",
+    "tags": [
+      "loader",
+      "animation",
+      "progress",
+      "smooth",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 5000,
+    "accentColor": null,
+    "html": "<div class=\"loader\">\n    <div></div>\n</div>",
+    "css": "/* From Uiverse.io by gagan-gv - Tags: animation, progress, loader, smooth */\n.loader {\n  width: 12em;\n  height: 1em;\n  border-radius: 8px;\n  background-color: #47a7ff44;\n}\n\n.loader div {\n  height: 100%;\n  width: 100%;\n  border-radius: 8px;\n  background-color: #47a7ff;\n  animation: width7435 5s linear infinite;\n  transition: all;\n}\n\n@keyframes width7435 {\n  from {\n    /*width: 0;*/\n    transform: scaleX(0);\n  }\n\n  to {\n    transform: scaleX(1);\n  }\n}"
+  },
+  {
+    "id": "uiverse-steveblox_wise-moose-53",
+    "title": "Wise Moose",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "SteveBloX",
+      "profileUrl": "https://uiverse.io/SteveBloX/wise-moose-53"
+    },
+    "license": "MIT",
+    "description": "Wise Moose · loader by SteveBloX",
+    "tags": [
+      "loader",
+      "loading",
+      "progress",
+      "progress bar",
+      "dark",
+      "animated",
+      "background",
+      "gray"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<div class=\"progress-loader\">\n  <div class=\"progress\"></div>\n</div>",
+    "css": "/* From Uiverse.io by SteveBloX  - Tags: loading, progress, progress bar, loader, dark, animated, loader, background, gray, white, minimal, bar, progress, horizontal */\n.progress-loader {\n  top: 50%;\n  left: 50%;\n  position: absolute;\n  transform: translate(-50%, -50%);\n  width: 150px;\n  background: rgba(236, 236, 238, 0.253);\n  height: 10px;\n  border-radius: 7px;\n  overflow: hidden;\n}\n\n.progress {\n  width: 1px;\n  height: 10px;\n  border-radius: 7px;\n  background: rgb(255, 255, 255);\n  transition: 0.5s;\n  animation: loading_44 5s cubic-bezier(0.4, 1.01, 1, 1) infinite;\n}\n\n@keyframes loading_44 {\n  0% {\n    width: 0%;\n  }\n\n  50% {\n    width: 100%;\n  }\n\n  100% {\n    width: 0%;\n  }\n}"
   },
   {
     "id": "uiverse-vikramsinghnegi_moody-mole-33",
@@ -349,6 +397,158 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<span class=\"loader\"></span>",
     "css": "/* From Uiverse.io by vikramsinghnegi  - Tags: loader, heart, smooth */\n.loader {\n  position: relative;\n  width: 40px;\n  height: 60px;\n  animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);\n}\n\n.loader:before,\n.loader:after {\n  content: \"\";\n  background: red;\n  width: 40px;\n  height: 60px;\n  border-radius: 50px 50px 0 0;\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  transform: rotate(45deg);\n  transform-origin: 50% 68%;\n  box-shadow: 5px 4px 5px #0004 inset;\n}\n.loader:after {\n  transform: rotate(-45deg);\n}\n@keyframes heartBeat {\n  0% {\n    transform: scale(0.95);\n  }\n  5% {\n    transform: scale(1.1);\n  }\n  39% {\n    transform: scale(0.85);\n  }\n  45% {\n    transform: scale(1);\n  }\n  60% {\n    transform: scale(0.95);\n  }\n  100% {\n    transform: scale(0.9);\n  }\n}"
+  },
+  {
+    "id": "uiverse-shoh2008_new-lion-60",
+    "title": "New Lion",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/new-lion-60"
+    },
+    "license": "MIT",
+    "description": "New Lion · loader by Shoh2008",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 84px;\n  height: 84px;\n  position: relative;\n  overflow: hidden;\n}\n\n.loader:before , .loader:after {\n  content: \"\";\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  background: yellow;\n  transform: translate(-50% , 100%)  scale(0);\n  animation: push_4051 2s infinite ease-in;\n}\n\n.loader:after {\n  animation-delay: 1s;\n}\n\n@keyframes push_4051 {\n  0% {\n    transform: translate(-50% , 100%)  scale(1);\n  }\n\n  15% , 25% {\n    transform: translate(-50% , 50%)  scale(1);\n  }\n\n  50% , 75% {\n    transform: translate(-50%, -30%) scale(0.5);\n  }\n\n  80%,  100% {\n    transform: translate(-50%, -50%) scale(0);\n  }\n}"
+  },
+  {
+    "id": "uiverse-shoh2008_yellow-dolphin-16",
+    "title": "Yellow Dolphin",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/yellow-dolphin-16"
+    },
+    "license": "MIT",
+    "description": "Yellow Dolphin · loader by Shoh2008",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<span class=\"loader\"></span>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  display: block;\n  width: 84px;\n  height: 84px;\n  position: relative;\n}\n\n.loader:before , .loader:after {\n  content: \"\";\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  background: #FFF;\n  transform: translate(-50% , -100%)  scale(0);\n  animation: push_401 2s infinite linear;\n}\n\n.loader:after {\n  animation-delay: 1s;\n}\n\n@keyframes push_401 {\n  0% , 50% {\n    transform: translate(-50% , 0%)  scale(1)\n  }\n\n  100% {\n    transform: translate(-50%, -100%) scale(0)\n  }\n}"
+  },
+  {
+    "id": "uiverse-cornerstone-04_chilly-fish-82",
+    "title": "Chilly Fish",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Cornerstone-04",
+      "profileUrl": "https://uiverse.io/Cornerstone-04/chilly-fish-82"
+    },
+    "license": "MIT",
+    "description": "Chilly Fish · loader by Cornerstone-04",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Cornerstone-04 - Tags: loader */\n.loader {\n  width: 50px;\n  height: 50px;\n  position: relative;\n  z-index: 1;\n  transform: translateX(-50%);\n}\n\n.loader::before, \n.loader::after {\n  content: '';\n  position: absolute;\n  width: inherit;\n  height: inherit;\n  border-radius: 50%;\n  mix-blend-mode: multiply;\n  animation: rotate92523 2s infinite cubic-bezier(0.77, 0, 0.175, 1);\n}\n\n.loader::before {\n  background-color: #75e2ff;\n}\n\n.loader::after {\n  background-color: #ff8496;\n  animation-delay: 1s;\n}\n\n@keyframes rotate92523 {\n  0%, 100% {\n    left: 35px;\n  }\n\n  25% {\n    transform: scale(.3);\n  }\n\n  50% {\n    left: 0%;\n  }\n\n  75% {\n    transform: scale(1);\n  }\n}"
+  },
+  {
+    "id": "uiverse-mrhyddenn_average-dodo-53",
+    "title": "Average Dodo",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "mrhyddenn",
+      "profileUrl": "https://uiverse.io/mrhyddenn/average-dodo-53"
+    },
+    "license": "MIT",
+    "description": "Average Dodo · loader by mrhyddenn",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"loader\">\n    <div class=\"circle\"></div>\n</div>",
+    "css": "/* From Uiverse.io by mrhyddenn - Tags: loader */\n.loader {\n  background: transparent;\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.circle {\n  width: 80px;\n  height: 80px;\n  border: 2px solid #ccc;\n  position: absolute;\n  border-radius: 50%;\n  animation: circle14512 2s linear infinite;\n}\n\n.circle::before {\n  content: '';\n  position: absolute;\n  top: -10px;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: #9ae932;\n  box-shadow: 0 0 20px #9ae932, 0 0 60px #9ae932;\n}\n\n@keyframes circle14512 {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
+  },
+  {
+    "id": "uiverse-shoh2008_terrible-fireant-25",
+    "title": "Terrible Fireant",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/terrible-fireant-25"
+    },
+    "license": "MIT",
+    "description": "Terrible Fireant · loader by Shoh2008",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 100px;\n  height: 46px;\n  position: relative;\n  border-bottom: 5px solid #FFF;\n  border-top: 5px solid #FFF;\n  box-sizing: border-box;\n}\n\n.loader:before , .loader:after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: -20px;\n  width: 32px;\n  height: 32px;\n  border-radius: 50%;\n  background: orange;\n  border: 5px solid #FFF;\n  box-sizing: border-box;\n  animation: slide_391 1s infinite ease-in-out alternate;\n}\n\n.loader:after {\n  top: 20px;\n  animation-direction: alternate-reverse;\n}\n\n@keyframes slide_391 {\n  0% , 20% {\n    transform: translateX(70px)\n  }\n\n  80% , 100% {\n    transform: translateX(-1px)\n  }\n}"
+  },
+  {
+    "id": "uiverse-mrhyddenn_fast-bear-60",
+    "title": "Fast Bear",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "mrhyddenn",
+      "profileUrl": "https://uiverse.io/mrhyddenn/fast-bear-60"
+    },
+    "license": "MIT",
+    "description": "Fast Bear · loader by mrhyddenn",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"mover\"></div>",
+    "css": "/* From Uiverse.io by mrhyddenn - Tags: loader */\n.mover {\n  background: rgba(248, 25, 25, 0.979);\n  height: 10px;\n  width: 80px;\n  border-radius: 10px;\n  position: relative;\n  animation: mover5 2s ease-in-out infinite;\n}\n\n.mover::before,\n.mover::after {\n  content: '';\n  position: absolute;\n  height: 10px;\n  border-radius: 10px;\n  left: 20px;\n  animation: mover5 2s ease-in-out infinite;\n}\n\n.mover::before {\n  background: rgb(201, 1, 1);\n  top: 20px;\n  width: 50px;\n}\n\n.mover::after {\n  background: rgb(255, 116, 106);\n  top: -20px;\n  width: 60px;\n}\n\n@keyframes mover5 {\n  0% {\n    transform: translateX(30px) scale(1);\n  }\n\n  50% {\n    transform: translateX(-30px) scale(1.1);\n  }\n\n  100% {\n    transform: translateX(30px) scale(1);\n  }\n}"
+  },
+  {
+    "id": "uiverse-youngjid_gentle-dragonfly-99",
+    "title": "Gentle Dragonfly",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "youngjid",
+      "profileUrl": "https://uiverse.io/youngjid/gentle-dragonfly-99"
+    },
+    "license": "MIT",
+    "description": "Gentle Dragonfly · loader by youngjid",
+    "tags": [
+      "loader",
+      "dark",
+      "glitch",
+      "text animation",
+      "css effect",
+      "glitch effect",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 300,
+    "accentColor": null,
+    "html": "<div class=\"glitch\" data-text=\"Loading ...\">Loading ...</div>",
+    "css": "/* From Uiverse.io by youngjid  - Tags: loader, dark, glitch, text animation, css effect, glitch Effect */\n.glitch {\n  position: relative;\n  font-size: 60px;\n  font-weight: bold;\n  color: #ffffff;\n  letter-spacing: 3px;\n  z-index: 1;\n}\n\n.glitch:before,\n.glitch:after {\n  display: block;\n  content: attr(data-text);\n  position: absolute;\n  top: 0;\n  left: 0;\n  opacity: 0.8;\n}\n\n.glitch:before {\n  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;\n  color: #00ffff;\n  z-index: -1;\n}\n\n.glitch:after {\n  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both\n    infinite;\n  color: #ff00ff;\n  z-index: -2;\n}\n\n@keyframes glitch-it {\n  0% {\n    transform: translate(0);\n  }\n  20% {\n    transform: translate(-2px, 2px);\n  }\n  40% {\n    transform: translate(-2px, -2px);\n  }\n  60% {\n    transform: translate(2px, 2px);\n  }\n  80% {\n    transform: translate(2px, -2px);\n  }\n  to {\n    transform: translate(0);\n  }\n}"
   },
   {
     "id": "uiverse-david-mohseni_breezy-penguin-47",
@@ -393,56 +593,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Pradeepsaranbishnoi - Tags: loader */\n.code-loader {\n  color: #fff;\n  font-family: Consolas, Menlo, Monaco, monospace;\n  font-weight: bold;\n  font-size: 100px;\n  opacity: 0.8;\n}\n\n.code-loader span {\n  display: inline-block;\n  animation: pulse_414 0.4s alternate infinite ease-in-out;\n}\n\n.code-loader span:nth-child(odd) {\n  animation-delay: 0.4s;\n}\n\n@keyframes pulse_414 {\n  to {\n    transform: scale(0.8);\n    opacity: 0.5;\n  }\n}"
   },
   {
-    "id": "uiverse-youngjid_gentle-dragonfly-99",
-    "title": "Gentle Dragonfly",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "youngjid",
-      "profileUrl": "https://uiverse.io/youngjid/gentle-dragonfly-99"
-    },
-    "license": "MIT",
-    "description": "Gentle Dragonfly · loader by youngjid",
-    "tags": [
-      "loader",
-      "dark",
-      "glitch",
-      "text animation",
-      "css effect",
-      "glitch effect",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<div class=\"glitch\" data-text=\"Loading ...\">Loading ...</div>",
-    "css": "/* From Uiverse.io by youngjid  - Tags: loader, dark, glitch, text animation, css effect, glitch Effect */\n.glitch {\n  position: relative;\n  font-size: 60px;\n  font-weight: bold;\n  color: #ffffff;\n  letter-spacing: 3px;\n  z-index: 1;\n}\n\n.glitch:before,\n.glitch:after {\n  display: block;\n  content: attr(data-text);\n  position: absolute;\n  top: 0;\n  left: 0;\n  opacity: 0.8;\n}\n\n.glitch:before {\n  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;\n  color: #00ffff;\n  z-index: -1;\n}\n\n.glitch:after {\n  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both\n    infinite;\n  color: #ff00ff;\n  z-index: -2;\n}\n\n@keyframes glitch-it {\n  0% {\n    transform: translate(0);\n  }\n  20% {\n    transform: translate(-2px, 2px);\n  }\n  40% {\n    transform: translate(-2px, -2px);\n  }\n  60% {\n    transform: translate(2px, 2px);\n  }\n  80% {\n    transform: translate(2px, -2px);\n  }\n  to {\n    transform: translate(0);\n  }\n}"
-  },
-  {
-    "id": "uiverse-cksunandh_young-dragonfly-81",
-    "title": "Young Dragonfly",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "Cksunandh",
-      "profileUrl": "https://uiverse.io/Cksunandh/young-dragonfly-81"
-    },
-    "license": "MIT",
-    "description": "Young Dragonfly · loader by Cksunandh",
-    "tags": [
-      "loader",
-      "simple",
-      "html",
-      "css",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 2000,
-    "accentColor": null,
-    "html": "<div class=\"loader\"><i></i></div>",
-    "css": "/* From Uiverse.io by Cksunandh  - Tags: simple, loader, html, css */\n.loader i {\n  display: block;\n  width: 2px;\n  height: 85px;\n  margin-top: 18px;\n  background-color: rgba(61, 61, 61, 0.5);\n  overflow: hidden;\n  position: relative;\n}\n.loader i:before {\n  display: block;\n  content: \"\";\n  width: 100%;\n  height: 100%;\n  background-color: #fafafa;\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: loader-animation 2s infinite normal;\n}\n@keyframes loader-animation {\n  0% {\n    transform: translate3d(0, -100%, 0);\n  }\n  15% {\n    transform: translate3d(0, -98%, 0);\n  }\n  85% {\n    transform: translate3d(0, 98%, 0);\n  }\n  100% {\n    transform: translate3d(0, 100%, 0);\n  }\n}"
-  },
-  {
     "id": "uiverse-leonkohli_ordinary-rat-31",
     "title": "Ordinary Rat",
     "category": "loader",
@@ -467,16 +617,39 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by LeonKohli  - Tags: gradient, loader, rounded, gradients */\n.loader {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n\n.bubble {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background-image: linear-gradient(to right, #ff6b81, #ff9a44);\n  margin: 0 5px;\n  animation: bubbleAnimation 1.5s ease-in-out infinite;\n}\n\n@keyframes bubbleAnimation {\n  0%,\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(2);\n    opacity: 0.5;\n  }\n}"
   },
   {
-    "id": "uiverse-cornerstone-04_terrible-termite-49",
-    "title": "Terrible Termite",
+    "id": "uiverse-doniaskima_sweet-gecko-35",
+    "title": "Sweet Gecko",
     "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "Cornerstone-04",
-      "profileUrl": "https://uiverse.io/Cornerstone-04/terrible-termite-49"
+      "name": "doniaskima",
+      "profileUrl": "https://uiverse.io/doniaskima/sweet-gecko-35"
     },
     "license": "MIT",
-    "description": "Terrible Termite · loader by Cornerstone-04",
+    "description": "Sweet Gecko · loader by doniaskima",
+    "tags": [
+      "loader",
+      "neumorphism",
+      "skeuomorphism",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by doniaskima - Tags: neumorphism, skeuomorphism, loader */\n.loader {\n  width: fit-content;\n  font-weight: bold;\n  font-family: monospace;\n  white-space: pre;\n  font-size: 30px;\n  line-height: 1.2em;\n  height: 1.2em;\n  overflow: hidden;\n}\n\n.loader:before {\n  content: \"Loading...\\A⌰oading...\\A⌰⍜ading...\\A⌰⍜⏃ding...\\A⌰⍜⏃⎅ing...\\A⌰⍜⏃⎅⟟ng...\\A⌰⍜⏃⎅⟟⋏g...\\A⌰⍜⏃⎅⟟⋏☌...\\A⌰⍜⏃⎅⟟⋏☌⟒..\\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔\";\n  white-space: pre;\n  display: inline-block;\n  animation: l39 1s infinite steps(11) alternate;\n}\n\n@keyframes l39 {\n  100% {\n    transform: translateY(-100%)\n  }\n}"
+  },
+  {
+    "id": "uiverse-shoh2008_bad-earwig-19",
+    "title": "Bad Earwig",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/bad-earwig-19"
+    },
+    "license": "MIT",
+    "description": "Bad Earwig · loader by Shoh2008",
     "tags": [
       "loader",
       "animated"
@@ -484,8 +657,29 @@ export const CATALOG = [
     "previewType": "css",
     "durationMs": 1000,
     "accentColor": null,
-    "html": "<div class=\"loader\">\n\n</div>",
-    "css": "/* From Uiverse.io by Cornerstone-04 - Tags: loader */\n.loader {\n  display: inline-block;\n  width: 190px;\n  height: 10px;\n  border-radius: 40px;\n  background-color: rgba(255, 255, 255, 1);\n  position: relative;\n  overflow: hidden;\n}\n\n.loader span {\n  font: 700 22px monospace;\n  text-transform: uppercase;\n  margin: auto;\n  color: #fff;\n  letter-spacing: 5px;\n}\n\n.loader::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -50px;\n  width: 150%;\n  height: 100%;\n  background-image: linear-gradient(332deg, #6bff7f, #32ff3c);\n  border-radius: inherit;\n  transform: scaleX(0);\n  transform-origin: left;\n  animation: load5123 1s infinite;\n}\n\n@keyframes load5123 {\n  50% {\n    transform: scaleX(1);\n  }\n\n  100% {\n    transform: scaleX(0);\n    transform-origin: right;\n  }\n}"
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 48px;\n  height: 48px;\n  display: inline-block;\n  position: relative;\n  background: #FFF;\n  box-sizing: border-box;\n  animation: zeroRotation 1s ease infinite alternate-reverse;\n}\n\n@keyframes zeroRotation {\n  0% {\n    transform: scale(1) rotate(0deg);\n  }\n\n  100% {\n    transform: scale(0.3) rotate(360deg);\n  }\n}"
+  },
+  {
+    "id": "uiverse-emmaxplay_polite-husky-37",
+    "title": "Polite Husky",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "EmmaxPlay",
+      "profileUrl": "https://uiverse.io/EmmaxPlay/polite-husky-37"
+    },
+    "license": "MIT",
+    "description": "Polite Husky · loader by EmmaxPlay",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<div class=\"spinner\"></div>",
+    "css": "/* From Uiverse.io by EmmaxPlay - Tags: loader */\n.spinner {\n position: relative;\n width: 60px;\n height: 60px;\n border-radius: 50%;\n}\n\n.spinner::before,\n.spinner:after {\n content: \"\";\n position: absolute;\n border-radius: inherit;\n}\n\n.spinner:before {\n width: 100%;\n height: 100%;\n background-image: linear-gradient(0deg, #ff00cc 0%, #333399 100%);\n animation: spin8932 .5s infinite linear;\n}\n\n.spinner:after {\n width: 85%;\n height: 85%;\n background-color: #212121;\n top: 50%;\n left: 50%;\n transform: translate(-50%, -50%);\n}\n\n@keyframes spin8932 {\n to {\n  transform: rotate(360deg);\n }\n}"
   },
   {
     "id": "uiverse-g4b413l_nasty-yak-65",
@@ -509,31 +703,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by G4b413l - Tags: loader */\n.spinner {\n  position: relative;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n}\n\n.spinner::before,\n.spinner::after {\n  content: \"\";\n  position: absolute;\n  border-radius: inherit;\n}\n\n.spinner::before {\n  width: 100%;\n  height: 100%;\n  background-image: linear-gradient(0deg, #ff00cc 0%, #212121 50%);\n  animation: spin .5s infinite linear;\n}\n\n.spinner::after {\n  width: 85%;\n  height: 85%;\n  background-color: #212121;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}"
   },
   {
-    "id": "uiverse-angelo2004-mateus_neat-owl-38",
-    "title": "Neat Owl",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "angelo2004-mateus",
-      "profileUrl": "https://uiverse.io/angelo2004-mateus/neat-owl-38"
-    },
-    "license": "MIT",
-    "description": "Neat Owl · loader by angelo2004-mateus",
-    "tags": [
-      "loader",
-      "material design",
-      "neumorphism",
-      "animation",
-      "animated",
-      "gradients"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<div class=\"loader\">\n  <span></span>\n</div>",
-    "css": "/* From Uiverse.io by angelo2004-mateus - Tags: material design, neumorphism, animation, loader, animated, gradients */\n.loader {\n  width: 10rem;\n  height: 10rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  border-radius: 50%;\n  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94, 104, 121, 0.137);\n}\n\n.loader:before {\n  height: 4rem;\n  width: 4rem;\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 10;\n  background: #ececec;\n  border-radius: 50%;\n  border: 2px solid #e2e1e1;\n  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);\n}\n\n.loader span {\n  width: 80%;\n  height: 80%;\n  border-radius: 50%;\n  background: linear-gradient(to bottom, rgb(89, 92, 252), rgb(226, 57, 241));\n  animation: rotate 1s infinite linear;\n}\n\n@keyframes rotate {\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
-  },
-  {
     "id": "uiverse-terenceodonoghue_friendly-pug-5",
     "title": "Friendly Pug",
     "category": "loader",
@@ -553,48 +722,6 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"container\">\n  <span></span>\n  <span></span>\n  <span></span>\n</div>",
     "css": "/* From Uiverse.io by terenceodonoghue - Tags: loader */\n.container {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  display: flex;\n  gap: 0.625em;\n  transform: translate(-50%, -50%);\n}\n\n.container span {\n  border-radius: 50%;\n  height: 1.5em;\n  width: 1.5em;\n}\n\n.container span::before {\n  content: \"\";\n  display: block;\n  border-radius: inherit;\n  height: inherit;\n  width: inherit;\n  background-color: inherit;\n  animation: ripple 1.8s ease-out infinite;\n  animation-delay: inherit;\n  z-index: -1;\n}\n\n.container span:nth-of-type(1) {\n  background-color: #84cdfa;\n}\n\n.container span:nth-of-type(2) {\n  background-color: #5ad1cd;\n  animation-delay: 0.2s;\n}\n\n.container span:nth-of-type(3) {\n  background-color: #9b59b6;\n  animation-delay: 0.4s;\n}\n\n@keyframes ripple {\n  from {\n    opacity: 1;\n    transform: scale(0);\n  }\n\n  to {\n    opacity: 0;\n    transform: scale(3);\n  }\n}"
-  },
-  {
-    "id": "uiverse-satyamchaudharydev_fresh-frog-39",
-    "title": "Fresh Frog",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "satyamchaudharydev",
-      "profileUrl": "https://uiverse.io/satyamchaudharydev/fresh-frog-39"
-    },
-    "license": "MIT",
-    "description": "Fresh Frog · loader by satyamchaudharydev",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<div class=\"spinner\">\n  <span></span>\n  <span></span>\n  <span></span>\n</div>",
-    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: loader */\n.spinner {\n --clr: rgb(0, 113, 128);\n --gap: 6px;\n   /* gap between each circle */\n width: 100px;\n height: 100px;\n display: flex;\n justify-content: center;\n align-items: center;\n gap: var(--gap);\n}\n\n.spinner span {\n width: 20px;\n height: 20px;\n border-radius: 100%;\n background-color: var(--clr);\n opacity: 0;\n}\n\n.spinner span:nth-child(1) {\n animation: fade 1s ease-in-out infinite;\n}\n\n.spinner span:nth-child(2) {\n animation: fade 1s ease-in-out 0.33s infinite;\n}\n\n.spinner span:nth-child(3) {\n animation: fade 1s ease-in-out 0.66s infinite;\n}\n\n@keyframes fade {\n 0%, 100% {\n  opacity: 1;\n }\n\n 60% {\n  opacity: 0;\n }\n}"
-  },
-  {
-    "id": "uiverse-boryanakrasteva_fast-eagle-21",
-    "title": "Fast Eagle",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "boryanakrasteva",
-      "profileUrl": "https://uiverse.io/boryanakrasteva/fast-eagle-21"
-    },
-    "license": "MIT",
-    "description": "Fast Eagle · loader by boryanakrasteva",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 4000,
-    "accentColor": null,
-    "html": "<div class=\"loader\">\n  <div class=\"circle\"></div>\n  <div class=\"circle\"></div>\n  <div class=\"circle\"></div>\n  <div class=\"circle\"></div>\n</div>",
-    "css": "/* From Uiverse.io by boryanakrasteva - Tags: loader */\n.loader {\n  position: relative;\n}\n\n.circle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 0px;\n  height: 0px;\n  border-radius: 100%;\n  opacity: 0;\n  animation: pulse_4923 4s infinite linear;\n  border: 0.5px solid #f3f3f3;\n  box-shadow: 0px 0px 5px #eef0e5;\n}\n\n.circle:nth-child(1) {\n  animation-delay: .2s;\n}\n\n.circle:nth-child(2) {\n  animation-delay: .4s;\n}\n\n.circle:nth-child(3) {\n  animation-delay: .8s;\n}\n\n.circle:nth-child(4) {\n  animation-delay: 1s;\n}\n\n@keyframes pulse_4923 {\n  0% {\n    opacity: 0.0;\n    width: 0px;\n    height: 0px;\n    transform: translate(-50%, -50%) scale(1);\n  }\n\n  10% {\n    opacity: 0.5;\n    transform: translate(-50%, -50%) scale(2);\n  }\n\n  100% {\n    opacity: 0.0;\n    width: 100px;\n    height: 100px;\n    transform: translate(-50%, -50%) scale(1);\n  }\n}"
   },
   {
     "id": "uiverse-tilakjain123_shy-yak-36",
@@ -618,134 +745,110 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by tilakjain123 - Tags: loader */\n.loader {\n  position: relative;\n  width: 64px;\n  height: 64px;\n}\n\n.loader div {\n  position: absolute;\n  border: 4px solid #454ade;\n  border-radius: 50%;\n  animation: loader8435 1s ease-out infinite;\n}\n\n.loader div:nth-child(2) {\n  animation-delay: -0.5s;\n}\n\n@keyframes loader8435 {\n  0% {\n    top: 32px;\n    left: 32px;\n    width: 0;\n    height: 0;\n    opacity: 1;\n  }\n\n  100% {\n    top: 0;\n    left: 0;\n    width: 64px;\n    height: 64px;\n    opacity: 0;\n  }\n}"
   },
   {
-    "id": "uiverse-doniaskima_jolly-fireant-35",
-    "title": "Jolly Fireant",
+    "id": "uiverse-sabbircoder07_fresh-tiger-75",
+    "title": "Fresh Tiger",
     "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "doniaskima",
-      "profileUrl": "https://uiverse.io/doniaskima/jolly-fireant-35"
+      "name": "sabbircoder07",
+      "profileUrl": "https://uiverse.io/sabbircoder07/fresh-tiger-75"
     },
     "license": "MIT",
-    "description": "Jolly Fireant · loader by doniaskima",
+    "description": "Fresh Tiger · loader by sabbircoder07",
     "tags": [
       "loader",
-      "simple",
-      "neumorphism",
-      "success",
+      "animated",
+      "css3"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"progress\">\n      <div class=\"inner\"></div>\n</div>",
+    "css": "/* From Uiverse.io by sabbircoder07 - Tags: loader, animated, css3 */\n.progress {\n  background-color: #ffffff;\n  width: 220px;\n  height: 20px;\n  border-radius: 100px;\n  overflow: hidden;\n  backface-visibility: hidden;\n}\n\n.inner {\n  background-image: linear-gradient(to left, #00cdac, #00c2c9, #00b4e3, #00a2f1, #008cef, #0088eb, #0085e6, #0081e2, #0090de, #009bd2, #00a3c1, #02aab0);\n  height: 100%;\n  transform-origin: left;\n  animation: progress 2s infinite;\n}\n\n@keyframes progress {\n  0% {\n    transform: scaleX(10%) translateX(-10%);\n  }\n\n  100% {\n    transform: scaleX(80%) translateX(150%);\n  }\n}"
+  },
+  {
+    "id": "uiverse-satyamchaudharydev_fresh-frog-39",
+    "title": "Fresh Frog",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "satyamchaudharydev",
+      "profileUrl": "https://uiverse.io/satyamchaudharydev/fresh-frog-39"
+    },
+    "license": "MIT",
+    "description": "Fresh Frog · loader by satyamchaudharydev",
+    "tags": [
+      "loader",
       "animated"
     ],
     "previewType": "css",
     "durationMs": 1000,
     "accentColor": null,
-    "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by doniaskima - Tags: simple, neumorphism, success, loader */\n.loader {\n  display: inline-flex;\n  gap: 10px;\n}\n\n.loader:before,\n.loader:after {\n  content: \"\";\n  height: 20px;\n  aspect-ratio: 1;\n  border-radius: 50%;\n  background: radial-gradient(farthest-side,#000 95%,#0000) 35% 35%/6px 6px no-repeat\n    #fff;\n  transform: scaleX(var(--s,1)) rotate(0deg);\n  animation: l6 1s infinite linear;\n}\n\n.loader:after {\n  --s: -1;\n  animation-delay: -0.1s;\n}\n\n@keyframes l6 {\n  100% {\n    transform: scaleX(var(--s,1)) rotate(360deg);\n  }\n}"
+    "html": "<div class=\"spinner\">\n  <span></span>\n  <span></span>\n  <span></span>\n</div>",
+    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: loader */\n.spinner {\n --clr: rgb(0, 113, 128);\n --gap: 6px;\n   /* gap between each circle */\n width: 100px;\n height: 100px;\n display: flex;\n justify-content: center;\n align-items: center;\n gap: var(--gap);\n}\n\n.spinner span {\n width: 20px;\n height: 20px;\n border-radius: 100%;\n background-color: var(--clr);\n opacity: 0;\n}\n\n.spinner span:nth-child(1) {\n animation: fade 1s ease-in-out infinite;\n}\n\n.spinner span:nth-child(2) {\n animation: fade 1s ease-in-out 0.33s infinite;\n}\n\n.spinner span:nth-child(3) {\n animation: fade 1s ease-in-out 0.66s infinite;\n}\n\n@keyframes fade {\n 0%, 100% {\n  opacity: 1;\n }\n\n 60% {\n  opacity: 0;\n }\n}"
   },
   {
-    "id": "uiverse-mrhyddenn_calm-snail-67",
-    "title": "Calm Snail",
+    "id": "uiverse-ahmed-mit_curly-rabbit-4",
+    "title": "Curly Rabbit",
+    "category": "loader",
+    "source": "uiverse",
+    "author": {
+      "name": "AHMED-MIT",
+      "profileUrl": "https://uiverse.io/AHMED-MIT/curly-rabbit-4"
+    },
+    "license": "MIT",
+    "description": "Curly Rabbit · loader by AHMED-MIT",
+    "tags": [
+      "loader",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"spinner\"></div>",
+    "css": "/* From Uiverse.io by AHMED-MIT - Tags: loader */\n.spinner {\n  width: 56px;\n  height: 56px;\n  display: grid;\n  border: 4.5px solid #0000;\n  border-radius: 50%;\n  border-color: #dbdcef #0000;\n  animation: spinner-e04l1k 1s infinite linear;\n}\n\n.spinner::before,\n.spinner::after {\n  content: \"\";\n  grid-area: 1/1;\n  margin: 2.2px;\n  border: inherit;\n  border-radius: 50%;\n}\n\n.spinner::before {\n  border-color: #474bff #0000;\n  animation: inherit;\n  animation-duration: 0.5s;\n  animation-direction: reverse;\n}\n\n.spinner::after {\n  margin: 8.9px;\n}\n\n@keyframes spinner-e04l1k {\n  100% {\n    transform: rotate(1turn);\n  }\n}"
+  },
+  {
+    "id": "uiverse-mrhyddenn_ordinary-wolverine-98",
+    "title": "Ordinary Wolverine",
     "category": "loader",
     "source": "uiverse",
     "author": {
       "name": "mrhyddenn",
-      "profileUrl": "https://uiverse.io/mrhyddenn/calm-snail-67"
+      "profileUrl": "https://uiverse.io/mrhyddenn/ordinary-wolverine-98"
     },
     "license": "MIT",
-    "description": "Calm Snail · loader by mrhyddenn",
+    "description": "Ordinary Wolverine · loader by mrhyddenn",
     "tags": [
       "loader",
-      "spinner",
       "animated"
     ],
     "previewType": "css",
     "durationMs": 1000,
     "accentColor": null,
     "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by mrhyddenn - Tags: loader, spinner */\n.loader {\n  width: 50px;\n  height: 50px;\n  display: inline-block;\n  border: 5px solid rgb(255, 17, 0);\n  border-radius: 50%;\n  border-top-color: transparent;\n  border-bottom-color: transparent;\n  animation: rot5 1s infinite;\n}\n\n@keyframes rot5 {\n  0% {\n    transform: rotate(0);\n  }\n\n  50% {\n    transform: rotate(180deg);\n    border-top-color: rgb(139, 46, 46);\n    border-bottom-color: rgb(243, 92, 33);\n    border-right-color: transparent;\n    border-left-color: transparent;\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
+    "css": "/* From Uiverse.io by mrhyddenn - Tags: loader */\n.loader {\n  position: relative;\n  transform: scale(2);\n  border-radius: 50%;\n  border: 1px solid;\n  width: 30px;\n  height: 30px;\n  color: white;\n}\n\n.loader::after {\n  position: absolute;\n  width: 0px;\n  height: 10px;\n  display: block;\n  border-left: 1px solid #fff;\n  content: '';\n  left: 14px;\n  border-radius: 1px;\n  top: 4px;\n  animation-duration: 1s;\n}\n\n.loader::before {\n  position: absolute;\n  width: 0px;\n  height: 10px;\n  display: block;\n  border-left: 1px solid #fff;\n  content: '';\n  left: 14px;\n  border-radius: 1px;\n  top: 4px;\n  animation-duration: 40s;\n}\n\n.loader::before,.loader::after {\n  transform-origin: bottom;\n  animation-name: dial;\n  animation-iteration-count: infinite;\n  animation-timing-function: linear;\n}\n\n@keyframes dial {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
   },
   {
-    "id": "uiverse-shoh2008_cold-walrus-85",
-    "title": "Cold Walrus",
+    "id": "uiverse-clemix37_young-bulldog-90",
+    "title": "Young Bulldog",
     "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "Shoh2008",
-      "profileUrl": "https://uiverse.io/Shoh2008/cold-walrus-85"
+      "name": "Clemix37",
+      "profileUrl": "https://uiverse.io/Clemix37/young-bulldog-90"
     },
     "license": "MIT",
-    "description": "Cold Walrus · loader by Shoh2008",
+    "description": "Young Bulldog · loader by Clemix37",
     "tags": [
       "loader",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 2500,
+    "durationMs": 800,
     "accentColor": null,
     "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  position: relative;\n  font-size: 16px;\n  width: 5.5em;\n  height: 5.5em;\n}\n\n.loader:before {\n  content: '';\n  position: absolute;\n  transform: translate(-50%, -50%) rotate(45deg);\n  height: 100%;\n  width: 4px;\n  background: #fff;\n  left: 50%;\n  top: 50%;\n}\n\n.loader:after {\n  content: '';\n  position: absolute;\n  left: 0.2em;\n  bottom: 0.18em;\n  width: 1em;\n  height: 1em;\n  background-color: orange;\n  border-radius: 15%;\n  animation: rollingRock 2.5s cubic-bezier(.79, 0, .47, .97) infinite;\n}\n\n@keyframes rollingRock {\n  0% {\n    transform: translate(0, -1em) rotate(-45deg)\n  }\n\n  5% {\n    transform: translate(0, -1em) rotate(-50deg)\n  }\n\n  20% {\n    transform: translate(1em, -2em) rotate(47deg)\n  }\n\n  25% {\n    transform: translate(1em, -2em) rotate(45deg)\n  }\n\n  30% {\n    transform: translate(1em, -2em) rotate(40deg)\n  }\n\n  45% {\n    transform: translate(2em, -3em) rotate(137deg)\n  }\n\n  50% {\n    transform: translate(2em, -3em) rotate(135deg)\n  }\n\n  55% {\n    transform: translate(2em, -3em) rotate(130deg)\n  }\n\n  70% {\n    transform: translate(3em, -4em) rotate(217deg)\n  }\n\n  75% {\n    transform: translate(3em, -4em) rotate(220deg)\n  }\n\n  100% {\n    transform: translate(0, -1em) rotate(-225deg)\n  }\n}"
-  },
-  {
-    "id": "uiverse-cornerstone-04_neat-dragon-24",
-    "title": "Neat Dragon",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "Cornerstone-04",
-      "profileUrl": "https://uiverse.io/Cornerstone-04/neat-dragon-24"
-    },
-    "license": "MIT",
-    "description": "Neat Dragon · loader by Cornerstone-04",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 2000,
-    "accentColor": null,
-    "html": "<div class=\"loader\">\n    <div></div>\n</div>",
-    "css": "/* From Uiverse.io by Cornerstone-04 - Tags: loader */\n.loader {\n  width: 50px;\n  height: 50px;\n  border: 7px double;\n  border-color: #43cec7 transparent;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  animation: spin13213 2s linear infinite;\n}\n\n.loader div {\n  width: 50%;\n  height: 50%;\n  background-color: #43cec7;\n  border-radius: 50%;\n}\n\n@keyframes spin13213 {\n  to {\n    transform: rotate(360deg);\n  }\n}"
-  },
-  {
-    "id": "uiverse-satwinder04_afraid-treefrog-79",
-    "title": "Afraid Treefrog",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "Satwinder04",
-      "profileUrl": "https://uiverse.io/Satwinder04/afraid-treefrog-79"
-    },
-    "license": "MIT",
-    "description": "Afraid Treefrog · loader by Satwinder04",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 2000,
-    "accentColor": null,
-    "html": "<div class=\"loader\">\n  <div class=\"loader-text\">Loading...</div>\n  <div class=\"loader-bar\"></div>\n</div>",
-    "css": "/* From Uiverse.io by Satwinder04 - Tags: loader */\n.loader {\n  /* background-color: blue; */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n\n.loader-text {\n  font-size: 24px;\n  color: rgb(0, 0, 0);\n  margin-bottom: 20px;\n  align-self: center;\n}\n\n.loader-bar {\n  width: 30%;\n  height: 10px;\n  border-radius: 5px;\n  background-color: rgb(0, 0, 0);\n  animation: loader-bar-animation 2s ease-in-out infinite;\n}\n\n@keyframes loader-bar-animation {\n  0% {\n    /* transform: translateX(-100%) rotate(270deg); */\n    transform: translateX(-100%);\n  }\n\n  50% {\n    /* transform: translateX(100%) rotate(-90deg); */\n    transform: translateX(100%);\n  }\n\n  100% {\n    /* transform: translateX(-100%) rotate(270deg); */\n    transform: translateX(-100%);\n  }\n}"
-  },
-  {
-    "id": "uiverse-guilhermeyohan_fluffy-turtle-93",
-    "title": "Fluffy Turtle",
-    "category": "loader",
-    "source": "uiverse",
-    "author": {
-      "name": "guilhermeyohan",
-      "profileUrl": "https://uiverse.io/guilhermeyohan/fluffy-turtle-93"
-    },
-    "license": "MIT",
-    "description": "Fluffy Turtle · loader by guilhermeyohan",
-    "tags": [
-      "loader",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 2000,
-    "accentColor": null,
-    "html": "<div class=\"loader\"></div>",
-    "css": "/* From Uiverse.io by guilhermeyohan - Tags: loader */\n.loader,\n.loader:before,\n.loader:after {\n  border-radius: 50%;\n}\n\n.loader {\n  color: #ffffff;\n  font-size: 11px;\n  text-indent: -99999em;\n  margin: 55px auto;\n  position: relative;\n  width: 10em;\n  height: 10em;\n  box-shadow: inset 0 0 0 1em;\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n}\n\n.loader:before,\n.loader:after {\n  position: absolute;\n  content: '';\n}\n\n.loader:before {\n  width: 5.2em;\n  height: 10.2em;\n  background: #0011ff;\n  border-radius: 10.2em 0 0 10.2em;\n  top: -0.1em;\n  left: -0.1em;\n  -webkit-transform-origin: 5.1em 5.1em;\n  transform-origin: 5.1em 5.1em;\n  -webkit-animation: load2 2s infinite ease 1.5s;\n  animation: load2 2s infinite ease 1.5s;\n}\n\n.loader:after {\n  width: 5.2em;\n  height: 10.2em;\n  background: #0011ff;\n  border-radius: 0 10.2em 10.2em 0;\n  top: -0.1em;\n  left: 4.9em;\n  -webkit-transform-origin: 0.1em 5.1em;\n  transform-origin: 0.1em 5.1em;\n  -webkit-animation: load2 2s infinite ease;\n  animation: load2 2s infinite ease;\n}\n\n@keyframes load2 {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}"
+    "css": "/* From Uiverse.io by Clemix37 - Tags: loader */\n.loader {\n width: 60px;\n height: 60px;\n}\n\n.loader::before {\n content: \"\";\n box-sizing: border-box;\n position: absolute;\n width: 60px;\n height: 60px;\n border-radius: 50%;\n border-top: 2px solid #8900FF;\n border-right: 2px solid transparent;\n animation: spinner8217 0.8s linear infinite;\n}\n\n@keyframes spinner8217 {\n to {\n  transform: rotate(360deg);\n }\n}"
   },
   {
     "id": "uiverse-mike11jr_nice-dog-2",
@@ -769,711 +872,113 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Mike11jr - Tags: loader */\n.loader-wrapper {\n width: 60px;\n height: 60px;\n}\n\n.loader {\n box-sizing: border-box;\n width: 100%;\n height: 100%;\n border: 10px solid #162534;\n border-top-color: #4bc8eb;\n border-bottom-color: #f13a8f;\n border-radius: 50%;\n animation: rotate0925 5s linear infinite;\n}\n\n.loader-inner {\n border-top-color: #36f372;\n border-bottom-color: #fff;\n animation-duration: 2.5s;\n}\n\n@keyframes rotate0925 {\n 0% {\n  transform: scale(1) rotate(360deg);\n }\n\n 50% {\n  transform: scale(.8) rotate(-360deg);\n }\n\n 100% {\n  transform: scale(1) rotate(360deg);\n }\n}"
   },
   {
-    "id": "uiverse-satwinder04_tasty-horse-82",
-    "title": "Tasty Horse",
-    "category": "button",
+    "id": "uiverse-steveblox_happy-emu-33",
+    "title": "Happy Emu",
+    "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "Satwinder04",
-      "profileUrl": "https://uiverse.io/Satwinder04/tasty-horse-82"
+      "name": "SteveBloX  - Website: https://codepen.io/travishorn/pen/YyGVRG - Name: Google / Travis Horn",
+      "profileUrl": "https://uiverse.io/SteveBloX  - Website: https://codepen.io/travishorn/pen/YyGVRG - Name: Google / Travis Horn/happy-emu-33"
     },
     "license": "MIT",
-    "description": "Tasty Horse · button by Satwinder04",
+    "description": "Happy Emu · loader by SteveBloX  - Website: https://codepen.io/travishorn/pen/YyGVRG - Name: Google / Travis Horn",
     "tags": [
-      "button",
-      "blue",
-      "ripple",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<button class=\"animated-button\">hover me</button>",
-    "css": "/* From Uiverse.io by Satwinder04 - Tags: blue, button, ripple */\n.animated-button {\n  position: relative;\n  display: inline-block;\n  padding: 16px 28px;\n  font-size: 20px;\n  font-weight: bold;\n  text-transform: uppercase;\n  color: #fff;\n  text-align: center;\n  text-decoration: none;\n  background-color: #1f347b;\n  /* border-radius: 40px; */\n  overflow: hidden;\n  border: none;\n  z-index: 1;\n}\n\n.animated-button:before {\n  transition: 1s;\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0;\n  height: 0;\n  background-color: #fff;\n  border-radius: 50%;\n  opacity: 0;\n  transform: translate(-50%, -50%);\n  z-index: -1;\n}\n\n.animated-button:hover:before {\n  width: 300px;\n  height: 300px;\n  opacity: 0.4;\n  transition: all 0.5s ease-out;\n}\n\n.animated-button:hover {\n  background-color: #fff;\n  color: #202960;\n  transition: all 0.5s ease-out;\n}\n\n.animated-button:hover:after {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0;\n  height: 0;\n  background-color: #255ea4;\n  border-radius: 50%;\n  transform: translate(-50%, -50%);\n  z-index: -2;\n  animation: pulse 2s infinite;\n}\n\n@keyframes pulse {\n  0% {\n    width: 0;\n    height: 0;\n    opacity: 0.5;\n  }\n\n  100% {\n    width: 200px;\n    height: 200px;\n    opacity: 0;\n  }\n}"
-  },
-  {
-    "id": "uiverse-ercnersoy_swift-bullfrog-99",
-    "title": "Swift Bullfrog",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "ercnersoy",
-      "profileUrl": "https://uiverse.io/ercnersoy/swift-bullfrog-99"
-    },
-    "license": "MIT",
-    "description": "Swift Bullfrog · button by ercnersoy",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 900,
-    "accentColor": null,
-    "html": "<button>\n  click me\n</button>",
-    "css": "/* From Uiverse.io by ercnersoy - Tags: button */\nbutton {\n  padding: 0.5rem 2.5rem 0.5rem 2.5rem;\n  box-shadow: 0px 0px 0px 3px black;\n  border: 0;\n  border-radius: 0.5rem;\n  font-size: 1rem;\n  background-color: #ffc83d;\n  color: black;\n  font-weight: bolder;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  position: relative;\n  transition: all .9s ease-in-out;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n}\n\nbutton:hover {\n  background-color: #f03a17;\n  color: white;\n}\n\nbutton::before {\n  content: \"😍\";\n  position: absolute;\n  left: -0rem;\n  top: 0rem;\n  opacity: 1;\n  font-size: 1.55rem;\n  transition: all .9s ease-in-out;\n  transform: rotate(0deg);\n}\n\nbutton:hover::before {\n  content: \"😘\";\n  opacity: 1;\n  visibility: visible;\n  transform: rotate(40deg);\n  font-size: 2.5rem;\n  top: -0.75rem;\n  transition: all .9s ease-in-out;\n  animation: rightRun 2s forwards;\n}\n\nbutton:active::before {\n  content: \"🥰\";\n}\n\n@keyframes rightRun {\n  100% {\n    transform: translateX(140px);\n  }\n}"
-  },
-  {
-    "id": "uiverse-misaraadel_dry-cow-55",
-    "title": "Dry Cow",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "misaraadel",
-      "profileUrl": "https://uiverse.io/misaraadel/dry-cow-55"
-    },
-    "license": "MIT",
-    "description": "Dry Cow · button by misaraadel",
-    "tags": [
-      "button",
-      "creative",
-      "3d button",
-      "css animation",
-      "hover idea",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<button class=\"btn-shape\">\n    <span class=\"title\">\n      hover me\n    </span>\n</button>",
-    "css": "/* From Uiverse.io by misaraadel - Tags: button, creative, 3d button, css animation, hover idea */\n.btn-shape {\n  transition: all .3s linear;\n  width: 168px;\n  height: 50px;\n  display: flex;\n  align-items: center;\n  align-content: center;\n  justify-content: center;\n  outline: none;\n  background-color: #020202;\n  border-radius: 50px;\n  border: 0px;\n  position: relative;\n  z-index: 99;\n  cursor: pointer;\n}\n\n.btn-shape::after,\n.btn-shape::before {\n  content: '';\n  position: absolute;\n  background-color: #020202;\n  width: 100%;\n  opacity: 0;\n  height: 100%;\n  left: 0;\n  border-radius: 100px;\n  bottom: 0;\n  z-index: -2;\n  transition: all .3s linear;\n}\n\n.btn-shape span {\n  font-size: 16px;\n  font-weight: 700;\n  transition: all .3s linear;\n  color: #fff;\n  text-transform: capitalize;\n}\n\n.btn-shape:hover {\n  transform: translate(-12px, -12px);\n}\n\n.btn-shape:hover:after {\n  transform: translate(6px, 6px);\n  opacity: .5;\n}\n\n.btn-shape:hover::before {\n  transform: translate(12px, 12px);\n  opacity: .3;\n}\n\n.btn-shape:hover span {\n  animation: storm .4s linear both;\n}\n\n@keyframes storm {\n  0% {\n    transform: translate3d(0, 0, 0) translateZ(0);\n  }\n\n  25% {\n    transform: translate3d(4px, 0, 0) translateZ(0);\n  }\n\n  50% {\n    transform: translate3d(-3px, 0, 0) translateZ(0);\n  }\n\n  75% {\n    transform: translate3d(2px, 0, 0) translateZ(0);\n  }\n\n  100% {\n    transform: translate3d(0, 0, 0) translateZ(0);\n  }\n}"
-  },
-  {
-    "id": "uiverse-muhammadhasann_calm-quail-31",
-    "title": "Calm Quail",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "MuhammadHasann",
-      "profileUrl": "https://uiverse.io/MuhammadHasann/calm-quail-31"
-    },
-    "license": "MIT",
-    "description": "Calm Quail · button by MuhammadHasann",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<button>\n  Button\n</button>",
-    "css": "/* From Uiverse.io by MuhammadHasann - Tags: button */\nbutton {\n  position: relative;\n  padding: 13px 35px;\n  background: #6d7973;\n  font-size: 17px;\n  font-weight: 900;\n  color: #ffffff;\n  border: 2px solid #6d7973;\n  border-radius: 25px;\n  transition: all .3s ease-in-out;\n}\n\nbutton::after {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 124px;\n  height: 45px;\n  border: 3px solid #6d7973;\n  border-radius: 25px;\n  transition: all .3s ease-in-out;\n  z-index: 2;\n}\n\nbutton:hover::after {\n  animation: radar_45011 1s ease infinite .3s;\n}\n\n@keyframes radar_45011 {\n  from {\n    opacity: 1;\n    width: 124px;\n    height: 45px;\n    border-radius: 25px;\n  }\n\n  to {\n    opacity: 0;\n    width: 470px;\n    height: 220px;\n    border-radius: 150px;\n  }\n}\n\nbutton:active {\n  transform: scale(.9);\n}"
-  },
-  {
-    "id": "uiverse-martinval9_nervous-owl-11",
-    "title": "Nervous Owl",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "martinval9",
-      "profileUrl": "https://uiverse.io/martinval9/nervous-owl-11"
-    },
-    "license": "MIT",
-    "description": "Nervous Owl · button by martinval9",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<button class=\"btn\">Button\n</button>",
-    "css": "/* From Uiverse.io by martinval9 - Tags: button */\n.btn {\n color: #B500FF;\n padding: 13px 20px;\n border: 2px solid #B500FF;\n font-size: 17px;\n transition: 0.3s;\n border-radius: 10px;\n font-family: Arial;\n font-weight: 600;\n}\n\n.btn:hover {\n transition: 0.3s;\n background-color: #B500FF;\n margin-top: -20px;\n color: #fff;\n animation-name: button_animation;\n animation-duration: 3s;\n animation-iteration-count: infinite;\n}\n\n.btn:active {\n transform: scale(0.97);\n}\n\n@keyframes button_animation {\n 0% {\n  background-color: #B500FF;\n }\n\n 25% {\n  background-color: #000000;\n }\n\n 50% {\n  background-color: #B500FF;\n }\n\n 75% {\n  background-color: #000000;\n }\n\n 100% {\n  background-color: #B500FF;\n }\n}"
-  },
-  {
-    "id": "uiverse-shoh2008_hungry-treefrog-88",
-    "title": "Hungry Treefrog",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "Shoh2008",
-      "profileUrl": "https://uiverse.io/Shoh2008/hungry-treefrog-88"
-    },
-    "license": "MIT",
-    "description": "Hungry Treefrog · button by Shoh2008",
-    "tags": [
-      "button",
-      "jelly",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 500,
-    "accentColor": null,
-    "html": "<button>\n  Button\n</button>",
-    "css": "/* From Uiverse.io by Shoh2008 - Tags: button, jelly */\nbutton {\n  padding: 15px 30px;\n  font-size: 18px;\n  outline: none;\n  border: none;\n  border-radius: 10px;\n  transition: 0.5s;\n  background: #1e1e1e;\n  color: greenyellow;\n  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;\n}\n\nbutton:hover {\n  animation: a 0.5s 1 linear;\n}\n\n@keyframes a {\n  0% {\n    transform: scale(0.7, 1.3);\n  }\n\n  25% {\n    transform: scale(1.3, 0.7);\n  }\n\n  50% {\n    transform: scale(0.7, 1.3);\n  }\n\n  75% {\n    transform: scale(1.3, 0.7);\n  }\n\n  100% {\n    transform: scale(1, 1);\n  }\n}"
-  },
-  {
-    "id": "uiverse-raspberrybee_warm-mouse-87",
-    "title": "Warm Mouse",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "RaspberryBee",
-      "profileUrl": "https://uiverse.io/RaspberryBee/warm-mouse-87"
-    },
-    "license": "MIT",
-    "description": "Warm Mouse · button by RaspberryBee",
-    "tags": [
-      "button",
-      "send",
-      "rounded",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<button class=\"button\">\n  Send\n</button>",
-    "css": "/* From Uiverse.io by RaspberryBee - Tags: send, button, rounded */\n.button {\n  height: 2em;\n  width: 5em;\n  border-radius: 1em;\n  border: 0.1rem solid transparent;\n  background-color: rgb(64, 146, 239);\n  transition: 0.3s;\n  font-size: 1em;\n}\n\n.button:hover {\n  cursor: pointer;\n  transform: scale(1.05) rotate(3deg);\n}\n\n.button:active {\n  animation: borderMove 0.5s forwards;\n  transform: scale(0.9) rotate(-3deg);\n  background-color: rgb(0, 0, 0);\n  color: rgb(64, 146, 239);\n  border: 0.1rem solid rgb(38, 103, 224);\n}\n\n@keyframes borderMove {\n  0% {\n    border-width: 0.1rem;\n    transform: scale(1) rotate(0deg);\n  }\n\n  50% {\n    border-width: 0.4rem;\n    transform: scale(0.9) rotate(-3deg);\n  }\n\n  100% {\n    border-width: 0.15rem;\n    transform: scale(1) rotate(0deg);\n  }\n}"
-  },
-  {
-    "id": "uiverse-ercnersoy_average-warthog-24",
-    "title": "Average Warthog",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "ercnersoy",
-      "profileUrl": "https://uiverse.io/ercnersoy/average-warthog-24"
-    },
-    "license": "MIT",
-    "description": "Average Warthog · button by ercnersoy",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 500,
-    "accentColor": null,
-    "html": "<button>BUTTON</button>",
-    "css": "/* From Uiverse.io by ercnersoy - Tags: button */\nbutton {\n padding: 20px 30px;\n border-radius: 30px;\n border: 5px solid #ffffff;\n background-color: #5584AC;\n font-size: 15px;\n color: white;\n letter-spacing: 5px;\n font-weight: bolder;\n animation: none;\n transition: all .5s ease-in-out;\n font-family: 'Rajdhani', sans-serif;\n}\n\nbutton:hover {\n border-radius: 30px 30px 0px 30px;\n box-shadow: inset 0px 30px 10px -25px black;\n transition: all .5s ease-in-out;\n animation: bounce42 1.6s infinite;\n}\n\n@keyframes bounce42 {\n 0%, 20%, 50%, 80%, 100% {\n  transform: translateY(0);\n }\n\n 40% {\n  transform: translateY(-5px);\n }\n\n 60% {\n  transform: translateY(-5px);\n }\n}"
-  },
-  {
-    "id": "uiverse-pruthvirajmunde_great-cheetah-48",
-    "title": "Great Cheetah",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "Pruthvirajmunde",
-      "profileUrl": "https://uiverse.io/Pruthvirajmunde/great-cheetah-48"
-    },
-    "license": "MIT",
-    "description": "Great Cheetah · button by Pruthvirajmunde",
-    "tags": [
-      "button",
-      "simple",
-      "smooth",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<button class=\"button\">Hire Me</button>",
-    "css": "/* From Uiverse.io by Pruthvirajmunde  - Tags: simple, button, smooth */\n.button {\n  position: relative;\n  transition: all 0.3s ease-in-out;\n  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);\n  padding-block: 0.5rem;\n  padding-inline: 1.25rem;\n  background-color: rgb(153, 174, 187);\n  border-radius: 9999px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: #ffff;\n  gap: 10px;\n  font-weight: bold;\n  border: 3px solid #ffffff4d;\n  outline: none;\n  overflow: hidden;\n  font-size: 15px;\n}\n\n.icon {\n  width: 24px;\n  height: 24px;\n  transition: all 0.3s ease-in-out;\n}\n\n.button:hover {\n  transform: scale(1.05);\n  border-color: #fff9;\n}\n\n.button:hover .icon {\n  transform: translate(4px);\n}\n\n.button:hover::before {\n  animation: shine 1.5s ease-out infinite;\n}\n\n.button::before {\n  content: \"\";\n  position: absolute;\n  width: 100px;\n  height: 100%;\n  background-image: linear-gradient(\n    120deg,\n    rgba(255, 255, 255, 0) 30%,\n    rgba(255, 255, 255, 0.8),\n    rgba(255, 255, 255, 0) 70%\n  );\n  top: 0;\n  left: -100px;\n  opacity: 0.6;\n}\n\n@keyframes shine {\n  0% {\n    left: -100px;\n  }\n\n  60% {\n    left: 100%;\n  }\n\n  to {\n    left: 100%;\n  }\n}"
-  },
-  {
-    "id": "uiverse-vinodjangid07_fluffy-sheep-17",
-    "title": "Fluffy Sheep",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "vinodjangid07",
-      "profileUrl": "https://uiverse.io/vinodjangid07/fluffy-sheep-17"
-    },
-    "license": "MIT",
-    "description": "Fluffy Sheep · button by vinodjangid07",
-    "tags": [
-      "button",
-      "gradient",
-      "hover effect",
-      "sign up",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 700,
-    "accentColor": null,
-    "html": "<button class=\"signupBtn\">\n  SIGN UP\n  <span class=\"arrow\">\n     <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" viewBox=\"0 0 320 512\" fill=\"rgb(183, 128, 255)\"><path d=\"M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z\"></path></svg>\n  </span>\n</button>",
-    "css": "/* From Uiverse.io by vinodjangid07 - Tags: gradient, button, hover effect, sign up */\n.signupBtn {\n  width: 120px;\n  height: 40px;\n  border-radius: 30px;\n  border: none;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  padding-left: 20px;\n  gap: 9px;\n  color: white;\n  background: linear-gradient(to right,rgb(128, 128, 255),rgb(183, 128, 255));\n  position: relative;\n  cursor: pointer;\n  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);\n}\n\n.arrow {\n  position: absolute;\n  right: 7.5px;\n  background-color: rgb(255, 255, 255);\n  width: 25px;\n  height: 25px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n}\n\n.signupBtn:hover .arrow {\n  animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;\n}\n\n@keyframes slide-in-left {\n  0% {\n    transform: translateX(-10px);\n    opacity: 0;\n  }\n\n  100% {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}"
-  },
-  {
-    "id": "uiverse-akashkobal_blue-octopus-30",
-    "title": "Blue Octopus",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "AkashKobal",
-      "profileUrl": "https://uiverse.io/AkashKobal/blue-octopus-30"
-    },
-    "license": "MIT",
-    "description": "Blue Octopus · button by AkashKobal",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<button class=\"buttonDownload\">Upload</button>",
-    "css": "/* From Uiverse.io by AkashKobal - Tags: button */\n.buttonDownload {\n  display: inline-block;\n  position: relative;\n  padding: 10px 25px;\n  background-color: #4CC713;\n  color: white;\n  font-family: sans-serif;\n  text-decoration: none;\n  font-size: 0.9em;\n  text-align: center;\n  text-indent: 15px;\n  border: none;\n  border-radius: 2em;\n  font-weight: bold;\n}\n\n.buttonDownload:hover {\n  background-color: #1a60a2;\n  color: white;\n}\n\n.buttonDownload:before, .buttonDownload:after {\n  content: ' ';\n  display: block;\n  position: absolute;\n  left: 15px;\n  top: 52%;\n}\n\n.buttonDownload:before {\n  width: 10px;\n  height: 2px;\n  border-style: solid;\n  border-width: 0 2px 2px;\n}\n\n.buttonDownload:after {\n  width: 0;\n  height: 0;\n  margin-left: 3px;\n  margin-top: -7px;\n  border-style: solid;\n  border-width: 4px 4px 0 4px;\n  border-color: transparent;\n  border-top-color: inherit;\n  animation: downloadArrow 1s linear infinite;\n  animation-play-state: paused;\n}\n\n.buttonDownload:hover:before {\n  border-color: #bdd3ef;\n}\n\n.buttonDownload:hover:after {\n  border-top-color: #eff1f7;\n  animation-play-state: running;\n}\n\n@keyframes downloadArrow {\n  0% {\n    margin-top: -7px;\n    opacity: 1;\n  }\n\n  0.001% {\n    margin-top: -15px;\n    opacity: 0.4;\n  }\n\n  50% {\n    opacity: 1;\n  }\n\n  100% {\n    margin-top: 0;\n    opacity: 0.4;\n  }\n}"
-  },
-  {
-    "id": "uiverse-mi-series_little-frog-95",
-    "title": "Little Frog",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "mi-series",
-      "profileUrl": "https://uiverse.io/mi-series/little-frog-95"
-    },
-    "license": "MIT",
-    "description": "Little Frog · button by mi-series",
-    "tags": [
-      "button",
-      "simple",
-      "material design",
-      "flashy",
-      "animation",
-      "purple",
-      "minimalist",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 600,
-    "accentColor": null,
-    "html": "<div>\n    <button class=\"btn\"><i class=\"animation\"></i>BUTTON<i class=\"animation\"></i>\n    </button>\n</div>",
-    "css": "/* From Uiverse.io by mi-series - Tags: simple, material design, flashy, animation, purple, minimalist, button, animated */\n.btn {\n  outline: 0;\n  display: inline-flex;\n  align-items: center;\n  justify-content: space-between;\n  background: #40B3A2;\n  min-width: 200px;\n  border: 0;\n  border-radius: 4px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);\n  box-sizing: border-box;\n  padding: 16px 20px;\n  color: #fff;\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 1.2px;\n  text-transform: uppercase;\n  overflow: hidden;\n  cursor: pointer;\n}\n\n.btn:hover {\n  opacity: .95;\n}\n\n.btn .animation {\n  border-radius: 100%;\n  animation: ripple 0.6s linear infinite;\n}\n\n@keyframes ripple {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);\n  }\n\n  100% {\n    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);\n  }\n}"
-  },
-  {
-    "id": "uiverse-satyamchaudharydev_curvy-rat-14",
-    "title": "Curvy Rat",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "satyamchaudharydev",
-      "profileUrl": "https://uiverse.io/satyamchaudharydev/curvy-rat-14"
-    },
-    "license": "MIT",
-    "description": "Curvy Rat · button by satyamchaudharydev",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<button>\n    Join now\n</button>",
-    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: button */\n/* this button is inspired from this -- https://www.newline.co/pricing */\nbutton {\n  --width: 150px;\n  --timing: 2s;\n  border: 0;\n  width: var(--width);\n  padding-block: 1em;\n  color: #fff;\n  font-weight: bold;\n  font-size: 1em;\n  background: rgb(64, 192, 87);\n  transition: all 0.2s;\n  border-radius: 3px;\n}\n\nbutton:hover {\n  background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);\n  animation: var(--timing) linear dance6123 infinite;\n  transform: scale(1.1) translateY(-1px);\n}\n\n@keyframes dance6123 {\n  to {\n    background-position: var(--width);\n  }\n}"
-  },
-  {
-    "id": "uiverse-praveen-prasad2_jolly-moose-71",
-    "title": "Jolly Moose",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "praveen-prasad2",
-      "profileUrl": "https://uiverse.io/praveen-prasad2/jolly-moose-71"
-    },
-    "license": "MIT",
-    "description": "Jolly Moose · button by praveen-prasad2",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 750,
-    "accentColor": null,
-    "html": "<button class=\"button\">\n  <span>Explore </span>\n</button>",
-    "css": "/* From Uiverse.io by praveen-prasad2 - Tags: button */\n.button {\n  position: relative;\n  display: inline-block;\n  text-decoration: none;\n  color: #fff;\n  padding: 3px;\n  border-radius: 6px;\n  overflow: hidden;\n}\n\n.button::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 200%;\n  height: 100%;\n  background: linear-gradient(115deg,\n        #4fcf70, #fad648, \n        #a767e5,#12bcfe, \n        #44ce7b);\n  background-size: 50% 100%;\n  border-radius: inherit;\n}\n\n.button:hover::before {\n  animation: animate_border .75s\n        linear infinite;\n}\n\n.button span {\n  position: relative;\n  z-index: 2;\n  display: block;\n  background-color: #000;\n  padding: 13px 20px;\n  border-radius: 3px;\n}\n\n@keyframes animate_border {\n  to {\n    transform: translateX(-50%)\n  }\n}"
-  },
-  {
-    "id": "uiverse-jaydipprajapati1910_giant-mouse-100",
-    "title": "Giant Mouse",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "JaydipPrajapati1910",
-      "profileUrl": "https://uiverse.io/JaydipPrajapati1910/giant-mouse-100"
-    },
-    "license": "MIT",
-    "description": "Giant Mouse · button by JaydipPrajapati1910",
-    "tags": [
-      "button",
-      "red",
-      "hover",
-      "play",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<button class=\"button\">\n<svg viewBox=\"0 0 16 16\" fill=\"currentColor\" height=\"18\" width=\"18\" xmlns=\"http://www.w3.org/2000/svg\" class=\"game\"> <path d=\"M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z\"></path> <path d=\"M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z\"></path> </svg>\n  Play Now\n  <div class=\"arrow\">››</div>\n</button>",
-    "css": "/* From Uiverse.io by JaydipPrajapati1910 - Tags: red, button, hover, play */\n.button {\n  width: 140px;\n  height: 40px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  gap: 10px;\n  padding: 0px 15px;\n  background-color: red;\n  border-radius: 10px;\n  border: none;\n  color: white;\n  position: relative;\n  cursor: pointer;\n  font-weight: 900;\n  transition-duration: .2s;\n}\n\n.game path {\n  color: white;\n}\n\n.button .arrow {\n  position: absolute;\n  right: 0;\n  padding: 0px 5px;\n  width: 30px;\n  height: 100%;\n  font-size: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.button:hover,\n.button:focus {\n  background-color: black;\n  transition-duration: .2s;\n}\n\n.button:hover .arrow {\n  animation: slide-right .6s ease-out both;\n}\n/* arrow animation */\n@keyframes slide-right {\n  0% {\n    transform: translateX(-10px);\n    opacity: 0;\n  }\n\n  100% {\n    transform: translateX(0);\n    opacity: 1;\n  }\n}\n\n.button:active {\n  transform: translate(1px , 1px);\n  transition-duration: .2s;\n}"
-  },
-  {
-    "id": "uiverse-na3ar-17_sweet-horse-64",
-    "title": "Sweet Horse",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "Na3ar-17",
-      "profileUrl": "https://uiverse.io/Na3ar-17/sweet-horse-64"
-    },
-    "license": "MIT",
-    "description": "Sweet Horse · button by Na3ar-17",
-    "tags": [
-      "button",
-      "simple",
-      "action",
-      "hover button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<div class=\"container\"><button class=\"button\">Hover me</button></div>",
-    "css": "/* From Uiverse.io by Na3ar-17  - Tags: simple, action, button, hover button */\n.container {\n  * {\n    outline: none;\n    border: none;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    font-family: Arial, Helvetica, sans-serif;\n  }\n}\n\n.button {\n  width: 140px;\n  height: 32px;\n  border-radius: 0.375rem;\n  cursor: pointer;\n  margin-top: 1rem;\n  background-image: linear-gradient(#268bff, hsl(252, 82%, 57%));\n  transition: all 0.3s ease;\n  color: #fff;\n  font-weight: 600;\n}\n\n.button:hover {\n  -webkit-animation: pulse 2s infinite;\n  animation: pulse512 1.5s infinite;\n  letter-spacing: 2px;\n}\n\n.button:active {\n  transform: translateY(4px);\n}\n\n@keyframes pulse512 {\n  0% {\n    box-shadow: 0 0 0 0 rgba(5, 186, 218, 0.4);\n  }\n  70% {\n    box-shadow: 0 0 0 10px rgba(218, 103, 68, 0%);\n  }\n  100% {\n    box-shadow: 0 0 0 0 rgba(218, 103, 68, 0%);\n  }\n}"
-  },
-  {
-    "id": "uiverse-mohsinech_tidy-yak-66",
-    "title": "Tidy Yak",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "Mohsinech",
-      "profileUrl": "https://uiverse.io/Mohsinech/tidy-yak-66"
-    },
-    "license": "MIT",
-    "description": "Tidy Yak · button by Mohsinech",
-    "tags": [
-      "button",
-      "black",
-      "click",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 500,
-    "accentColor": null,
-    "html": "<div class=\"btn\"><span data-text=\"Click me\">Click me</span></div>",
-    "css": "/* From Uiverse.io by Mohsinech  - Tags: black, button, click */\n.btn {\n  background: transparent;\n  border: 1px solid #141414;\n  outline: none;\n  padding: 12px 40px;\n  height: 60px;\n  border-radius: 100px;\n  overflow: hidden;\n  transform: scaleX(1);\n  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n}\n\n.btn:hover {\n  animation: animate-scaleX 0.6s cubic-bezier(0.4, 0, 0, 1);\n  background: transparent;\n}\n\n.btn::after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  background: black;\n  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),\n    border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);\n  width: 100%;\n  height: 100%;\n  border-radius: 50% 50% 0 0;\n  transform: translateY(100%);\n}\n\n.btn:hover::after {\n  transform: translateY(0%);\n  border-radius: 0;\n}\n\n.btn span {\n  font-size: 20px;\n  font-weight: 500;\n  overflow: hidden;\n  position: relative;\n  color: black;\n}\n\n.btn span:after {\n  width: 100%;\n  height: 100%;\n  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);\n  content: attr(data-text);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  z-index: 1;\n  transform: translate(-50%, 100%);\n  color: white;\n}\n.btn:hover span:after {\n  transform: translate(-50%, 0);\n}\n\n.btn:focus {\n  outline: none;\n}\n\n@keyframes animate-scaleX {\n  0% {\n    transform: scaleX(1);\n  }\n  50% {\n    transform: scaleX(1.05);\n  }\n  100% {\n    transform: scaleX(1);\n  }\n}"
-  },
-  {
-    "id": "uiverse-wang3616359git_bright-turkey-74",
-    "title": "Bright Turkey",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "wang3616359git",
-      "profileUrl": "https://uiverse.io/wang3616359git/bright-turkey-74"
-    },
-    "license": "MIT",
-    "description": "Bright Turkey · button by wang3616359git",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<button class=\"bt\" id=\"bt\">\n    <span class=\"msg\" id=\"msg\"></span>\n    SEND\n</button>",
-    "css": "/* From Uiverse.io by wang3616359git - Tags: button */\n.bt {\n  border: none;\n  user-select: none;\n  font-size: 18px;\n  color: white;\n  text-align: center;\n  background-color: #0873bd;\n  box-shadow: #cacaca 2px 2px 10px 1px;\n  border-radius: 12px;\n  height: 60px;\n  line-height: 60px;\n  width: 155px;\n  transition: all 0.2s ease;\n  position: relative;\n}\n\n.msg {\n  height: 0;\n  width: 0;\n  border-radius: 2px;\n  position: absolute;\n  left: 15%;\n  top: 25%;\n}\n\n.bt:active {\n  transition: all 0.001s ease;\n  background-color: #5d9fcd;\n  box-shadow: #97989a 0 0 0 0;\n  transform: translateX(1px) translateY(1px);\n}\n\n.bt:hover .msg {\n  animation: msgRun 2s forwards;\n}\n\n@keyframes msgRun {\n  0% {\n    border-top: #d6d6d9 0 solid;\n    border-bottom: #f2f2f5 0 solid;\n    border-left: #f2f2f5 0 solid;\n    border-right: #f2f2f5 0 solid;\n  }\n\n  20% {\n    border-top: #d6d6d9 14px solid;\n    border-bottom: #f2f2f5 14px solid;\n    border-left: #f2f2f5 20px solid;\n    border-right: #f2f2f5 20px solid;\n  }\n\n  25% {\n    border-top: #d6d6d9 12px solid;\n    border-bottom: #f2f2f5 12px solid;\n    border-left: #f2f2f5 18px solid;\n    border-right: #f2f2f5 18px solid;\n  }\n\n  80% {\n    border-top: transparent 12px solid;\n    border-bottom: transparent 12px solid;\n    border-left: transparent 18px solid;\n    border-right: transparent 18px solid;\n  }\n\n  100% {\n    transform: translateX(150px);\n    border-top: transparent 12px solid;\n    border-bottom: transparent 12px solid;\n    border-left: transparent 18px solid;\n    border-right: transparent 18px solid;\n  }\n}"
-  },
-  {
-    "id": "uiverse-peary74_ugly-ape-46",
-    "title": "Ugly Ape",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "Peary74",
-      "profileUrl": "https://uiverse.io/Peary74/ugly-ape-46"
-    },
-    "license": "MIT",
-    "description": "Ugly Ape · button by Peary74",
-    "tags": [
-      "button",
-      "hover",
-      "active",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<button class=\"btn\">\n <svg class=\"icon\" width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z\"></path></svg>\n</button>",
-    "css": "/* From Uiverse.io by Peary74 - Tags: button, hover, active */\n.btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 10px;\n  border: none;\n  background-color: transparent;\n  position: relative;\n}\n\n.btn:hover > .icon {\n  transform: scale(1.2);\n  cursor: pointer;\n  transition: .2s linear;\n}\n\n.btn:focus > .icon {\n  fill: #fd1853;\n  animation: grosseur .2s linear;\n}\n\n@keyframes grosseur {\n  0% {\n    width: 50px;\n    height: 50px;\n    fill: #fd1853;\n  }\n\n  100% {\n    width: 30px;\n    height: 30px;\n    fill: #fd1853;\n  }\n}"
-  },
-  {
-    "id": "uiverse-boryanakrasteva_massive-jellyfish-28",
-    "title": "Massive Jellyfish",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "boryanakrasteva",
-      "profileUrl": "https://uiverse.io/boryanakrasteva/massive-jellyfish-28"
-    },
-    "license": "MIT",
-    "description": "Massive Jellyfish · button by boryanakrasteva",
-    "tags": [
-      "button",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 6000,
-    "accentColor": null,
-    "html": "<div class=\"btn-wrapper\">\n  <button class=\"btn\"> button </button>\n</div>",
-    "css": "/* From Uiverse.io by boryanakrasteva - Tags: button */\n.btn-wrapper {\n  width: 120px;\n  height: 50px;\n  position: relative;\n  z-index: 1;\n  background: linear-gradient(270deg, #96f061, #a259d3, #1d9de0, #e790b0);\n  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.363);\n  background-size: 800% 800%;\n  animation: animateBorder 9s ease infinite;\n}\n\n.btn {\n  width: 95%;\n  height: 90%;\n  position: absolute;\n  padding: 5px;\n  border: none;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background-color: #212121;\n  z-index: 2;\n  text-transform: uppercase;\n  letter-spacing: 4.5px;\n  color: white;\n  font-weight: bold;\n}\n\n@keyframes animateBorder {\n  0% {\n    background-position: 0% 50%\n  }\n\n  50% {\n    background-position: 100% 50%\n  }\n\n  100% {\n    background-position: 0% 50%\n  }\n}"
-  },
-  {
-    "id": "uiverse-satyamchaudharydev_rude-wolverine-24",
-    "title": "Rude Wolverine",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "satyamchaudharydev",
-      "profileUrl": "https://uiverse.io/satyamchaudharydev/rude-wolverine-24"
-    },
-    "license": "MIT",
-    "description": "Rude Wolverine · button by satyamchaudharydev",
-    "tags": [
-      "button",
-      "simple",
-      "animation",
-      "text animation",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<button class=\"button\">\n  Apply Now\n  <svg fill=\"currentColor\" viewBox=\"0 0 24 24\" class=\"icon\">\n    <path clip-rule=\"evenodd\" d=\"M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z\" fill-rule=\"evenodd\"></path>\n  </svg>\n</button>",
-    "css": "/* From Uiverse.io by satyamchaudharydev - Tags: simple, animation, button, text animation */\n.button {\n  position: relative;\n  transition: all 0.3s ease-in-out;\n  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);\n  padding-block: 0.5rem;\n  padding-inline: 1.25rem;\n  background-color: rgb(0 107 179);\n  border-radius: 9999px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: #ffff;\n  gap: 10px;\n  font-weight: bold;\n  border: 3px solid #ffffff4d;\n  outline: none;\n  overflow: hidden;\n  font-size: 15px;\n}\n\n.icon {\n  width: 24px;\n  height: 24px;\n  transition: all 0.3s ease-in-out;\n}\n\n.button:hover {\n  transform: scale(1.05);\n  border-color: #fff9;\n}\n\n.button:hover .icon {\n  transform: translate(4px);\n}\n\n.button:hover::before {\n  animation: shine 1.5s ease-out infinite;\n}\n\n.button::before {\n  content: \"\";\n  position: absolute;\n  width: 100px;\n  height: 100%;\n  background-image: linear-gradient(\n    120deg,\n    rgba(255, 255, 255, 0) 30%,\n    rgba(255, 255, 255, 0.8),\n    rgba(255, 255, 255, 0) 70%\n  );\n  top: 0;\n  left: -100px;\n  opacity: 0.6;\n}\n\n@keyframes shine {\n  0% {\n    left: -100px;\n  }\n\n  60% {\n    left: 100%;\n  }\n\n  to {\n    left: 100%;\n  }\n}"
-  },
-  {
-    "id": "uiverse-arturcodecraft_afraid-fish-22",
-    "title": "Afraid Fish",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "ArturCodeCraft",
-      "profileUrl": "https://uiverse.io/ArturCodeCraft/afraid-fish-22"
-    },
-    "license": "MIT",
-    "description": "Afraid Fish · button by ArturCodeCraft",
-    "tags": [
-      "button",
-      "scroll",
-      "scroll to bottom",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 3000,
-    "accentColor": null,
-    "html": "<div class=\"main__action\">\n  <a class=\"main__scroll\" href=\"#\">\n    <div class=\"main__scroll-box\">\n      <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  \t    <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n  \t    <path d=\"M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z\" fill=\"rgba(28,28,30,1)\">\n  \t    </path>\n\t  </svg>\n    </div>\n\n    <span class=\"main__scroll-text\">Scroll</span>\n  </a>\n</div>",
-    "css": "/* From Uiverse.io by ArturCodeCraft - Tags: button, scroll, scroll to bottom */\n/* <reset-style> ============================ */\na {\n  text-decoration: none;\n}\n/* <main-style> ============================ */\n.main__scroll-text {\n  color: rgba(28,28,30,1);\n}\n\n.main__action:hover .main__scroll-box {\n  animation: scroll-down 3s infinite;\n}\n\n/* Animate scroll icon */\n@keyframes scroll-down {\n  0%, 100% {\n    transform: translateY(0rem);\n    opacity: 1;\n  }\n\n  35% {\n    transform: translateY(1rem);\n    opacity: 0;\n  }\n\n  70% {\n    transform: translateY(-1rem);\n    opacity: 0;\n  }\n}"
-  },
-  {
-    "id": "uiverse-john-cfo_calm-kangaroo-15",
-    "title": "Calm Kangaroo",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "John-CFO",
-      "profileUrl": "https://uiverse.io/John-CFO/calm-kangaroo-15"
-    },
-    "license": "MIT",
-    "description": "Calm Kangaroo · button by John-CFO",
-    "tags": [
-      "button",
-      "simple",
-      "hover",
-      "hover effect",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<button class=\"BTN-style\">\n  <span class=\"BTN-text\">Hover me</span>\n</button>",
-    "css": "/* From Uiverse.io by John-CFO  - Tags: simple, button, hover, hover effect */\n.BTN-style {\n  position: relative;\n  width: 12em;\n  height: 3.8em;\n  border-width: 2px;\n  border-radius: 6px;\n  border-color: #ffff;\n  display: block;\n  padding: 8px;\n  background: linear-gradient(to left, #c0c0c0, #dcdcdc);\n  color: #ffffff;\n  line-height: 1.25rem;\n  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);\n  overflow: hidden;\n}\n\n.BTN-text {\n  font-weight: 500;\n  font-size: 0.975rem;\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);\n  text-transform: uppercase;\n}\n\n.BTN-style:hover {\n  -webkit-transition: all 0.2s ease-out;\n  -moz-transition: all 0.2s ease-out;\n  transition: all 0.2s ease-out;\n\n  cursor: pointer;\n}\n\n.BTN-style:hover::before {\n  -webkit-animation: sh02 0.5s 0s linear;\n  -moz-animation: sh02 0.5s 0s linear;\n  animation: sh02 0.5s 0s linear;\n}\n\n.BTN-style::before {\n  content: \"\";\n  display: block;\n  width: 0px;\n  height: 85%;\n  position: absolute;\n  top: 50%;\n  left: 0%;\n  opacity: 0;\n  background: #fff;\n  box-shadow: 0 0 50px 30px #fff;\n  -webkit-transform: skewX(-20deg);\n  -moz-transform: skewX(-20deg);\n  -ms-transform: skewX(-20deg);\n  -o-transform: skewX(-20deg);\n  transform: skewX(-20deg);\n}\n\n@keyframes sh02 {\n  from {\n    opacity: 0;\n    left: 0%;\n  }\n\n  50% {\n    opacity: 1;\n  }\n\n  to {\n    opacity: 0;\n    left: 100%;\n  }\n}"
-  },
-  {
-    "id": "uiverse-niat786_perfect-warthog-57",
-    "title": "Perfect Warthog",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "niat786",
-      "profileUrl": "https://uiverse.io/niat786/perfect-warthog-57"
-    },
-    "license": "MIT",
-    "description": "Perfect Warthog · button by niat786",
-    "tags": [
-      "button",
+      "loader",
+      "google",
+      "color",
       "animated"
     ],
     "previewType": "css",
     "durationMs": 2000,
     "accentColor": null,
-    "html": "<button> Button\n</button>",
-    "css": "/* From Uiverse.io by niat786 - Tags: button */\nbutton {\n border: none;\n color: #fff;\n background-image: linear-gradient(30deg, #0400ff, #4ce3f7);\n border-radius: 20px;\n background-size: 100% auto;\n font-family: inherit;\n font-size: 17px;\n padding: 0.6em 1.5em;\n}\n\nbutton:hover {\n background-position: right center;\n background-size: 200% auto;\n -webkit-animation: pulse 2s infinite;\n animation: pulse512 1.5s infinite;\n}\n\n@keyframes pulse512 {\n 0% {\n  box-shadow: 0 0 0 0 #05bada66;\n }\n\n 70% {\n  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);\n }\n\n 100% {\n  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);\n }\n}"
+    "html": "<div class=\"wrapper\">\n  <div class=\"blue ball\"></div>\n  <div class=\"red ball\"></div>\n  <div class=\"yellow ball\"></div>\n  <div class=\"green ball\"></div>\n</div>",
+    "css": "/* From Uiverse.io by SteveBloX  - Website: https://codepen.io/travishorn/pen/YyGVRG - Name: Google / Travis Horn - Tags: loader, google, color */\n.wrapper {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 200px;\n}\n\n.ball {\n  --size: 16px;\n  width: var(--size);\n  height: var(--size);\n  border-radius: 11px;\n  margin: 0 10px;\n\n  animation: 2s bounce ease infinite;\n}\n\n.blue {\n  background-color: #4285f5;\n}\n\n.red {\n  background-color: #ea4436;\n  animation-delay: 0.25s;\n}\n\n.yellow {\n  background-color: #fbbd06;\n  animation-delay: 0.5s;\n}\n\n.green {\n  background-color: #34a952;\n  animation-delay: 0.75s;\n}\n\n@keyframes bounce {\n  50% {\n    transform: translateY(25px);\n  }\n}"
   },
   {
-    "id": "uiverse-jhavelang_hard-penguin-52",
-    "title": "Hard Penguin",
-    "category": "button",
+    "id": "uiverse-ahmed150up_old-moose-46",
+    "title": "Old Moose",
+    "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "JhaveLang",
-      "profileUrl": "https://uiverse.io/JhaveLang/hard-penguin-52"
+      "name": "ahmed150up",
+      "profileUrl": "https://uiverse.io/ahmed150up/old-moose-46"
     },
     "license": "MIT",
-    "description": "Hard Penguin · button by JhaveLang",
+    "description": "Old Moose · loader by ahmed150up",
     "tags": [
-      "button",
-      "simple",
-      "animation",
-      "simple button",
+      "loader",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 300,
+    "durationMs": 1000,
     "accentColor": null,
-    "html": "<button class=\"button\">Enter</button>",
-    "css": "/* From Uiverse.io by JhaveLang  - Tags: simple, animation, simple button */\n.button {\n  font-weight: 600;\n  padding: 1em 4em 1em 4em;\n  border-radius: 4em;\n  border: 0;\n  background: rgb(251, 213, 213);\n  background: linear-gradient(\n    115deg,\n    rgba(251, 213, 213, 1) 20%,\n    rgba(248, 180, 180, 1) 41%,\n    rgba(252, 233, 106, 1) 100%\n  );\n  cursor: pointer;\n  box-shadow: 0em 0em 0em 0.3em rgb(251, 213, 213);\n  transition: background 0.3s ease;\n}\n.button:hover {\n  background: rgb(252, 233, 106);\n  background: linear-gradient(\n    115deg,\n    rgba(252, 233, 106, 1) 0%,\n    rgba(251, 213, 213, 1) 37%,\n    rgba(248, 180, 180, 1) 100%\n  );\n}\n.button:hover {\n  background: rgb(252, 233, 106);\n  background: linear-gradient(\n    115deg,\n    rgba(252, 233, 106, 1) 0%,\n    rgba(251, 213, 213, 1) 37%,\n    rgba(248, 180, 180, 1) 100%\n  );\n}\n\n@keyframes bounce {\n  0%,\n  20%,\n  50%,\n  80%,\n  100% {\n    transform: translateY(0);\n  }\n  40% {\n    transform: translateY(-10px);\n  }\n  60% {\n    transform: translateY(-5px);\n  }\n}"
+    "html": "<div class=\"loader\">\n  <div class=\"bar\"></div>\n  <div class=\"bar\"></div>\n  <div class=\"bar\"></div>\n  <div class=\"bar\"></div>\n</div>",
+    "css": "/* From Uiverse.io by ahmed150up - Tags: loader */\n.loader {\n  display: flex;\n  justify-content: center;\n}\n\n.bar {\n  width: 7px;\n  height: 18px;\n  margin: 0 9px;\n  border-radius: 10px;\n  animation: loading_5192 1s ease-in-out infinite;\n  background-color: aqua;\n}\n\n.bar:nth-child(1) {\n  animation-delay: 0.01s;\n}\n\n.bar:nth-child(2) {\n  animation-delay: 0.09s;\n}\n\n.bar:nth-child(3) {\n  animation-delay: 0.19s;\n}\n\n.bar:nth-child(4) {\n  animation-delay: 0.29s;\n}\n\n@keyframes loading_5192 {\n  0% {\n    transform: scale(1);\n  }\n\n  20% {\n    transform: scale(1, 2.5);\n  }\n\n  40% {\n    transform: scale(1);\n  }\n}"
   },
   {
-    "id": "uiverse-selfmadesystem_strange-cobra-12",
-    "title": "Strange Cobra",
-    "category": "button",
+    "id": "uiverse-cheneylin_lazy-goat-96",
+    "title": "Lazy Goat",
+    "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "SelfMadeSystem",
-      "profileUrl": "https://uiverse.io/SelfMadeSystem/strange-cobra-12"
+      "name": "CheneyLin",
+      "profileUrl": "https://uiverse.io/CheneyLin/lazy-goat-96"
     },
     "license": "MIT",
-    "description": "Strange Cobra · button by SelfMadeSystem",
+    "description": "Lazy Goat · loader by CheneyLin",
     "tags": [
-      "button",
+      "loader",
       "animation",
-      "animated",
-      "rainbow",
-      "codepen"
-    ],
-    "previewType": "css",
-    "durationMs": 750,
-    "accentColor": null,
-    "html": "<a class=\"codepen-button\"><span>Start Coding</span></a>",
-    "css": "/* From Uiverse.io by SelfMadeSystem - Tags: animation, button, animated, rainbow, codepen */\n/* Yoinked from CodePen, but improved the animation\nso that it is smooth among other more minor things */\n\n.codepen-button {\n  display: block;\n  cursor: pointer;\n  color: white;\n  margin: 0 auto;\n  position: relative;\n  text-decoration: none;\n  font-weight: 600;\n  border-radius: 6px;\n  overflow: hidden;\n  padding: 3px;\n  isolation: isolate;\n}\n\n.codepen-button::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 400%;\n  height: 100%;\n  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);\n  background-size: 25% 100%;\n  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;\n  animation-play-state: paused;\n  translate: -5% 0%;\n  transition: translate 0.25s ease-out;\n}\n\n.codepen-button:hover::before {\n  animation-play-state: running;\n  transition-duration: 0.75s;\n  translate: 0% 0%;\n}\n\n@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {\n  to {\n    transform: translateX(-25%);\n  }\n}\n\n.codepen-button span {\n  position: relative;\n  display: block;\n  padding: 1rem 1.5rem;\n  font-size: 1.1rem;\n  background: #000;\n  border-radius: 3px;\n  height: 100%;\n}"
-  },
-  {
-    "id": "uiverse-nguyenhainam24082000_nervous-insect-23",
-    "title": "Nervous Insect",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "NguyenHaiNam24082000",
-      "profileUrl": "https://uiverse.io/NguyenHaiNam24082000/nervous-insect-23"
-    },
-    "license": "MIT",
-    "description": "Nervous Insect · button by NguyenHaiNam24082000",
-    "tags": [
-      "button",
-      "skeuomorphism",
-      "emergency",
+      "progress bar",
       "animated"
     ],
     "previewType": "css",
     "durationMs": 500,
     "accentColor": null,
-    "html": "<div class=\"background-button\">\n  <button class=\"button\">\n    EMERGENCY\n  </button>\n</div>",
-    "css": "/* From Uiverse.io by NguyenHaiNam24082000 - Tags: skeuomorphism, button, emergency */\n.background-button {\n  background: repeating-linear-gradient(\n    45deg,\n    #3c2209 0 20px,\n    #ff9c00 20px 40px\n  );\n  width: 10em;\n  height: 10em;\n  -webkit-box-shadow: 15px 15px 50px 5px #5f5f5f;\n  box-shadow: 15px 15px 50px 5px #5f5f5f;\n  position: relative;\n  display: inline-block;\n  outline: 2px solid black;\n}\n\n.background-button::before {\n  content: \"\";\n  display: inline-block;\n  position: absolute;\n  top: 15%;\n  left: 15%;\n  width: 70%;\n  height: 70%;\n  background: #a0b8c4;\n  border: 2px solid #3c2209;\n}\n\n.button {\n  background: #cc2a1f;\n  width: 65%;\n  height: 65%;\n  border-radius: 50%;\n  position: absolute;\n  top: 7.5%;\n  left: 18.25%;\n  color: white;\n  font-size: 1em;\n  font-weight: 900;\n  font-family: 'Courier New', Courier, monospace;\n  -webkit-box-shadow: 0 15px 0 0 #842a2a;\n  box-shadow: 0 15px 0 0 #842a2a;\n  -webkit-transition: all .5s ease;\n  transition: all .5s ease;\n  border: 2px solid black;\n}\n\n.button:active {\n  -webkit-box-shadow: 0 1px 1px 1px #8C0606;\n  box-shadow: 0 1px 1px 1px #8C0606;\n  top: 15%;\n}\n\n.background-button:has(.button:active) + .emergency {\n  display: block;\n  -webkit-transform: rotate(0deg) scaleY(1);\n  -ms-transform: rotate(0deg) scaleY(1);\n  transform: rotate(0deg) scaleY(1);\n  -webkit-animation: anims 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);\n  animation: anims 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);\n}\n\n@keyframes anims {\n  0% {\n    -webkit-transform: rotate(-30deg) scaleY(0.25);\n    transform: rotate(-30deg) scaleY(0.25);\n  }\n\n  100% {\n    -webkit-transform: rotate(0deg) scaleY(1);\n    transform: rotate(0deg) scaleY(1);\n  }\n}\n\n.emergency {\n  position: absolute;\n  display: none;\n}"
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by CheneyLin  - Tags: animation, progress bar, loader */\n.loader {\n  position: absolute;\n  border-radius: 10px;\n  height: 20px;\n  width: 320px;\n  background-color: #aaa;\n  animation: move-arrows 0.5s linear infinite;\n  -webkit-animation: move-arrows 0.5s linear infinite;\n  transform-origin: left;\n  background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABDZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3Y2M3MzIzZC0xZjc3LTQ1MmYtOGFjZS1jY2JkZWIwNTMyZWIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTUzNjQwRkU3RDNBMTFFRTk5QTg4MkQ5REZCNTY1NzAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTUzNjQwRkQ3RDNBMTFFRTk5QTg4MkQ5REZCNTY1NzAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI1LjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTExLTE3VDE2OjU0OjA4KzA4OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0xMS0yMFQwNTozNDoxNyswODowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0xMS0yMFQwNTozNDoxNyswODowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowRDBDQjlDMjdENEIxMUVFOTU2MkVDNUVBMTUxNTUyMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowRDBDQjlDMzdENEIxMUVFOTU2MkVDNUVBMTUxNTUyMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj38waoAAAFKSURBVHjanJbbSwJhEMV3pYTQIOgCPogEPQQZRBf6/18zbyiGRD0YRNEFMuwmuZ2BIwTZfuebAz92H2Y8rDtzvk2zLEuoA1BNwuqCURKhwq/7HhgLPftgzWvyDc7BVOg5BkWPiWkCOkLfCjgCqcfEdAeuhN4NsOs1MV2AZ6F/B1S8JjZyTfApGNlUlj0mpg/QomGelsAJr9EmpkcwFJ6mzCdymZguwb1QV+E7cpmY2uBNqLNp2/SaTLmos0Cd7c0h9yjaxPQC+kJdkUYuk0SYtLlGXpN1hmNI1+DGY1JiKIbqH8DA8+KXuWyh1J0wJbJYk/m0rArT1/jvmAiZ7IEtYRhsj149G18D28LfOQwlQiHnrKgLBreMneioVydpLJ6if37IJumU1zx9gTN+F0SZpDy3S4GeGXPs3fMhUV+UoAtk+fUUk0U/AgwAELo+LcAxjVoAAAAASUVORK5CYII=\");\n  background-size: auto 100%;\n}\n\n@keyframes move-arrows {\n  100% {\n    background-position: 20px 0;\n  }\n}\n@-webkit-keyframes move-arrows {\n  100% {\n    background-position: 20px 0;\n  }\n}"
   },
   {
-    "id": "uiverse-3bdel3ziz-t_dangerous-newt-76",
-    "title": "Dangerous Newt",
-    "category": "button",
+    "id": "uiverse-satwinder04_afraid-treefrog-79",
+    "title": "Afraid Treefrog",
+    "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "3bdel3ziz-T",
-      "profileUrl": "https://uiverse.io/3bdel3ziz-T/dangerous-newt-76"
+      "name": "Satwinder04",
+      "profileUrl": "https://uiverse.io/Satwinder04/afraid-treefrog-79"
     },
     "license": "MIT",
-    "description": "Dangerous Newt · button by 3bdel3ziz-T",
+    "description": "Afraid Treefrog · loader by Satwinder04",
     "tags": [
-      "button",
-      "icon",
-      "animation",
-      "notification",
-      "rotate",
-      "light&dark",
-      "hover effect",
-      "hover button"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<div class=\"notification\">\n  <div class=\"bell-container\">\n    <div class=\"bell\"></div>\n  </div>\n</div>",
-    "css": "/* From Uiverse.io by 3bdel3ziz-T  - Tags: icon, animation, notification, button, rotate, light&dark, hover effect, hover button */\n/*making bell shape with one div */\n.bell {\n  border: 2.17px solid white;\n  border-radius: 10px 10px 0 0;\n  width: 15px;\n  height: 17px;\n  background: transparent;\n  display: block;\n  position: relative;\n  top: -3px;\n}\n.bell::before,\n.bell::after {\n  content: \"\";\n  background: white;\n  display: block;\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  height: 2.17px;\n}\n.bell::before {\n  top: 100%;\n  width: 20px;\n}\n.bell::after {\n  top: calc(100% + 4px);\n  width: 7px;\n}\n/*container main styling*/\n.notification {\n  background: transparent;\n  border: none;\n  padding: 15px 15px;\n  border-radius: 50px;\n  cursor: pointer;\n  transition: 300ms;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*notifications number with before*/\n.notification::before {\n  content: \"1\";\n  color: white;\n  font-size: 10px;\n  width: 12px;\n  height: 12px;\n  border-radius: 50%;\n  background-color: red;\n  position: absolute;\n  right: 8px;\n  top: 8px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 1000;\n}\n/*container background hover effect*/\n.notification:hover {\n  background: rgba(170, 170, 170, 0.062);\n}\n/*container animations*/\n.notification:hover > .bell-container {\n  animation: bell-animation 650ms ease-out 0s 1 normal both;\n}\n/*bell ring and scale animation*/\n@keyframes bell-animation {\n  20% {\n    transform: rotate(15deg);\n  }\n\n  40% {\n    transform: rotate(-15deg);\n    scale: 1.1;\n  }\n  60% {\n    transform: rotate(10deg);\n    scale: 1.1;\n  }\n  80% {\n    transform: rotate(-10deg);\n  }\n  0%,\n  100% {\n    transform: rotate(0deg);\n  }\n}"
-  },
-  {
-    "id": "uiverse-deepanshukant_dry-rattlesnake-75",
-    "title": "Dry Rattlesnake",
-    "category": "button",
-    "source": "uiverse",
-    "author": {
-      "name": "DeepanshuKant",
-      "profileUrl": "https://uiverse.io/DeepanshuKant/dry-rattlesnake-75"
-    },
-    "license": "MIT",
-    "description": "Dry Rattlesnake · button by DeepanshuKant",
-    "tags": [
-      "button",
+      "loader",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 300,
+    "durationMs": 2000,
     "accentColor": null,
-    "html": "<button class=\"btn\">\n   Button\n</button>",
-    "css": "/* From Uiverse.io by DeepanshuKant - Tags: button */\n.btn {\n  position: relative;\n  padding: 1rem 2.5rem;\n  color: #ffd739;\n  font-size: 1em;\n  background-color: #27045b;\n  outline: none;\n  border: none;\n  font-weight: bold;\n  border-radius: 5px;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  transition-property: all;\n  transition-duration: 0.3s;\n  cursor: pointer;\n}\n\n.btn:hover {\n  background-color: #6807f9;\n  box-shadow: 0px 14px 56px -11px #6807f9;\n}\n\n.btn::before {\n  content: \"\";\n  position: absolute;\n  height: 5px;\n  width: 5px;\n  background-color: white;\n  border-radius: 100px;\n  right: 2rem;\n  bottom: 37%;\n  animation: 0.5s both ease-in-out infinite;\n}\n\n.btn:hover::before {\n  animation-name: bounce_591;\n  transition: all 0.3s ease;\n}\n\n@keyframes bounce_591 {\n  0% {\n    bottom: 37%;\n  }\n\n  50% {\n    bottom: 70%;\n  }\n\n  100% {\n    bottom: 37%;\n  }\n}"
+    "html": "<div class=\"loader\">\n  <div class=\"loader-text\">Loading...</div>\n  <div class=\"loader-bar\"></div>\n</div>",
+    "css": "/* From Uiverse.io by Satwinder04 - Tags: loader */\n.loader {\n  /* background-color: blue; */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n\n.loader-text {\n  font-size: 24px;\n  color: rgb(0, 0, 0);\n  margin-bottom: 20px;\n  align-self: center;\n}\n\n.loader-bar {\n  width: 30%;\n  height: 10px;\n  border-radius: 5px;\n  background-color: rgb(0, 0, 0);\n  animation: loader-bar-animation 2s ease-in-out infinite;\n}\n\n@keyframes loader-bar-animation {\n  0% {\n    /* transform: translateX(-100%) rotate(270deg); */\n    transform: translateX(-100%);\n  }\n\n  50% {\n    /* transform: translateX(100%) rotate(-90deg); */\n    transform: translateX(100%);\n  }\n\n  100% {\n    /* transform: translateX(-100%) rotate(270deg); */\n    transform: translateX(-100%);\n  }\n}"
   },
   {
-    "id": "uiverse-simontheonlyone_warm-duck-56",
-    "title": "Warm Duck",
-    "category": "button",
+    "id": "uiverse-shoh2008_bad-lionfish-99",
+    "title": "Bad Lionfish",
+    "category": "loader",
     "source": "uiverse",
     "author": {
-      "name": "simontheonlyone - Source: no source link just the close button of Microsoft Windows",
-      "profileUrl": "https://uiverse.io/simontheonlyone - Source: no source link just the close button of Microsoft Windows/warm-duck-56"
+      "name": "Shoh2008",
+      "profileUrl": "https://uiverse.io/Shoh2008/bad-lionfish-99"
     },
     "license": "MIT",
-    "description": "Warm Duck · button by simontheonlyone - Source: no source link just the close button of Microsoft Windows",
+    "description": "Bad Lionfish · loader by Shoh2008",
     "tags": [
-      "button",
-      "animated",
-      "click animation",
-      "close",
-      "minimal"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<button class=\"button\">\n  <span class=\"X\"></span>\n  <span class=\"Y\"></span>\n  <div class=\"close\">Close</div>\n</button>",
-    "css": "/* From Uiverse.io by simontheonlyone - Source: no source link just the close button of Microsoft Windows - Tags: button, animated, click animation, close, minimal */\n.button {\n  position: relative;\n  width: 6em;\n  height: 4em;\n  border: none;\n  background: none;\n}\n\n.X {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 33%;\n  width: 2em;\n  height: 1.5px;\n  background-color: #fff;\n  transform: rotate(45deg);\n}\n\n.Y {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 33%;\n  width: 2em;\n  height: 1.5px;\n  background-color: #fff;\n  transform: rotate(-45deg);\n}\n\n.close {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: -40%;\n  left: 70%;\n  width: 3em;\n  height: 1.7em;\n  font-size: 16px;\n  background-color: rgb(254, 255, 225);\n  color: #000;\n  border: 1px solid #000;\n  pointer-events: none;\n  opacity: 0;\n}\n\n.button:hover {\n  background-color: rgb(210, 0, 0);\n}\n\n.button:active {\n  background-color: rgb(130, 0, 0);\n}\n\n.button:hover > .close {\n  animation: close 0.2s forwards 1.25s;\n}\n\n@keyframes close {\n  100% {\n    opacity: 1;\n  }\n}"
-  },
-  {
-    "id": "uiverse-kareemtolan_tasty-snail-21",
-    "title": "Tasty Snail",
-    "category": "toggle",
-    "source": "uiverse",
-    "author": {
-      "name": "KareemTolan",
-      "profileUrl": "https://uiverse.io/KareemTolan/tasty-snail-21"
-    },
-    "license": "MIT",
-    "description": "Tasty Snail · toggle by KareemTolan",
-    "tags": [
-      "toggle",
-      "switch",
+      "loader",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 200,
+    "durationMs": 5000,
     "accentColor": null,
-    "html": "<label class=\"toggle-switch\">\n  <input type=\"checkbox\">\n  <span class=\"toggle-switch__slider\"></span>\n</label>",
-    "css": "/* From Uiverse.io by KareemTolan - Tags: switch */\n/* Toggle switch styles */\n.toggle-switch {\n  display: inline-block;\n  position: relative;\n  width: 60px;\n  height: 34px;\n}\n\n.toggle-switch input {\n  display: none;\n}\n\n.toggle-switch__slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  border-radius: 34px;\n  transition: background-color 0.2s ease-in-out;\n}\n\n.toggle-switch__slider:before {\n  position: absolute;\n  content: \"\";\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: #fff;\n  border-radius: 50%;\n  transition: transform 0.2s ease-in-out;\n}\n\n.toggle-switch input:checked + .toggle-switch__slider {\n  background-color: #2196f3;\n  /* Neon effect */\n  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2196f3, 0 0 40px #2196f3, 0 0 50px #2196f3, 0 0 60px #2196f3, 0 0 70px #2196f3;\n}\n\n.toggle-switch input:checked + .toggle-switch__slider:before {\n  transform: translateX(26px);\n}\n\n/* Shake animation */\n.toggle-switch input:checked + .toggle-switch__slider:before:hover {\n  animation: shake 0.5s ease-in-out;\n}\n\n@keyframes shake {\n  0% {\n    transform: translateX(0);\n  }\n\n  25% {\n    transform: translateX(-5px);\n  }\n\n  50% {\n    transform: translateX(5px);\n  }\n\n  75% {\n    transform: translateX(-5px);\n  }\n\n  100% {\n    transform: translateX(0);\n  }\n}\n\n/* Accessibility styles */\n.toggle-switch input:focus + .toggle-switch__slider {\n  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.5);\n}\n\n.toggle-switch input:focus:not(:checked) + .toggle-switch__slider:before,\n.toggle-switch input:focus:checked + .toggle-switch__slider:before {\n  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.5);\n}\n\n.toggle-switch input:not(:checked):disabled + .toggle-switch__slider,\n.toggle-switch input:checked:disabled + .toggle-switch__slider {\n  opacity: 0.5;\n  cursor: not-allowed;\n}"
+    "html": "<div class=\"loader\"></div>",
+    "css": "/* From Uiverse.io by Shoh2008 - Tags: loader */\n.loader {\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n  position: relative;\n  box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,\n      0 5px 12px rgba(0, 0, 0, 0.15);\n  overflow: hidden;\n}\n\n.loader:before,\n  .loader:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 45%;\n  top: -40%;\n  background-color: #2e2e2e;\n  animation: wave 5s linear infinite;\n}\n\n.loader:before {\n  border-radius: 30%;\n  background: rgba(122, 122, 122, 0.4);\n  animation: wave 5s linear infinite;\n}\n\n@keyframes wave {\n  0% {\n    transform: rotate(0);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
   },
   {
     "id": "uiverse-troyrandall_curvy-eagle-61",
@@ -1500,6 +1005,28 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"comment-react\">\n  <button>\n    <svg\n      xmlns=\"http://www.w3.org/2000/svg\"\n      width=\"22\"\n      height=\"22\"\n      viewBox=\"0 0 24 24\"\n      fill=\"none\"\n    >\n      <path\n        d=\"M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z\"\n        stroke=\"#707277\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n        fill=\"#707277\"\n      ></path>\n    </svg>\n  </button>\n\n  <span>14</span>\n</div>",
     "css": "/* From Uiverse.io by TroyRandall  - Tags: icon, button, switch, like, heart */\n/* The switch - the box around the slider */\n.comment-react {\n  margin: 0;\n  display: flex;\n  justify-content: center;\n  padding: 5px;\n  background-color: #f1f1f1;\n  border-radius: 5px;\n  scale: 1.5;\n  width: 100px;\n}\n\n.comment-react button {\n  width: 35px;\n  height: 35px;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: transparent;\n  border: 0;\n  outline: none;\n}\n\n.comment-react button:after {\n  content: \"\";\n  width: 40px;\n  height: 40px;\n  position: absolute;\n  left: -3px;\n  top: -3px;\n  background-color: #f5356e;\n  border-radius: 50%;\n  z-index: 0;\n  transform: scale(0);\n}\n\n.comment-react button svg {\n  position: relative;\n  z-index: 9;\n}\n\n.comment-react button:hover:after {\n  animation: ripple 0.6s ease-in-out forwards;\n}\n\n.comment-react button:hover svg {\n  fill: #f5356e;\n}\n\n.comment-react button:hover svg path {\n  stroke: #f5356e;\n  fill: #f5356e;\n}\n\n.comment-react hr {\n  width: 80%;\n  height: 1px;\n  background-color: #dfe1e6;\n  margin: auto;\n  border: 0;\n}\n\n.comment-react span {\n  height: 35px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: auto;\n  font-size: 20px;\n  font-weight: 600;\n  color: #707277;\n  padding-right: 10px;\n  text-align: center;\n}\n\n@keyframes ripple {\n  0% {\n    transform: scale(0);\n    opacity: 0.6;\n  }\n\n  100% {\n    transform: scale(2);\n    opacity: 0;\n  }\n}"
+  },
+  {
+    "id": "uiverse-kareemtolan_tasty-snail-21",
+    "title": "Tasty Snail",
+    "category": "toggle",
+    "source": "uiverse",
+    "author": {
+      "name": "KareemTolan",
+      "profileUrl": "https://uiverse.io/KareemTolan/tasty-snail-21"
+    },
+    "license": "MIT",
+    "description": "Tasty Snail · toggle by KareemTolan",
+    "tags": [
+      "toggle",
+      "switch",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 200,
+    "accentColor": null,
+    "html": "<label class=\"toggle-switch\">\n  <input type=\"checkbox\">\n  <span class=\"toggle-switch__slider\"></span>\n</label>",
+    "css": "/* From Uiverse.io by KareemTolan - Tags: switch */\n/* Toggle switch styles */\n.toggle-switch {\n  display: inline-block;\n  position: relative;\n  width: 60px;\n  height: 34px;\n}\n\n.toggle-switch input {\n  display: none;\n}\n\n.toggle-switch__slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  border-radius: 34px;\n  transition: background-color 0.2s ease-in-out;\n}\n\n.toggle-switch__slider:before {\n  position: absolute;\n  content: \"\";\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: #fff;\n  border-radius: 50%;\n  transition: transform 0.2s ease-in-out;\n}\n\n.toggle-switch input:checked + .toggle-switch__slider {\n  background-color: #2196f3;\n  /* Neon effect */\n  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2196f3, 0 0 40px #2196f3, 0 0 50px #2196f3, 0 0 60px #2196f3, 0 0 70px #2196f3;\n}\n\n.toggle-switch input:checked + .toggle-switch__slider:before {\n  transform: translateX(26px);\n}\n\n/* Shake animation */\n.toggle-switch input:checked + .toggle-switch__slider:before:hover {\n  animation: shake 0.5s ease-in-out;\n}\n\n@keyframes shake {\n  0% {\n    transform: translateX(0);\n  }\n\n  25% {\n    transform: translateX(-5px);\n  }\n\n  50% {\n    transform: translateX(5px);\n  }\n\n  75% {\n    transform: translateX(-5px);\n  }\n\n  100% {\n    transform: translateX(0);\n  }\n}\n\n/* Accessibility styles */\n.toggle-switch input:focus + .toggle-switch__slider {\n  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.5);\n}\n\n.toggle-switch input:focus:not(:checked) + .toggle-switch__slider:before,\n.toggle-switch input:focus:checked + .toggle-switch__slider:before {\n  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.5);\n}\n\n.toggle-switch input:not(:checked):disabled + .toggle-switch__slider,\n.toggle-switch input:checked:disabled + .toggle-switch__slider {\n  opacity: 0.5;\n  cursor: not-allowed;\n}"
   },
   {
     "id": "uiverse-simontheonlyone_bad-mole-99",
@@ -1600,6 +1127,28 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by barisdogansutcu - Tags: switch */\nlabel {\n background-color: white;\n display: flex;\n align-items: center;\n gap: 14px;\n padding: 10px 15px 10px 10px;\n cursor: pointer;\n user-select: none;\n border-radius: 10px;\n box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;\n color: black;\n}\n\ninput {\n display: none;\n}\n\ninput:checked + label svg {\n fill: hsl(0deg 100% 50%);\n stroke: hsl(0deg 100% 50%);\n animation: heartButton 1s;\n}\n\n@keyframes heartButton {\n 0% {\n  transform: scale(1);\n }\n\n 25% {\n  transform: scale(1.3);\n }\n\n 50% {\n  transform: scale(1);\n }\n\n 75% {\n  transform: scale(1.3);\n }\n\n 100% {\n  transform: scale(1);\n }\n}\n\ninput + label .action {\n position: relative;\n overflow: hidden;\n display: grid;\n}\n\ninput + label .action span {\n grid-column-start: 1;\n grid-column-end: 1;\n grid-row-start: 1;\n grid-row-end: 1;\n transition: all .5s;\n}\n\ninput + label .action span.option-1 {\n transform: translate(0px,0%);\n opacity: 1;\n}\n\ninput:checked + label .action span.option-1 {\n transform: translate(0px,-100%);\n opacity: 0;\n}\n\ninput + label .action span.option-2 {\n transform: translate(0px,100%);\n opacity: 0;\n}\n\ninput:checked + label .action span.option-2 {\n transform: translate(0px,0%);\n opacity: 1;\n}"
   },
   {
+    "id": "uiverse-subaashbala_quiet-ape-66",
+    "title": "Quiet Ape",
+    "category": "toggle",
+    "source": "uiverse",
+    "author": {
+      "name": "Subaashbala",
+      "profileUrl": "https://uiverse.io/Subaashbala/quiet-ape-66"
+    },
+    "license": "MIT",
+    "description": "Quiet Ape · toggle by Subaashbala",
+    "tags": [
+      "toggle",
+      "switch",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<label class=\"switch\">\n  <input type=\"checkbox\" />\n  <span class=\"slider\"></span>\n</label>",
+    "css": "/* From Uiverse.io by Subaashbala  - Tags: switch */\n/* The switch - the box around the slider */\n.switch {\n  --INITIAL-SWITCH-TRACK-COLOR: #fffbeb;\n  --INITIAL-THUMB-COLOR: #ff5722;\n  --OVERALL-TRANSITION-DURATION: 500ms; /* Overall transition speed */\n  font-size: 17px;\n  position: relative;\n  display: inline-block;\n  width: 3.75em;\n  height: 2em;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: var(--INITIAL-SWITCH-TRACK-COLOR);\n  transition: var(--OVERALL-TRANSITION-DURATION);\n  border-radius: 30px;\n  overflow: hidden;\n}\n\n/* Thumb */\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 100%;\n  aspect-ratio: 1;\n  border-radius: 20px;\n  left: 0;\n  bottom: 0;\n  background-color: var(--INITIAL-THUMB-COLOR);\n  transition: var(--OVERALL-TRANSITION-DURATION);\n}\n\n.switch input:checked + .slider {\n  background-color: var(--INITIAL-THUMB-COLOR);\n}\n\n/* Actions to be performed when the switch is TOGGLED ON */\n.switch input:checked + .slider::before {\n  transform-origin: left;\n  background-color: var(--INITIAL-SWITCH-TRACK-COLOR);\n  animation: wobble var(--OVERALL-TRANSITION-DURATION)\n    cubic-bezier(0.075, 0.82, 0.165, 1);\n  transform: scale(1, 1) translateX(2rem);\n}\n\n/* Actions to be performed when the switch is TOGGLED OFF */\n.switch input:not(:checked) + .slider::before {\n  transform-origin: right;\n  animation: reverse-wobble var(--OVERALL-TRANSITION-DURATION)\n    cubic-bezier(0.075, 0.82, 0.165, 1);\n}\n\n@keyframes wobble {\n  0% {\n    transform: scale(1, 1);\n  }\n  50% {\n    transform: scale(3, 1);\n  }\n  100% {\n    transform: scale(1, 1) translateX(2rem);\n  }\n}\n\n@keyframes reverse-wobble {\n  0% {\n    transform: scale(1, 1) translateX(2rem);\n  }\n  50% {\n    transform: scale(3, 1);\n  }\n  100% {\n    transform: scale(1, 1) translateX(0);\n  }\n}"
+  },
+  {
     "id": "uiverse-subaashbala_hard-monkey-38",
     "title": "Hard Monkey",
     "category": "toggle",
@@ -1644,26 +1193,26 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by AmIt-DasIT - Tags: switch */\n/* The switch - the box around the slider */\n.switch {\n  font-size: 17px;\n  position: relative;\n  display: inline-block;\n  width: 3.5em;\n  height: 2em;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #223243;\n  transition: .4s;\n  border-radius: 30px;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 1.4em;\n  width: 1.4em;\n  border-radius: 20px;\n  left: 0.3em;\n  bottom: 0.3em;\n  background-color: #223243;\n  box-shadow: inset 2px -2px 0 1.8px #fff;\n  transition: .4s;\n  animation: anima1 0.3s linear;\n}\n\n@keyframes anima1 {\n  0% {\n    transform: translateX(1.5em);\n  }\n\n  80% {\n    transform: translateX(-0.3em);\n  }\n\n  100% {\n    transform: translateX(0em);\n  }\n}\n\n.switch input:checked + .slider:before {\n  background-color: yellow;\n  box-shadow: none;\n  transform: translateX(1.5em);\n  animation: anima 0.3s linear;\n}\n\n@keyframes anima {\n  0% {\n    transform: translateX(0px)\n  }\n\n  80% {\n    transform: translateX(1.6em)\n  }\n\n  100% {\n    transform: translateX(1.4em)\n  }\n}"
   },
   {
-    "id": "uiverse-subaashbala_quiet-ape-66",
-    "title": "Quiet Ape",
+    "id": "uiverse-mobinkakei_spicy-moose-47",
+    "title": "Spicy Moose",
     "category": "toggle",
     "source": "uiverse",
     "author": {
-      "name": "Subaashbala",
-      "profileUrl": "https://uiverse.io/Subaashbala/quiet-ape-66"
+      "name": "mobinkakei",
+      "profileUrl": "https://uiverse.io/mobinkakei/spicy-moose-47"
     },
     "license": "MIT",
-    "description": "Quiet Ape · toggle by Subaashbala",
+    "description": "Spicy Moose · toggle by mobinkakei",
     "tags": [
       "toggle",
-      "switch",
+      "checkbox",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 500,
+    "durationMs": 150,
     "accentColor": null,
-    "html": "<label class=\"switch\">\n  <input type=\"checkbox\" />\n  <span class=\"slider\"></span>\n</label>",
-    "css": "/* From Uiverse.io by Subaashbala  - Tags: switch */\n/* The switch - the box around the slider */\n.switch {\n  --INITIAL-SWITCH-TRACK-COLOR: #fffbeb;\n  --INITIAL-THUMB-COLOR: #ff5722;\n  --OVERALL-TRANSITION-DURATION: 500ms; /* Overall transition speed */\n  font-size: 17px;\n  position: relative;\n  display: inline-block;\n  width: 3.75em;\n  height: 2em;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: var(--INITIAL-SWITCH-TRACK-COLOR);\n  transition: var(--OVERALL-TRANSITION-DURATION);\n  border-radius: 30px;\n  overflow: hidden;\n}\n\n/* Thumb */\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 100%;\n  aspect-ratio: 1;\n  border-radius: 20px;\n  left: 0;\n  bottom: 0;\n  background-color: var(--INITIAL-THUMB-COLOR);\n  transition: var(--OVERALL-TRANSITION-DURATION);\n}\n\n.switch input:checked + .slider {\n  background-color: var(--INITIAL-THUMB-COLOR);\n}\n\n/* Actions to be performed when the switch is TOGGLED ON */\n.switch input:checked + .slider::before {\n  transform-origin: left;\n  background-color: var(--INITIAL-SWITCH-TRACK-COLOR);\n  animation: wobble var(--OVERALL-TRANSITION-DURATION)\n    cubic-bezier(0.075, 0.82, 0.165, 1);\n  transform: scale(1, 1) translateX(2rem);\n}\n\n/* Actions to be performed when the switch is TOGGLED OFF */\n.switch input:not(:checked) + .slider::before {\n  transform-origin: right;\n  animation: reverse-wobble var(--OVERALL-TRANSITION-DURATION)\n    cubic-bezier(0.075, 0.82, 0.165, 1);\n}\n\n@keyframes wobble {\n  0% {\n    transform: scale(1, 1);\n  }\n  50% {\n    transform: scale(3, 1);\n  }\n  100% {\n    transform: scale(1, 1) translateX(2rem);\n  }\n}\n\n@keyframes reverse-wobble {\n  0% {\n    transform: scale(1, 1) translateX(2rem);\n  }\n  50% {\n    transform: scale(3, 1);\n  }\n  100% {\n    transform: scale(1, 1) translateX(0);\n  }\n}"
+    "html": "<div class=\"toggler\">\n    <input id=\"toggler-1\" name=\"toggler-1\" type=\"checkbox\" value=\"1\">\n    <label for=\"toggler-1\">\n        <svg class=\"toggler-on\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 130.2 130.2\">\n            <polyline class=\"path check\" points=\"100.2,40.2 51.5,88.8 29.8,67.5\"></polyline>\n        </svg>\n        <svg class=\"toggler-off\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 130.2 130.2\">\n            <line class=\"path line\" x1=\"34.4\" y1=\"34.4\" x2=\"95.8\" y2=\"95.8\"></line>\n            <line class=\"path line\" x1=\"95.8\" y1=\"34.4\" x2=\"34.4\" y2=\"95.8\"></line>\n        </svg>\n    </label>\n</div>",
+    "css": "/* From Uiverse.io by mobinkakei - Tags: checkbox */\n.toggler {\n  width: 72px;\n  margin: 40px auto;\n}\n\n.toggler input {\n  display: none;\n}\n\n.toggler label {\n  display: block;\n  position: relative;\n  width: 72px;\n  height: 36px;\n  border: 1px solid #d6d6d6;\n  border-radius: 36px;\n  background: #e4e8e8;\n  cursor: pointer;\n}\n\n.toggler label::after {\n  display: block;\n  border-radius: 100%;\n  background-color: #d7062a;\n  content: '';\n  animation-name: toggler-size;\n  animation-duration: 0.15s;\n  animation-timing-function: ease-out;\n  animation-direction: forwards;\n  animation-iteration-count: 1;\n  animation-play-state: running;\n}\n\n.toggler label::after, .toggler label .toggler-on, .toggler label .toggler-off {\n  position: absolute;\n  top: 50%;\n  left: 25%;\n  width: 26px;\n  height: 26px;\n  transform: translateY(-50%) translateX(-50%);\n  transition: left 0.15s ease-in-out, background-color 0.2s ease-out, width 0.15s ease-in-out, height 0.15s ease-in-out, opacity 0.15s ease-in-out;\n}\n\n.toggler input:checked + label::after, .toggler input:checked + label .toggler-on, .toggler input:checked + label .toggler-off {\n  left: 75%;\n}\n\n.toggler input:checked + label::after {\n  background-color: #50ac5d;\n  animation-name: toggler-size2;\n}\n\n.toggler .toggler-on, .toggler .toggler-off {\n  opacity: 1;\n  z-index: 2;\n}\n\n.toggler input:checked + label .toggler-off, .toggler input:not(:checked) + label .toggler-on {\n  width: 0;\n  height: 0;\n  opacity: 0;\n}\n\n.toggler .path {\n  fill: none;\n  stroke: #fefefe;\n  stroke-width: 7px;\n  stroke-linecap: round;\n  stroke-miterlimit: 10;\n}\n\n@keyframes toggler-size {\n  0%, 100% {\n    width: 26px;\n    height: 26px;\n  }\n\n  50% {\n    width: 20px;\n    height: 20px;\n  }\n}\n\n@keyframes toggler-size2 {\n  0%, 100% {\n    width: 26px;\n    height: 26px;\n  }\n\n  50% {\n    width: 20px;\n    height: 20px;\n  }\n}"
   },
   {
     "id": "uiverse-forzdz_kind-mule-56",
@@ -1688,28 +1237,6 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"rating\">\n  <input type=\"radio\" id=\"star5\" name=\"rating\" value=\"5\">\n  <label for=\"star5\"></label>\n  <input type=\"radio\" id=\"star4\" name=\"rating\" value=\"4\">\n  <label for=\"star4\"></label>\n  <input type=\"radio\" id=\"star3\" name=\"rating\" value=\"3\">\n  <label for=\"star3\"></label>\n  <input type=\"radio\" id=\"star2\" name=\"rating\" value=\"2\">\n  <label for=\"star2\"></label>\n  <input type=\"radio\" id=\"star1\" name=\"rating\" value=\"1\">\n  <label for=\"star1\"></label>\n</div>",
     "css": "/* From Uiverse.io by ForzDz - Tags: switch, starrating, 3d cool effect */\n.rating {\n  display: inline-block;\n  opacity: 1;\n}\n\n.rating input {\n  display: none;\n  opacity: 1;\n}\n\n.rating label {\n  float: right;\n  cursor: pointer;\n  color: #ccc;\n  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;\n}\n\n.rating label:before {\n  content: '\\2605';\n  font-size: 30px;\n  transition: color 0.3s;\n}\n\n.rating input:checked ~ label,\n.rating label:hover,\n.rating label:hover ~ label {\n  color: #ffc300;\n  transform: scale(1.2);\n  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;\n  animation: bounce 0.5s ease-in-out alternate;\n}\n\n@keyframes bounce {\n  to {\n    transform: scale(1.3);\n  }\n}"
-  },
-  {
-    "id": "uiverse-mobinkakei_spicy-moose-47",
-    "title": "Spicy Moose",
-    "category": "toggle",
-    "source": "uiverse",
-    "author": {
-      "name": "mobinkakei",
-      "profileUrl": "https://uiverse.io/mobinkakei/spicy-moose-47"
-    },
-    "license": "MIT",
-    "description": "Spicy Moose · toggle by mobinkakei",
-    "tags": [
-      "toggle",
-      "checkbox",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 150,
-    "accentColor": null,
-    "html": "<div class=\"toggler\">\n    <input id=\"toggler-1\" name=\"toggler-1\" type=\"checkbox\" value=\"1\">\n    <label for=\"toggler-1\">\n        <svg class=\"toggler-on\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 130.2 130.2\">\n            <polyline class=\"path check\" points=\"100.2,40.2 51.5,88.8 29.8,67.5\"></polyline>\n        </svg>\n        <svg class=\"toggler-off\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 130.2 130.2\">\n            <line class=\"path line\" x1=\"34.4\" y1=\"34.4\" x2=\"95.8\" y2=\"95.8\"></line>\n            <line class=\"path line\" x1=\"95.8\" y1=\"34.4\" x2=\"34.4\" y2=\"95.8\"></line>\n        </svg>\n    </label>\n</div>",
-    "css": "/* From Uiverse.io by mobinkakei - Tags: checkbox */\n.toggler {\n  width: 72px;\n  margin: 40px auto;\n}\n\n.toggler input {\n  display: none;\n}\n\n.toggler label {\n  display: block;\n  position: relative;\n  width: 72px;\n  height: 36px;\n  border: 1px solid #d6d6d6;\n  border-radius: 36px;\n  background: #e4e8e8;\n  cursor: pointer;\n}\n\n.toggler label::after {\n  display: block;\n  border-radius: 100%;\n  background-color: #d7062a;\n  content: '';\n  animation-name: toggler-size;\n  animation-duration: 0.15s;\n  animation-timing-function: ease-out;\n  animation-direction: forwards;\n  animation-iteration-count: 1;\n  animation-play-state: running;\n}\n\n.toggler label::after, .toggler label .toggler-on, .toggler label .toggler-off {\n  position: absolute;\n  top: 50%;\n  left: 25%;\n  width: 26px;\n  height: 26px;\n  transform: translateY(-50%) translateX(-50%);\n  transition: left 0.15s ease-in-out, background-color 0.2s ease-out, width 0.15s ease-in-out, height 0.15s ease-in-out, opacity 0.15s ease-in-out;\n}\n\n.toggler input:checked + label::after, .toggler input:checked + label .toggler-on, .toggler input:checked + label .toggler-off {\n  left: 75%;\n}\n\n.toggler input:checked + label::after {\n  background-color: #50ac5d;\n  animation-name: toggler-size2;\n}\n\n.toggler .toggler-on, .toggler .toggler-off {\n  opacity: 1;\n  z-index: 2;\n}\n\n.toggler input:checked + label .toggler-off, .toggler input:not(:checked) + label .toggler-on {\n  width: 0;\n  height: 0;\n  opacity: 0;\n}\n\n.toggler .path {\n  fill: none;\n  stroke: #fefefe;\n  stroke-width: 7px;\n  stroke-linecap: round;\n  stroke-miterlimit: 10;\n}\n\n@keyframes toggler-size {\n  0%, 100% {\n    width: 26px;\n    height: 26px;\n  }\n\n  50% {\n    width: 20px;\n    height: 20px;\n  }\n}\n\n@keyframes toggler-size2 {\n  0%, 100% {\n    width: 26px;\n    height: 26px;\n  }\n\n  50% {\n    width: 20px;\n    height: 20px;\n  }\n}"
   },
   {
     "id": "uiverse-burgisimon_breezy-donkey-2",
@@ -1832,28 +1359,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Nawsome - Tags: switch */\n.checkbox {\n  --border-default: #bbbbc1;\n  --border-hover: #9898a3;\n  --active: #6E7BF2;\n  --active-tick: #ffffff;\n  display: block;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n  position: relative;\n  -webkit-tap-highlight-color: transparent;\n}\n\n.checkbox svg {\n  display: block;\n  position: absolute;\n}\n\n.checkbox input {\n  display: block;\n  outline: none;\n  border: none;\n  padding: 0;\n  margin: 0;\n  -webkit-appearance: none;\n  width: 18px;\n  height: 18px;\n  border-radius: 36%/36%;\n  box-shadow: inset 0 0 0 1.5px var(--border, var(--border-default));\n  background: var(--background, transparent);\n  transition: background 0.25s linear, box-shadow 0.25s linear;\n}\n\n.checkbox input + svg {\n  width: 21px;\n  height: 18px;\n  left: 0;\n  top: 0;\n  color: var(--active);\n}\n\n.checkbox input + svg .tick {\n  stroke-dasharray: 20;\n  stroke-dashoffset: var(--stroke-dashoffset, 20);\n  transition: stroke-dashoffset 0.2s;\n}\n\n.checkbox input + svg .tick.mask {\n  stroke: var(--active-tick);\n}\n\n.checkbox input + svg + svg {\n  width: 11px;\n  height: 11px;\n  fill: none;\n  stroke: var(--active);\n  stroke-width: 1.25;\n  stroke-linecap: round;\n  top: -6px;\n  right: -10px;\n  stroke-dasharray: 4.5px;\n  stroke-dashoffset: 13.5px;\n  pointer-events: none;\n  -webkit-animation: var(--animation, none) 0.2s ease 0.175s;\n  animation: var(--animation, none) 0.2s ease 0.175s;\n}\n\n.checkbox input:checked {\n  --background: var(--active);\n  --border: var(--active);\n}\n\n.checkbox input:checked + svg {\n  --stroke-dashoffset: 0;\n}\n\n.checkbox input:checked + svg + svg {\n  --animation: check95;\n}\n\n.checkbox:hover input:not(:checked) {\n  --border: var(--border-hover);\n}\n\n@keyframes check95 {\n  100% {\n    stroke-dashoffset: 4.5px;\n  }\n}"
   },
   {
-    "id": "uiverse-andrew-demchenk0_light-dragonfly-53",
-    "title": "Light Dragonfly",
-    "category": "toggle",
-    "source": "uiverse",
-    "author": {
-      "name": "andrew-demchenk0",
-      "profileUrl": "https://uiverse.io/andrew-demchenk0/light-dragonfly-53"
-    },
-    "license": "MIT",
-    "description": "Light Dragonfly · toggle by andrew-demchenk0",
-    "tags": [
-      "toggle",
-      "switch",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 400,
-    "accentColor": null,
-    "html": "<label class=\"switch\">\n  <input class=\"input\" type=\"checkbox\">\n  <span class=\"slider\">\n    <span class=\"iron-man\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" viewBox=\"0 0 48 48\" height=\"50\"><path fill=\"#d03827\" d=\"m19.479 46.479c-.595.059-1.166-.238-1.441-.77-.415-.803-1.062-1.334-1.595-2.023-1.281-1.657-2.266-3.435-3.411-5.189-.196-.3-.395-.608-.481-.955-.089-.359-.053-.736-.02-1.104.058-.64-.058-1.274-.217-1.897-.384-1.51-2.376-2.642-3.273-3.916-1.248-1.774-1.382-4.075-1.473-6.242-.07-1.661.002-3.513-.032-5.223-.008-.422.162-.816.472-1.103.859-.794 1.844-2.056 2.009-3.191.332-2.29.469-4.653 1.376-6.782 1.679-3.937 5.84-6.913 10.083-7.475 5.19-.687 10.929 1.721 14.485 5.564.586.633 1.124 1.315 1.544 2.069.75 1.344 1.104 2.871 1.337 4.392.201 1.309.03 2.697.055 4.029.009.458.371.863.743 1.131.483.348.784.975.878 1.581.125.809-.061 1.629-.201 2.436-.25 1.443-.352 2.912-.303 4.377.05 1.499.199 3.184-.791 4.312-.511.582-1.458.982-1.927 1.599-1.072 1.409-.446 3.435-.987 5.121-.22.687-.665 1.276-1.102 1.85-1.579 2.075-2.924 4.202-4.503 6.277-.359.472-.878 1.082-1.471 1.066-3.125-.156-6.582-.247-9.754.066z\"></path><path fill=\"#010101\" d=\"m19.328 46.987c-.731 0-1.398-.396-1.734-1.048-.239-.464-.577-.837-.934-1.232-.209-.23-.418-.463-.612-.715-.888-1.147-1.645-2.367-2.377-3.547-.346-.558-.693-1.117-1.058-1.675-.206-.316-.439-.675-.548-1.107-.107-.436-.068-.869-.034-1.252.057-.622-.07-1.23-.201-1.747-.201-.789-.998-1.528-1.77-2.243-.519-.48-1.054-.978-1.428-1.508-1.373-1.95-1.479-4.478-1.564-6.509-.04-.965-.033-2.004-.026-3.009.005-.751.01-1.501-.005-2.226-.012-.558.219-1.098.632-1.479.765-.706 1.708-1.888 1.854-2.896.067-.463.127-.929.186-1.396.234-1.844.476-3.75 1.226-5.51 1.727-4.05 5.938-7.174 10.478-7.775 5.132-.677 11.124 1.619 14.918 5.72.688.743 1.216 1.451 1.613 2.165.851 1.523 1.192 3.237 1.396 4.56.138.902.109 1.829.081 2.726-.015.46-.029.918-.021 1.369.004.218.21.5.536.736.552.398.956 1.112 1.079 1.91.123.789-.015 1.556-.148 2.297l-.054.3c-.243 1.408-.343 2.847-.295 4.275l.013.345c.055 1.463.118 3.122-.928 4.313-.28.319-.648.574-1.004.821-.36.25-.7.486-.9.75-.541.71-.575 1.665-.612 2.676-.027.759-.057 1.544-.297 2.295-.25.776-.744 1.427-1.18 2-.785 1.031-1.526 2.097-2.244 3.127-.72 1.035-1.465 2.106-2.259 3.15-.477.626-1.066 1.263-1.842 1.263-.014 0-.028 0-.042 0-2.81-.14-6.438-.256-9.694.066-.068.006-.134.01-.201.01zm.151-.508h.01zm3.775-45.485c-.579 0-1.15.037-1.711.111-4.137.547-8.12 3.498-9.688 7.176-.695 1.631-.928 3.468-1.153 5.243-.06.473-.12.944-.188 1.413-.185 1.267-1.239 2.632-2.166 3.487-.206.19-.316.448-.311.725.014.734.01 1.493.005 2.252-.007.993-.014 2.021.026 2.962.079 1.899.179 4.264 1.383 5.974.313.445.787.885 1.29 1.351.877.813 1.784 1.655 2.058 2.73.152.598.298 1.311.23 2.064-.032.353-.061.668.007.939.067.269.244.54.415.803.368.563.72 1.129 1.069 1.693.752 1.211 1.463 2.355 2.318 3.463.179.231.372.444.563.656.384.425.781.864 1.08 1.443.178.344.547.552.948.501 3.302-.325 6.824-.218 9.831-.069h.01c.378 0 .874-.653 1.038-.869.781-1.027 1.521-2.089 2.235-3.116.723-1.039 1.471-2.113 2.269-3.161.406-.534.826-1.087 1.023-1.7.198-.619.224-1.303.25-2.026.041-1.122.083-2.282.815-3.244.296-.39.718-.683 1.126-.966.32-.223.623-.433.822-.66.783-.892.73-2.276.68-3.616l-.013-.349c-.05-1.497.055-3.004.311-4.479l.054-.308c.125-.689.242-1.342.145-1.966-.082-.531-.341-1.011-.676-1.253-.35-.253-.937-.786-.951-1.527-.009-.469.006-.943.021-1.42.027-.851.055-1.731-.069-2.543-.19-1.239-.508-2.84-1.28-4.224-.358-.644-.841-1.289-1.475-1.973-3.166-3.421-7.946-5.517-12.341-5.517z\"></path><path fill=\"#febf10\" d=\"m38.104 25.557c-1.123-4.605-1.65-9.529-1.541-14.268-1.207-1.917-2.861-3.551-4.866-4.604-.818-.43-1.954-.717-2.562-.021-.271.31-.351.738-.425 1.143-.326 1.761-.748 3.504-1.265 5.219-.234.776-.545 1.618-1.256 2.006-.435.237-.95.261-1.445.28-.754.029-1.509.057-2.263.086-.168.006-.348.009-.488-.084-.156-.104-.219-.299-.272-.479-.802-2.73-1.692-5.435-2.667-8.108-.086-.237-.215-.509-.464-.549-.148-.024-.294.046-.427.115-2.115 1.1-4.093 2.729-5.751 4.442.34 4.626-.564 9.83-2.475 14.057.237.218.46.466.687.707 3.687 5.347 5.26 11.33 7.888 17.277.163.369.428.763.828.711 3.361-.115 6.812-.309 10.173-.424 2.076-4.558 4.648-9.484 6.647-14.077l-.004-.001c.771-1.072 1.426-2.227 1.948-3.428z\"></path><path fill=\"#16b7b8\" d=\"m13.826 23.27c-.366 1.118-.367 2.353-.002 3.471 1.598.602 3.318.88 5.024.813.38-.015.775-.051 1.105-.241.465-.267.825-1.07.994-1.578\"></path><path fill=\"#16b7b8\" d=\"m27.207 25.601c.225.589.613.676.968 1.198.078.114.161.229.278.303.104.066.227.095.347.12 1.607.34 3.291.314 4.887-.075.245-.06.51-.143.648-.355.083-.128.107-.285.127-.437.171-1.292-.037-2.164-.038-3.467\"></path><path fill=\"#010101\" d=\"m38.589 25.438c-1.106-4.538-1.634-9.428-1.526-14.138.002-.099-.024-.195-.077-.278-1.308-2.077-3.057-3.729-5.057-4.779-1.323-.695-2.511-.662-3.171.093-.361.414-.461.95-.54 1.381-.32 1.732-.741 3.471-1.252 5.166-.201.669-.463 1.409-1.017 1.71-.343.187-.812.204-1.304.223l-2.183.083c-.051.002-.17.006-.182.01-.028-.033-.067-.165-.082-.214-.801-2.728-1.701-5.466-2.677-8.137-.069-.193-.282-.781-.852-.873-.324-.054-.594.089-.738.165-1.961 1.02-3.994 2.588-5.88 4.537-.099.103-.149.242-.14.385.334 4.544-.575 9.708-2.432 13.813-.086.196-.039.428.121.574.219.201.425.433.635.656 2.488 3.617 3.983 7.485 5.561 11.578.705 1.827 1.434 3.717 2.259 5.584.377.856.89 1.016 1.192 1.016.041 0 .077-.003.109-.007 1.684-.058 3.389-.135 5.095-.213 1.7-.077 3.4-.154 5.078-.211.19-.007.359-.12.438-.293.9-1.977 1.915-4.065 2.896-6.085 1.281-2.637 2.604-5.363 3.734-7.955.763-1.069 1.427-2.234 1.964-3.472.044-.102.054-.213.028-.319zm-20.194-18.702c.022-.012.084-.044.079-.069.02.025.058.088.109.232.969 2.652 1.862 5.37 2.657 8.076.06.203.159.544.476.755.277.185.592.171.784.168l2.262-.086c.498-.019 1.117-.042 1.666-.341.845-.46 1.218-1.378 1.495-2.301.521-1.73.951-3.504 1.277-5.272.064-.343.13-.697.312-.904.392-.452 1.296-.209 1.952.134 1.531.804 2.889 2.013 4.006 3.497-.748.863-1.13 1.896-1.198 3.33-.034.689-.099 1.419-.165 2.166-.188 2.116-.382 4.306.029 6.246.031.147.056.299.032.396-.039.104-.306.257-.831.469-6.237 2.525-13.53 2.362-19.149-.398 1.635-4.348.39-8.57-.941-12.214 1.674-1.653 3.441-2.996 5.148-3.884zm15.585 17.484c.05.7.09 1.3-.02 2.07 0 .06-.02.19-.04.23-.02.03-.1.08-.35.14-1.52.37-3.14.4-4.67.07-.05-.01-.15-.03-.18-.05-.04-.02-.1-.12-.13-.16-.18-.27-.37-.44-.52-.58-.084-.075-.15-.139-.211-.207 2.008-.295 3.995-.822 5.891-1.589.067-.027.145-.062.219-.094.004.055.008.116.011.17zm-19.802-.295c1.934.894 4.041 1.501 6.23 1.819-.205.55-.482 1.008-.704 1.135-.241.139-.578.163-.875.175-1.544.068-3.133-.18-4.598-.697-.217-.791-.227-1.63-.053-2.432zm2.551 13.108c-.654-1.697-1.297-3.354-1.999-4.976.132.177.254.359.401.526.34.39.724.749 1.094 1.097.822.772 1.599 1.501 1.855 2.469l.049.188c.171.662.396 1.511.954 2.056 0 .013-.006.025-.006.038.048.963-.065 1.921-.337 2.848l-.038.128c-.03.099-.06.206-.089.313-.668-1.569-1.29-3.149-1.884-4.687zm7.676 5.74c-1.609.074-3.222.145-4.853.204-.003-.05-.006-.1-.024-.148-.116-.306.005-.708.132-1.135l.039-.133c.258-.877.379-1.779.38-2.689 1.283.275 2.588.388 3.872.388 1.422 0 2.809-.128 4.11-.288.002.044.002.087.016.131.361 1.139.661 2.308.91 3.478-1.516.055-3.048.123-4.582.192zm7.56-6.027c-.747 1.539-1.502 3.108-2.225 4.649-.21-.873-.44-1.743-.71-2.596l-.046-.103c-.008-.013-.02-.021-.029-.033.031-.049.073-.09.086-.149.135-.608.352-1.072.582-1.563.173-.37.353-.752.515-1.225.131-.38.267-.746.486-1.032.266-.348.669-.598 1.098-.863l.171-.106c.858-.538 1.666-1.181 2.426-1.896-.765 1.638-1.565 3.293-2.354 4.917zm-.603-3.868-.167.104c-.485.301-.988.612-1.364 1.105-.311.404-.485.871-.638 1.314-.146.422-.313.779-.475 1.126-.203.432-.411.876-.566 1.427-2.56.324-5.5.535-8.176-.115-.478-.201-.71-1.098-.879-1.753l-.051-.193c-.33-1.244-1.249-2.107-2.138-2.941-.369-.347-.718-.674-1.026-1.026-.488-.559-.879-1.19-1.292-1.86-.126-.205-.253-.41-.382-.613-.901-1.41-1.971-2.962-3.188-4.264-.013-.019-.024-.038-.037-.057-.039-.055-.087-.1-.141-.134-.103-.106-.199-.225-.305-.327 1.537-3.535 2.401-7.778 2.435-11.769.982 3.109 1.563 6.542.119 9.977-.091.216-.012.457.172.591-.292 1.122-.276 2.323.084 3.426.047.145.157.259.3.313 1.492.563 3.112.855 4.714.855.169 0 .338-.004.507-.01.446-.019.917-.068 1.333-.308.673-.386 1.077-1.426 1.22-1.854.002-.006 0-.012.002-.017.867.09 1.743.139 2.624.139.909 0 1.822-.053 2.733-.148.169.391.405.618.609.804.13.12.26.24.37.41.1.15.23.32.43.45.17.1.35.15.51.18.78.17 1.58.25 2.38.25.92 0 1.84-.11 2.72-.33.23-.05.69-.17.95-.57.15-.23.19-.48.21-.64.11-.87.07-1.55.02-2.27-.015-.238-.029-.499-.038-.761.087-.113.16-.237.196-.383.073-.296.032-.58-.023-.845-.381-1.795-.193-3.908-.012-5.952.067-.761.134-1.504.167-2.205.053-1.076.31-1.864.79-2.514-.088 4.675.436 9.513 1.519 14.02-1.383 3.108-3.586 5.72-6.216 7.368z\"></path></svg></span>\n    <span class=\"commutator\"><svg fill=\"#303c42\" height=\"55\" stroke=\"#303c42\" stroke-width=\"1.444\" viewBox=\"0 0 76 76\" width=\"55\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#2196F3\" stroke-linejoin=\"round\"><path d=\"m38 29c4.9706 0 9 4.0294 9 9s-4.0294 9-9 9-9-4.0294-9-9 4.0294-9 9-9zm0-10c1.8461 0 3.6307.2633 5.3183.7544l-2.321 4.5672c-.9657-.2106-1.9685-.3216-2.9973-.3216-.7922 0-1.569.0658-2.3252.1922l-2.0953-4.6753c1.4185-.338 2.8986-.5169 4.4205-.5169zm0 38c-1.8461 0-3.6307-.2633-5.3184-.7544l2.3211-4.5672c.9656.2106 1.9685.3216 2.9973.3216.7921 0 1.5689-.0658 2.3252-.1922l2.0952 4.6753c-1.4184.338-2.8985.5169-4.4204.5169zm7.288-36.552c3.0672 1.275 5.7284 3.3306 7.7355 5.9189l-4.5613 2.3301c-1.1837-1.3302-2.6173-2.4332-4.2272-3.2353zm8.9232 7.6374c1.6744 2.7319 2.6776 5.9196 2.7801 9.3337l-5.0581-.7957c-.1783-1.8263-.7075-3.5498-1.5193-5.1021zm-1.7744 22.2674c-2.1253 2.4815-4.8792 4.4086-8.0149 5.5345l-.8067-5.0589c1.6508-.7236 3.1353-1.7566 4.38-3.0255zm4.5042-10.8449c-.2661 3.3899-1.4219 6.5297-3.2341 9.1861l-3.6247-3.617c.8892-1.5149 1.5017-3.2119 1.768-5.0215zm-26.229 16.0441c-3.0673-1.275-5.7284-3.3306-7.7355-5.9189l4.5612-2.3301c1.1837 1.3303 2.6174 2.4333 4.2272 3.2354zm-8.9232-7.6374c-1.6744-2.7319-2.6776-5.9196-2.7801-9.3337l5.0581.7957c.1782 1.8263.7074 3.5498 1.5192 5.1021zm-2.7298-11.4225c.2661-3.3898 1.4219-6.5297 3.2341-9.1861l3.6247 3.6171c-.8893 1.5149-1.5017 3.2118-1.768 5.0214zm4.5042-10.8449c2.1252-2.4814 4.8791-4.4085 8.0149-5.5345l.8067 5.0589c-1.6509.7236-3.1353 1.7566-4.38 3.0255z\" stroke=\"#ccc\" stroke-linecap=\"round\" stroke-width=\"2.432\"></path><path d=\"m38 29c4.9706 0 9 4.0294 9 9s-4.0294 9-9 9-9-4.0294-9-9 4.0294-9 9-9zm0-10c1.8461 0 3.6307.2633 5.3183.7544l-2.321 4.5672c-.9657-.2106-1.9685-.3216-2.9973-.3216-.7922 0-1.569.0658-2.3252.1922l-2.0953-4.6753c1.4185-.338 2.8986-.5169 4.4205-.5169zm0 38c-1.8461 0-3.6307-.2633-5.3184-.7544l2.3211-4.5672c.9656.2106 1.9685.3216 2.9973.3216.7921 0 1.5689-.0658 2.3252-.1922l2.0952 4.6753c-1.4184.338-2.8985.5169-4.4204.5169zm7.288-36.552c3.0672 1.275 5.7284 3.3306 7.7355 5.9189l-4.5613 2.3301c-1.1837-1.3302-2.6173-2.4332-4.2272-3.2353zm8.9232 7.6374c1.6744 2.7319 2.6776 5.9196 2.7801 9.3337l-5.0581-.7957c-.1783-1.8263-.7075-3.5498-1.5193-5.1021zm-1.7744 22.2674c-2.1253 2.4815-4.8792 4.4086-8.0149 5.5345l-.8067-5.0589c1.6508-.7236 3.1353-1.7566 4.38-3.0255zm4.5042-10.8449c-.2661 3.3899-1.4219 6.5297-3.2341 9.1861l-3.6247-3.617c.8892-1.5149 1.5017-3.2119 1.768-5.0215zm-26.229 16.0441c-3.0673-1.275-5.7284-3.3306-7.7355-5.9189l4.5612-2.3301c1.1837 1.3303 2.6174 2.4333 4.2272 3.2354zm-8.9232-7.6374c-1.6744-2.7319-2.6776-5.9196-2.7801-9.3337l5.0581.7957c.1782 1.8263.7074 3.5498 1.5192 5.1021zm-2.7298-11.4225c.2661-3.3898 1.4219-6.5297 3.2341-9.1861l3.6247 3.6171c-.8893 1.5149-1.5017 3.2118-1.768 5.0214zm4.5042-10.8449c2.1252-2.4814 4.8791-4.4085 8.0149-5.5345l.8067 5.0589c-1.6509.7236-3.1353 1.7566-4.38 3.0255z\"></path></g></svg></span>\n  </span>\n</label>",
-    "css": "/* From Uiverse.io by andrew-demchenk0 - Tags: switch */\n.switch {\n  font-size: 17px;\n  position: relative;\n  display: inline-block;\n  width: 70px;\n  height: 34.5px;\n  overflow: hidden;\n}\n\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s;\n  border-radius: 30px;\n}\n\n.commutator {\n  cursor: pointer;\n  position: absolute;\n  top: -29%;\n  left: -14%;\n  transition: .4s;\n}\n\n.iron-man {\n  position: absolute;\n  top: -27%;\n  left: -100%;\n  transform: rotate(90deg);\n}\n\n.input:checked + .slider {\n  background-color: #2196F3;\n}\n\n.input:checked + .slider .commutator {\n  transform: translateX(34.5px);\n  opacity: 0;\n}\n\n.input:checked + .slider .iron-man {\n  animation: show_5911 1.3s ease-in-out forwards;\n}\n\n@keyframes show_5911 {\n  0% {\n    transform: translateX(0px) rotate(90deg);\n  }\n\n  50% {\n    transform: translateX(75px) rotate(90deg);\n  }\n\n  100% {\n    transform: translateX(79px) rotate(0deg);\n  }\n}"
-  },
-  {
     "id": "uiverse-ilkhoeri_blue-zebra-2",
     "title": "Blue Zebra",
     "category": "toggle",
@@ -1874,6 +1379,28 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"switch-wrap\">\n  <input\n    class=\"switch-input\"\n    aria-label=\"switch\"\n    name=\"switch\"\n    id=\"switch\"\n    type=\"checkbox\"\n    hidden=\"\"\n  />\n  <label class=\"switch-label\" for=\"switch\"></label>\n  <span class=\"switch-marbles\"></span>\n</div>",
     "css": "/* From Uiverse.io by ilkhoeri  - Tags: switch */\n.switch-wrap {\n  z-index: 20;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 9999px;\n  width: calc(var(--w-switch) + calc(var(--p) * 2));\n  height: calc(var(--h-switch) + calc(var(--p) * 2));\n  box-shadow: hsla(var(--pure-black), 0.25) 2px -5px 4px inset,\n    hsla(var(--pure-black), 0.25) 0px 2px 5px -1px,\n    hsla(var(--pure-black), 0.3) 0 1px 3px -1px,\n    0 70px 40px -20px hsla(var(--pure-black), 0.2),\n    hsla(var(--pure-black), 0.2) 0 0 0 1px inset;\n  --round: 4rem;\n  --pure-black: 0, 0%, 0%;\n  --pure-white: 0, 0%, 100%;\n  --scale-x: calc(1.35 * var(--round));\n  --p: calc(calc(6.25 / 100) * var(--round));\n  --checked: calc(100% - calc(var(--round) + var(--p)));\n  --sz-marbles: calc(var(--w-switch) + calc(var(--p) * 2));\n  --h-switch: calc(var(--round) + calc(var(--p) * 2));\n  --w-switch: calc(calc(var(--round) * 2) + calc(var(--p) * 2));\n  --bg-switch: var(--pure-black);\n  --box: var(--pure-white);\n}\n\n.switch-wrap .switch-input {\n  display: none;\n  background: transparent none;\n  visibility: hidden;\n}\n\n.switch-label {\n  cursor: pointer;\n  user-select: none;\n  position: relative;\n  z-index: 20;\n  width: var(--w-switch);\n  height: var(--h-switch);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  outline: none;\n  background-color: hsl(var(--pure-white));\n  border-radius: 9999px;\n  border-width: 0px;\n  transition: all linear 300ms;\n  box-shadow: var(--shadow);\n  --shadow: hsla(var(--pure-black), 0.4) 0 2px 4px,\n    hsla(var(--pure-black), 0.3) 0 7px 13px -3px,\n    hsla(var(--pure-black), 0.25) -2px -5px 4px inset,\n    hsla(var(--pure-black), 0.2) 0 0 0 1px inset;\n}\n\n.switch-label::after {\n  position: absolute;\n  display: block;\n  content: \"\";\n  width: var(--round);\n  height: var(--round);\n  left: var(--p);\n  border-radius: 9999px;\n  background-color: hsl(0, 0%, 100%);\n  will-change: left, width, margin, padding;\n  box-shadow: var(--shadow);\n  transition: left 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275),\n    width 300ms ease, padding 300ms ease, margin 300ms ease,\n    background-color 300ms ease, box-shadow 300ms linear;\n}\n\n.switch-input + .switch-label:active::after {\n  width: var(--scale-x);\n  --shadow: hsla(var(--pure-black), 0.4) 0 2px 4px,\n    hsla(var(--pure-black), 0.3) 0 7px 13px -3px,\n    hsla(var(--pure-black), 0.25) 0px -2px 8px 6px inset,\n    hsla(var(--pure-black), 0.25) 0 0 0 1px inset;\n}\n\n.switch-input:checked + .switch-label {\n  --shadow: hsla(var(--pure-black), 0.4) 0 2px 4px,\n    hsla(var(--pure-black), 0.3) 0 7px 13px -3px,\n    hsla(var(--pure-black), 0.25) 2px -5px 4px inset,\n    hsla(var(--pure-black), 0.2) 0 0 0 1px inset;\n  --bg-switch: var(--pure-white);\n  --box: var(--pure-black);\n}\n\n.switch-input:checked + .switch-label::after {\n  background: white linear-gradient(-45deg, #f8acff 0%, #696eff 100%);\n  left: var(--checked);\n}\n\n.switch-input:checked + .switch-label:active::after {\n  margin-left: calc(calc(var(--checked) - var(--scale-x)) - var(--p));\n}\n\n.switch-marbles {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n  border-radius: 9999px;\n}\n\n.switch-marbles::after {\n  height: var(--sz-marbles);\n  width: var(--sz-marbles);\n  z-index: 0;\n  content: \"\";\n  position: absolute;\n  border-radius: 9999px;\n}\n\n.switch-marbles::before {\n  content: \"\";\n  height: var(--sz-marbles);\n  width: var(--sz-marbles);\n  position: absolute;\n  border-radius: 9999px;\n  z-index: -1;\n  background-image: linear-gradient(-45deg, #f8acff 0%, #696eff);\n  filter: blur(20px);\n  opacity: var(0.7);\n  animation: rotate 4000ms linear running infinite;\n}\n\n@keyframes rotate {\n  to {\n    rotate: 360deg;\n  }\n}"
+  },
+  {
+    "id": "uiverse-andrew-demchenk0_light-dragonfly-53",
+    "title": "Light Dragonfly",
+    "category": "toggle",
+    "source": "uiverse",
+    "author": {
+      "name": "andrew-demchenk0",
+      "profileUrl": "https://uiverse.io/andrew-demchenk0/light-dragonfly-53"
+    },
+    "license": "MIT",
+    "description": "Light Dragonfly · toggle by andrew-demchenk0",
+    "tags": [
+      "toggle",
+      "switch",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 400,
+    "accentColor": null,
+    "html": "<label class=\"switch\">\n  <input class=\"input\" type=\"checkbox\">\n  <span class=\"slider\">\n    <span class=\"iron-man\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" viewBox=\"0 0 48 48\" height=\"50\"><path fill=\"#d03827\" d=\"m19.479 46.479c-.595.059-1.166-.238-1.441-.77-.415-.803-1.062-1.334-1.595-2.023-1.281-1.657-2.266-3.435-3.411-5.189-.196-.3-.395-.608-.481-.955-.089-.359-.053-.736-.02-1.104.058-.64-.058-1.274-.217-1.897-.384-1.51-2.376-2.642-3.273-3.916-1.248-1.774-1.382-4.075-1.473-6.242-.07-1.661.002-3.513-.032-5.223-.008-.422.162-.816.472-1.103.859-.794 1.844-2.056 2.009-3.191.332-2.29.469-4.653 1.376-6.782 1.679-3.937 5.84-6.913 10.083-7.475 5.19-.687 10.929 1.721 14.485 5.564.586.633 1.124 1.315 1.544 2.069.75 1.344 1.104 2.871 1.337 4.392.201 1.309.03 2.697.055 4.029.009.458.371.863.743 1.131.483.348.784.975.878 1.581.125.809-.061 1.629-.201 2.436-.25 1.443-.352 2.912-.303 4.377.05 1.499.199 3.184-.791 4.312-.511.582-1.458.982-1.927 1.599-1.072 1.409-.446 3.435-.987 5.121-.22.687-.665 1.276-1.102 1.85-1.579 2.075-2.924 4.202-4.503 6.277-.359.472-.878 1.082-1.471 1.066-3.125-.156-6.582-.247-9.754.066z\"></path><path fill=\"#010101\" d=\"m19.328 46.987c-.731 0-1.398-.396-1.734-1.048-.239-.464-.577-.837-.934-1.232-.209-.23-.418-.463-.612-.715-.888-1.147-1.645-2.367-2.377-3.547-.346-.558-.693-1.117-1.058-1.675-.206-.316-.439-.675-.548-1.107-.107-.436-.068-.869-.034-1.252.057-.622-.07-1.23-.201-1.747-.201-.789-.998-1.528-1.77-2.243-.519-.48-1.054-.978-1.428-1.508-1.373-1.95-1.479-4.478-1.564-6.509-.04-.965-.033-2.004-.026-3.009.005-.751.01-1.501-.005-2.226-.012-.558.219-1.098.632-1.479.765-.706 1.708-1.888 1.854-2.896.067-.463.127-.929.186-1.396.234-1.844.476-3.75 1.226-5.51 1.727-4.05 5.938-7.174 10.478-7.775 5.132-.677 11.124 1.619 14.918 5.72.688.743 1.216 1.451 1.613 2.165.851 1.523 1.192 3.237 1.396 4.56.138.902.109 1.829.081 2.726-.015.46-.029.918-.021 1.369.004.218.21.5.536.736.552.398.956 1.112 1.079 1.91.123.789-.015 1.556-.148 2.297l-.054.3c-.243 1.408-.343 2.847-.295 4.275l.013.345c.055 1.463.118 3.122-.928 4.313-.28.319-.648.574-1.004.821-.36.25-.7.486-.9.75-.541.71-.575 1.665-.612 2.676-.027.759-.057 1.544-.297 2.295-.25.776-.744 1.427-1.18 2-.785 1.031-1.526 2.097-2.244 3.127-.72 1.035-1.465 2.106-2.259 3.15-.477.626-1.066 1.263-1.842 1.263-.014 0-.028 0-.042 0-2.81-.14-6.438-.256-9.694.066-.068.006-.134.01-.201.01zm.151-.508h.01zm3.775-45.485c-.579 0-1.15.037-1.711.111-4.137.547-8.12 3.498-9.688 7.176-.695 1.631-.928 3.468-1.153 5.243-.06.473-.12.944-.188 1.413-.185 1.267-1.239 2.632-2.166 3.487-.206.19-.316.448-.311.725.014.734.01 1.493.005 2.252-.007.993-.014 2.021.026 2.962.079 1.899.179 4.264 1.383 5.974.313.445.787.885 1.29 1.351.877.813 1.784 1.655 2.058 2.73.152.598.298 1.311.23 2.064-.032.353-.061.668.007.939.067.269.244.54.415.803.368.563.72 1.129 1.069 1.693.752 1.211 1.463 2.355 2.318 3.463.179.231.372.444.563.656.384.425.781.864 1.08 1.443.178.344.547.552.948.501 3.302-.325 6.824-.218 9.831-.069h.01c.378 0 .874-.653 1.038-.869.781-1.027 1.521-2.089 2.235-3.116.723-1.039 1.471-2.113 2.269-3.161.406-.534.826-1.087 1.023-1.7.198-.619.224-1.303.25-2.026.041-1.122.083-2.282.815-3.244.296-.39.718-.683 1.126-.966.32-.223.623-.433.822-.66.783-.892.73-2.276.68-3.616l-.013-.349c-.05-1.497.055-3.004.311-4.479l.054-.308c.125-.689.242-1.342.145-1.966-.082-.531-.341-1.011-.676-1.253-.35-.253-.937-.786-.951-1.527-.009-.469.006-.943.021-1.42.027-.851.055-1.731-.069-2.543-.19-1.239-.508-2.84-1.28-4.224-.358-.644-.841-1.289-1.475-1.973-3.166-3.421-7.946-5.517-12.341-5.517z\"></path><path fill=\"#febf10\" d=\"m38.104 25.557c-1.123-4.605-1.65-9.529-1.541-14.268-1.207-1.917-2.861-3.551-4.866-4.604-.818-.43-1.954-.717-2.562-.021-.271.31-.351.738-.425 1.143-.326 1.761-.748 3.504-1.265 5.219-.234.776-.545 1.618-1.256 2.006-.435.237-.95.261-1.445.28-.754.029-1.509.057-2.263.086-.168.006-.348.009-.488-.084-.156-.104-.219-.299-.272-.479-.802-2.73-1.692-5.435-2.667-8.108-.086-.237-.215-.509-.464-.549-.148-.024-.294.046-.427.115-2.115 1.1-4.093 2.729-5.751 4.442.34 4.626-.564 9.83-2.475 14.057.237.218.46.466.687.707 3.687 5.347 5.26 11.33 7.888 17.277.163.369.428.763.828.711 3.361-.115 6.812-.309 10.173-.424 2.076-4.558 4.648-9.484 6.647-14.077l-.004-.001c.771-1.072 1.426-2.227 1.948-3.428z\"></path><path fill=\"#16b7b8\" d=\"m13.826 23.27c-.366 1.118-.367 2.353-.002 3.471 1.598.602 3.318.88 5.024.813.38-.015.775-.051 1.105-.241.465-.267.825-1.07.994-1.578\"></path><path fill=\"#16b7b8\" d=\"m27.207 25.601c.225.589.613.676.968 1.198.078.114.161.229.278.303.104.066.227.095.347.12 1.607.34 3.291.314 4.887-.075.245-.06.51-.143.648-.355.083-.128.107-.285.127-.437.171-1.292-.037-2.164-.038-3.467\"></path><path fill=\"#010101\" d=\"m38.589 25.438c-1.106-4.538-1.634-9.428-1.526-14.138.002-.099-.024-.195-.077-.278-1.308-2.077-3.057-3.729-5.057-4.779-1.323-.695-2.511-.662-3.171.093-.361.414-.461.95-.54 1.381-.32 1.732-.741 3.471-1.252 5.166-.201.669-.463 1.409-1.017 1.71-.343.187-.812.204-1.304.223l-2.183.083c-.051.002-.17.006-.182.01-.028-.033-.067-.165-.082-.214-.801-2.728-1.701-5.466-2.677-8.137-.069-.193-.282-.781-.852-.873-.324-.054-.594.089-.738.165-1.961 1.02-3.994 2.588-5.88 4.537-.099.103-.149.242-.14.385.334 4.544-.575 9.708-2.432 13.813-.086.196-.039.428.121.574.219.201.425.433.635.656 2.488 3.617 3.983 7.485 5.561 11.578.705 1.827 1.434 3.717 2.259 5.584.377.856.89 1.016 1.192 1.016.041 0 .077-.003.109-.007 1.684-.058 3.389-.135 5.095-.213 1.7-.077 3.4-.154 5.078-.211.19-.007.359-.12.438-.293.9-1.977 1.915-4.065 2.896-6.085 1.281-2.637 2.604-5.363 3.734-7.955.763-1.069 1.427-2.234 1.964-3.472.044-.102.054-.213.028-.319zm-20.194-18.702c.022-.012.084-.044.079-.069.02.025.058.088.109.232.969 2.652 1.862 5.37 2.657 8.076.06.203.159.544.476.755.277.185.592.171.784.168l2.262-.086c.498-.019 1.117-.042 1.666-.341.845-.46 1.218-1.378 1.495-2.301.521-1.73.951-3.504 1.277-5.272.064-.343.13-.697.312-.904.392-.452 1.296-.209 1.952.134 1.531.804 2.889 2.013 4.006 3.497-.748.863-1.13 1.896-1.198 3.33-.034.689-.099 1.419-.165 2.166-.188 2.116-.382 4.306.029 6.246.031.147.056.299.032.396-.039.104-.306.257-.831.469-6.237 2.525-13.53 2.362-19.149-.398 1.635-4.348.39-8.57-.941-12.214 1.674-1.653 3.441-2.996 5.148-3.884zm15.585 17.484c.05.7.09 1.3-.02 2.07 0 .06-.02.19-.04.23-.02.03-.1.08-.35.14-1.52.37-3.14.4-4.67.07-.05-.01-.15-.03-.18-.05-.04-.02-.1-.12-.13-.16-.18-.27-.37-.44-.52-.58-.084-.075-.15-.139-.211-.207 2.008-.295 3.995-.822 5.891-1.589.067-.027.145-.062.219-.094.004.055.008.116.011.17zm-19.802-.295c1.934.894 4.041 1.501 6.23 1.819-.205.55-.482 1.008-.704 1.135-.241.139-.578.163-.875.175-1.544.068-3.133-.18-4.598-.697-.217-.791-.227-1.63-.053-2.432zm2.551 13.108c-.654-1.697-1.297-3.354-1.999-4.976.132.177.254.359.401.526.34.39.724.749 1.094 1.097.822.772 1.599 1.501 1.855 2.469l.049.188c.171.662.396 1.511.954 2.056 0 .013-.006.025-.006.038.048.963-.065 1.921-.337 2.848l-.038.128c-.03.099-.06.206-.089.313-.668-1.569-1.29-3.149-1.884-4.687zm7.676 5.74c-1.609.074-3.222.145-4.853.204-.003-.05-.006-.1-.024-.148-.116-.306.005-.708.132-1.135l.039-.133c.258-.877.379-1.779.38-2.689 1.283.275 2.588.388 3.872.388 1.422 0 2.809-.128 4.11-.288.002.044.002.087.016.131.361 1.139.661 2.308.91 3.478-1.516.055-3.048.123-4.582.192zm7.56-6.027c-.747 1.539-1.502 3.108-2.225 4.649-.21-.873-.44-1.743-.71-2.596l-.046-.103c-.008-.013-.02-.021-.029-.033.031-.049.073-.09.086-.149.135-.608.352-1.072.582-1.563.173-.37.353-.752.515-1.225.131-.38.267-.746.486-1.032.266-.348.669-.598 1.098-.863l.171-.106c.858-.538 1.666-1.181 2.426-1.896-.765 1.638-1.565 3.293-2.354 4.917zm-.603-3.868-.167.104c-.485.301-.988.612-1.364 1.105-.311.404-.485.871-.638 1.314-.146.422-.313.779-.475 1.126-.203.432-.411.876-.566 1.427-2.56.324-5.5.535-8.176-.115-.478-.201-.71-1.098-.879-1.753l-.051-.193c-.33-1.244-1.249-2.107-2.138-2.941-.369-.347-.718-.674-1.026-1.026-.488-.559-.879-1.19-1.292-1.86-.126-.205-.253-.41-.382-.613-.901-1.41-1.971-2.962-3.188-4.264-.013-.019-.024-.038-.037-.057-.039-.055-.087-.1-.141-.134-.103-.106-.199-.225-.305-.327 1.537-3.535 2.401-7.778 2.435-11.769.982 3.109 1.563 6.542.119 9.977-.091.216-.012.457.172.591-.292 1.122-.276 2.323.084 3.426.047.145.157.259.3.313 1.492.563 3.112.855 4.714.855.169 0 .338-.004.507-.01.446-.019.917-.068 1.333-.308.673-.386 1.077-1.426 1.22-1.854.002-.006 0-.012.002-.017.867.09 1.743.139 2.624.139.909 0 1.822-.053 2.733-.148.169.391.405.618.609.804.13.12.26.24.37.41.1.15.23.32.43.45.17.1.35.15.51.18.78.17 1.58.25 2.38.25.92 0 1.84-.11 2.72-.33.23-.05.69-.17.95-.57.15-.23.19-.48.21-.64.11-.87.07-1.55.02-2.27-.015-.238-.029-.499-.038-.761.087-.113.16-.237.196-.383.073-.296.032-.58-.023-.845-.381-1.795-.193-3.908-.012-5.952.067-.761.134-1.504.167-2.205.053-1.076.31-1.864.79-2.514-.088 4.675.436 9.513 1.519 14.02-1.383 3.108-3.586 5.72-6.216 7.368z\"></path></svg></span>\n    <span class=\"commutator\"><svg fill=\"#303c42\" height=\"55\" stroke=\"#303c42\" stroke-width=\"1.444\" viewBox=\"0 0 76 76\" width=\"55\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#2196F3\" stroke-linejoin=\"round\"><path d=\"m38 29c4.9706 0 9 4.0294 9 9s-4.0294 9-9 9-9-4.0294-9-9 4.0294-9 9-9zm0-10c1.8461 0 3.6307.2633 5.3183.7544l-2.321 4.5672c-.9657-.2106-1.9685-.3216-2.9973-.3216-.7922 0-1.569.0658-2.3252.1922l-2.0953-4.6753c1.4185-.338 2.8986-.5169 4.4205-.5169zm0 38c-1.8461 0-3.6307-.2633-5.3184-.7544l2.3211-4.5672c.9656.2106 1.9685.3216 2.9973.3216.7921 0 1.5689-.0658 2.3252-.1922l2.0952 4.6753c-1.4184.338-2.8985.5169-4.4204.5169zm7.288-36.552c3.0672 1.275 5.7284 3.3306 7.7355 5.9189l-4.5613 2.3301c-1.1837-1.3302-2.6173-2.4332-4.2272-3.2353zm8.9232 7.6374c1.6744 2.7319 2.6776 5.9196 2.7801 9.3337l-5.0581-.7957c-.1783-1.8263-.7075-3.5498-1.5193-5.1021zm-1.7744 22.2674c-2.1253 2.4815-4.8792 4.4086-8.0149 5.5345l-.8067-5.0589c1.6508-.7236 3.1353-1.7566 4.38-3.0255zm4.5042-10.8449c-.2661 3.3899-1.4219 6.5297-3.2341 9.1861l-3.6247-3.617c.8892-1.5149 1.5017-3.2119 1.768-5.0215zm-26.229 16.0441c-3.0673-1.275-5.7284-3.3306-7.7355-5.9189l4.5612-2.3301c1.1837 1.3303 2.6174 2.4333 4.2272 3.2354zm-8.9232-7.6374c-1.6744-2.7319-2.6776-5.9196-2.7801-9.3337l5.0581.7957c.1782 1.8263.7074 3.5498 1.5192 5.1021zm-2.7298-11.4225c.2661-3.3898 1.4219-6.5297 3.2341-9.1861l3.6247 3.6171c-.8893 1.5149-1.5017 3.2118-1.768 5.0214zm4.5042-10.8449c2.1252-2.4814 4.8791-4.4085 8.0149-5.5345l.8067 5.0589c-1.6509.7236-3.1353 1.7566-4.38 3.0255z\" stroke=\"#ccc\" stroke-linecap=\"round\" stroke-width=\"2.432\"></path><path d=\"m38 29c4.9706 0 9 4.0294 9 9s-4.0294 9-9 9-9-4.0294-9-9 4.0294-9 9-9zm0-10c1.8461 0 3.6307.2633 5.3183.7544l-2.321 4.5672c-.9657-.2106-1.9685-.3216-2.9973-.3216-.7922 0-1.569.0658-2.3252.1922l-2.0953-4.6753c1.4185-.338 2.8986-.5169 4.4205-.5169zm0 38c-1.8461 0-3.6307-.2633-5.3184-.7544l2.3211-4.5672c.9656.2106 1.9685.3216 2.9973.3216.7921 0 1.5689-.0658 2.3252-.1922l2.0952 4.6753c-1.4184.338-2.8985.5169-4.4204.5169zm7.288-36.552c3.0672 1.275 5.7284 3.3306 7.7355 5.9189l-4.5613 2.3301c-1.1837-1.3302-2.6173-2.4332-4.2272-3.2353zm8.9232 7.6374c1.6744 2.7319 2.6776 5.9196 2.7801 9.3337l-5.0581-.7957c-.1783-1.8263-.7075-3.5498-1.5193-5.1021zm-1.7744 22.2674c-2.1253 2.4815-4.8792 4.4086-8.0149 5.5345l-.8067-5.0589c1.6508-.7236 3.1353-1.7566 4.38-3.0255zm4.5042-10.8449c-.2661 3.3899-1.4219 6.5297-3.2341 9.1861l-3.6247-3.617c.8892-1.5149 1.5017-3.2119 1.768-5.0215zm-26.229 16.0441c-3.0673-1.275-5.7284-3.3306-7.7355-5.9189l4.5612-2.3301c1.1837 1.3303 2.6174 2.4333 4.2272 3.2354zm-8.9232-7.6374c-1.6744-2.7319-2.6776-5.9196-2.7801-9.3337l5.0581.7957c.1782 1.8263.7074 3.5498 1.5192 5.1021zm-2.7298-11.4225c.2661-3.3898 1.4219-6.5297 3.2341-9.1861l3.6247 3.6171c-.8893 1.5149-1.5017 3.2118-1.768 5.0214zm4.5042-10.8449c2.1252-2.4814 4.8791-4.4085 8.0149-5.5345l.8067 5.0589c-1.6509.7236-3.1353 1.7566-4.38 3.0255z\"></path></g></svg></span>\n  </span>\n</label>",
+    "css": "/* From Uiverse.io by andrew-demchenk0 - Tags: switch */\n.switch {\n  font-size: 17px;\n  position: relative;\n  display: inline-block;\n  width: 70px;\n  height: 34.5px;\n  overflow: hidden;\n}\n\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s;\n  border-radius: 30px;\n}\n\n.commutator {\n  cursor: pointer;\n  position: absolute;\n  top: -29%;\n  left: -14%;\n  transition: .4s;\n}\n\n.iron-man {\n  position: absolute;\n  top: -27%;\n  left: -100%;\n  transform: rotate(90deg);\n}\n\n.input:checked + .slider {\n  background-color: #2196F3;\n}\n\n.input:checked + .slider .commutator {\n  transform: translateX(34.5px);\n  opacity: 0;\n}\n\n.input:checked + .slider .iron-man {\n  animation: show_5911 1.3s ease-in-out forwards;\n}\n\n@keyframes show_5911 {\n  0% {\n    transform: translateX(0px) rotate(90deg);\n  }\n\n  50% {\n    transform: translateX(75px) rotate(90deg);\n  }\n\n  100% {\n    transform: translateX(79px) rotate(0deg);\n  }\n}"
   },
   {
     "id": "uiverse-barisdogansutcu_tender-dingo-64",
@@ -1974,6 +1501,29 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Nawsome - Tags: skeuomorphism, checkbox, squishy, bubble */\nlabel, .bubble {\n  display: block;\n  -webkit-tap-highlight-color: transparent;\n}\n\nlabel {\n  animation: float74 4s ease-in-out infinite;\n}\n\n.bubble, .bubble:before, .bubble:after {\n  transition-duration: 0.2s;\n}\n\n.bubble, .bubble:after {\n  border-radius: 50%;\n}\n\n.bubble {\n  background-image: radial-gradient(8% 8% at 22% 28%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),\n\t\tradial-gradient(8% 8% at 23% 27%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),\n\t\tradial-gradient(8% 8% at 24% 26%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),\n\t\tradial-gradient(8% 8% at 25% 25%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),\n\t\tradial-gradient(8% 8% at 26% 24%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),\n\t\tradial-gradient(8% 8% at 27% 23%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),\n\t\tradial-gradient(8% 8% at 28% 22%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%);\n  box-shadow: 0 -0.06em 0.1em hsl(0,90%,100%) inset,\n\t\t0 -0.15em 0.4em hsl(0,90%,45%) inset,\n\t\t0 0.05em 0.05em hsl(0,90%,45%) inset,\n\t\t0.05em 0 0.1em hsl(0,90%,100%) inset,\n\t\t-0.05em 0 0.1em hsl(0,90%,100%) inset,\n\t\t0 0.1em 0.4em hsl(0,90%,60%) inset;\n  cursor: pointer;\n  position: relative;\n  width: 3em;\n  height: 3em;\n  transform-style: preserve-3d;\n  transition-property: box-shadow, transform, width, height;\n  transition-timing-function: ease-in-out, ease-in-out, var(--bubbleTiming), var(--bubbleTiming);\n  will-change: transform;\n  -webkit-appearance: none;\n  appearance: none;\n  z-index: 0;\n}\n\n.bubble:before, .bubble:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  transition-timing-function: var(--bubbleTiming);\n}\n\n.bubble:before {\n  border-radius: 0.75em;\n  box-shadow: 0 0 0 0.5em hsl(0,0%,100%) inset;\n  filter: drop-shadow(0.6em 0.6em 4px hsla(0,0%,0%,0.2));\n  top: 50%;\n  left: 50%;\n  width: 1.5em;\n  height: 1.5em;\n  transform: translate3d(-50%,-50%,-1px);\n  z-index: -1;\n}\n\n.bubble:after {\n  background: radial-gradient(100% 100% at center,hsla(0,0%,0%,0) 35%,hsla(0,0%,0%,0.2) 48%,hsla(0,0%,0%,0) 50%);\n  filter: blur(4px);\n  top: 0.6em;\n  left: 0.6em;\n  width: 100%;\n  height: 100%;\n  transform: translate3d(0,0,-1px);\n  z-index: -2;\n}\n\n.bubble:focus, .bubble:hover {\n  transform: scale(1.1);\n  outline: none;\n}\n\n.bubble:focus:active, .bubble:hover:active {\n  width: 3.6em;\n  height: 2.4em;\n}\n\n.bubble:focus:before, .bubble:hover:before {\n  filter: drop-shadow(0.75em 0.75em 4px hsla(0,0%,0%,0.2));\n}\n\n.bubble:focus:after, .bubble:hover:after {\n  transform: translate3d(0.15em,0.15em,-1px);\n}\n\n.bubble:checked {\n  box-shadow: 0 -0.06em 0.1em hsl(120,90%,100%) inset,\n\t\t0 -0.15em 0.4em hsl(120,90%,45%) inset,\n\t\t0 0.05em 0.05em hsl(120,90%,45%) inset,\n\t\t0.05em 0 0.1em hsl(120,90%,100%) inset,\n\t\t-0.05em 0 0.1em hsl(120,90%,100%) inset,\n\t\t0 0.1em 0.4em hsl(120,90%,60%) inset;\n}\n\n.bubble:checked:before {\n  border-radius: 0.25em;\n  width: 0.5em;\n}\n/* Reduced motion */\n@media (prefers-reduced-motion: reduce) {\n  label {\n    animation: none;\n  }\n\n  .bubble, .bubble:before, .bubble:after {\n    transition-duration: 0s;\n  }\n\n  .bubble:focus, .bubble:hover {\n    transform: scale(1);\n  }\n\n  .bubble:focus:active, .bubble:hover:active {\n    width: 3em;\n    height: 3em;\n  }\n\n  .bubble:focus:before, .bubble:hover:before {\n    filter: drop-shadow(0.6em 0.6em 4px hsla(0,0%,0%,0.2));\n  }\n\n  .bubble:focus:after, .bubble:hover:after {\n    transform: translate3d(0,0,-1px);\n  }\n}\n/* Animations */\n@keyframes float74 {\n  from, to {\n    transform: translate(0,3%);\n  }\n\n  25% {\n    transform: translate(-3%,0);\n  }\n\n  50% {\n    transform: translate(0,-3%);\n  }\n\n  75% {\n    transform: translate(3%,0);\n  }\n}"
   },
   {
+    "id": "uiverse-nawsome_empty-snail-69",
+    "title": "Empty Snail",
+    "category": "toggle",
+    "source": "uiverse",
+    "author": {
+      "name": "Nawsome",
+      "profileUrl": "https://uiverse.io/Nawsome/empty-snail-69"
+    },
+    "license": "MIT",
+    "description": "Empty Snail · toggle by Nawsome",
+    "tags": [
+      "toggle",
+      "skeuomorphism",
+      "switch",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 200,
+    "accentColor": null,
+    "html": "<label class=\"switch\">\n  <input type=\"checkbox\" checked=\"checked\">\n  <div class=\"button\">\n    <div class=\"light\"></div>\n    <div class=\"dots\"></div>\n    <div class=\"characters\"></div>\n    <div class=\"shine\"></div>\n    <div class=\"shadow\"></div>\n  </div>\n</label>",
+    "css": "/* From Uiverse.io by Nawsome - Tags: skeuomorphism, switch */\n.switch {\n  display: block;\n  background-color: black;\n  width: 150px;\n  height: 195px;\n  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c, inset 0 0 2px 22px black;\n  border-radius: 5px;\n  padding: 20px;\n  perspective: 700px;\n}\n\n.switch input {\n  display: none;\n}\n\n.switch input:checked + .button {\n  transform: translateZ(20px) rotateX(25deg);\n  box-shadow: 0 -10px 20px #ff1818;\n}\n\n.switch input:checked + .button .light {\n  animation: flicker 0.2s infinite 0.3s;\n}\n\n.switch input:checked + .button .shine {\n  opacity: 1;\n}\n\n.switch input:checked + .button .shadow {\n  opacity: 0;\n}\n\n.switch .button {\n  display: block;\n  transition: all 0.3s cubic-bezier(1, 0, 1, 1);\n  transform-origin: center center -20px;\n  transform: translateZ(20px) rotateX(-25deg);\n  transform-style: preserve-3d;\n  background-color: #9b0621;\n  height: 100%;\n  position: relative;\n  cursor: pointer;\n  background: linear-gradient(#980000 0%, #6f0000 30%, #6f0000 70%, #980000 100%);\n  background-repeat: no-repeat;\n}\n\n.switch .button::before {\n  content: \"\";\n  background: linear-gradient(rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.3) 30%, #650000 75%, #320000) 50% 50%/97% 97%, #b10000;\n  background-repeat: no-repeat;\n  width: 100%;\n  height: 50px;\n  transform-origin: top;\n  transform: rotateX(-90deg);\n  position: absolute;\n  top: 0;\n}\n\n.switch .button::after {\n  content: \"\";\n  background-image: linear-gradient(#650000, #320000);\n  width: 100%;\n  height: 50px;\n  transform-origin: top;\n  transform: translateY(50px) rotateX(-90deg);\n  position: absolute;\n  bottom: 0;\n  box-shadow: 0 50px 8px 0px black, 0 80px 20px 0px rgba(0, 0, 0, 0.5);\n}\n\n.switch .light {\n  opacity: 0;\n  animation: light-off 1s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-image: radial-gradient(#ffc97e, #ff1818 40%, transparent 70%);\n}\n\n.switch .dots {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-image: radial-gradient(transparent 30%, rgba(101, 0, 0, 0.7) 70%);\n  background-size: 10px 10px;\n}\n\n.switch .characters {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(white, white) 50% 20%/5% 20%, radial-gradient(circle, transparent 50%, white 52%, white 70%, transparent 72%) 50% 80%/33% 25%;\n  background-repeat: no-repeat;\n}\n\n.switch .shine {\n  transition: all 0.3s cubic-bezier(1, 0, 1, 1);\n  opacity: 0.3;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(white, transparent 3%) 50% 50%/97% 97%, linear-gradient(rgba(255, 255, 255, 0.5), transparent 50%, transparent 80%, rgba(255, 255, 255, 0.5)) 50% 50%/97% 97%;\n  background-repeat: no-repeat;\n}\n\n.switch .shadow {\n  transition: all 0.3s cubic-bezier(1, 0, 1, 1);\n  opacity: 1;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.8));\n  background-repeat: no-repeat;\n}\n\n@keyframes flicker {\n  0% {\n    opacity: 1;\n  }\n\n  80% {\n    opacity: 0.8;\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes light-off {\n  0% {\n    opacity: 1;\n  }\n\n  80% {\n    opacity: 0;\n  }\n}"
+  },
+  {
     "id": "uiverse-yaya12085_lovely-firefox-94",
     "title": "Lovely Firefox",
     "category": "toggle",
@@ -2001,29 +1551,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Yaya12085 - Tags: neumorphism, skeuomorphism, icon, 3d, button, switch, realistic, toggle */\n.container {\n  width: 7em;\n  height: 7em;\n  position: relative;\n}\n\n.button {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  border: 4px solid #090909;\n  background-color: transparent;\n  background-image: linear-gradient(145deg, #171717, #444245);\n  box-sizing: border-box;\n  box-shadow: inset 2px 2px 0 #7d7c7e, inset -2px -2px 0px #1c1c1c;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.container input {\n  display: none;\n}\n\n.button::before {\n  position: absolute;\n  content: \"\";\n  width: 7.25em;\n  height: 7.25em;\n  border-radius: inherit;\n  background-color: transparent;\n  background-image: linear-gradient(145deg, #262626, #606060);\n  z-index: -1;\n  box-shadow: 11px 11px 22px #141414, -11px -11px 22px #525252;\n}\n\n.button .icon {\n  width: 60px;\n  height: 60px;\n  display: inline-block;\n}\n\n.button .icon svg {\n  height: 100%;\n  width: 100%;\n  fill: #a5a5a5;\n}\n\n.container  input:checked + .button {\n  box-shadow: inset -2px -2px 0 #5e5e5e,inset 2px 2px 0 #1c1c1c;\n  border: 4px solid rgba(77, 124, 255, 0.281);\n  animation: animeBorder .3s linear alternate-reverse infinite;\n}\n\n.container input:checked + .button .icon svg {\n  fill: rgb(77, 124, 255);\n  animation: animeFill .3s linear alternate-reverse infinite;\n}\n\n@keyframes animeFill {\n  to {\n    fill: rgba(77, 124, 255, 0.642);\n  }\n}\n\n@keyframes animeBorder {\n  to {\n    border-color: rgba(77, 124, 255, 0.137);\n  }\n}"
   },
   {
-    "id": "uiverse-nawsome_empty-snail-69",
-    "title": "Empty Snail",
-    "category": "toggle",
-    "source": "uiverse",
-    "author": {
-      "name": "Nawsome",
-      "profileUrl": "https://uiverse.io/Nawsome/empty-snail-69"
-    },
-    "license": "MIT",
-    "description": "Empty Snail · toggle by Nawsome",
-    "tags": [
-      "toggle",
-      "skeuomorphism",
-      "switch",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<label class=\"switch\">\n  <input type=\"checkbox\" checked=\"checked\">\n  <div class=\"button\">\n    <div class=\"light\"></div>\n    <div class=\"dots\"></div>\n    <div class=\"characters\"></div>\n    <div class=\"shine\"></div>\n    <div class=\"shadow\"></div>\n  </div>\n</label>",
-    "css": "/* From Uiverse.io by Nawsome - Tags: skeuomorphism, switch */\n.switch {\n  display: block;\n  background-color: black;\n  width: 150px;\n  height: 195px;\n  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c, inset 0 0 2px 22px black;\n  border-radius: 5px;\n  padding: 20px;\n  perspective: 700px;\n}\n\n.switch input {\n  display: none;\n}\n\n.switch input:checked + .button {\n  transform: translateZ(20px) rotateX(25deg);\n  box-shadow: 0 -10px 20px #ff1818;\n}\n\n.switch input:checked + .button .light {\n  animation: flicker 0.2s infinite 0.3s;\n}\n\n.switch input:checked + .button .shine {\n  opacity: 1;\n}\n\n.switch input:checked + .button .shadow {\n  opacity: 0;\n}\n\n.switch .button {\n  display: block;\n  transition: all 0.3s cubic-bezier(1, 0, 1, 1);\n  transform-origin: center center -20px;\n  transform: translateZ(20px) rotateX(-25deg);\n  transform-style: preserve-3d;\n  background-color: #9b0621;\n  height: 100%;\n  position: relative;\n  cursor: pointer;\n  background: linear-gradient(#980000 0%, #6f0000 30%, #6f0000 70%, #980000 100%);\n  background-repeat: no-repeat;\n}\n\n.switch .button::before {\n  content: \"\";\n  background: linear-gradient(rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.3) 30%, #650000 75%, #320000) 50% 50%/97% 97%, #b10000;\n  background-repeat: no-repeat;\n  width: 100%;\n  height: 50px;\n  transform-origin: top;\n  transform: rotateX(-90deg);\n  position: absolute;\n  top: 0;\n}\n\n.switch .button::after {\n  content: \"\";\n  background-image: linear-gradient(#650000, #320000);\n  width: 100%;\n  height: 50px;\n  transform-origin: top;\n  transform: translateY(50px) rotateX(-90deg);\n  position: absolute;\n  bottom: 0;\n  box-shadow: 0 50px 8px 0px black, 0 80px 20px 0px rgba(0, 0, 0, 0.5);\n}\n\n.switch .light {\n  opacity: 0;\n  animation: light-off 1s;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-image: radial-gradient(#ffc97e, #ff1818 40%, transparent 70%);\n}\n\n.switch .dots {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-image: radial-gradient(transparent 30%, rgba(101, 0, 0, 0.7) 70%);\n  background-size: 10px 10px;\n}\n\n.switch .characters {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(white, white) 50% 20%/5% 20%, radial-gradient(circle, transparent 50%, white 52%, white 70%, transparent 72%) 50% 80%/33% 25%;\n  background-repeat: no-repeat;\n}\n\n.switch .shine {\n  transition: all 0.3s cubic-bezier(1, 0, 1, 1);\n  opacity: 0.3;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(white, transparent 3%) 50% 50%/97% 97%, linear-gradient(rgba(255, 255, 255, 0.5), transparent 50%, transparent 80%, rgba(255, 255, 255, 0.5)) 50% 50%/97% 97%;\n  background-repeat: no-repeat;\n}\n\n.switch .shadow {\n  transition: all 0.3s cubic-bezier(1, 0, 1, 1);\n  opacity: 1;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.8));\n  background-repeat: no-repeat;\n}\n\n@keyframes flicker {\n  0% {\n    opacity: 1;\n  }\n\n  80% {\n    opacity: 0.8;\n  }\n\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes light-off {\n  0% {\n    opacity: 1;\n  }\n\n  80% {\n    opacity: 0;\n  }\n}"
-  },
-  {
     "id": "uiverse-nawsome_silent-owl-45",
     "title": "Silent Owl",
     "category": "toggle",
@@ -2047,70 +1574,27 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Nawsome - Tags: switch, plane */\n.plane-switch {\n  --dot: #fff;\n  --street: #6B6D76;\n  --street-line: #A8AAB4;\n  --street-line-mid: #C0C2C8;\n  --sky-1: #60A7FA;\n  --sky-2: #2F8EFC;\n  --light-1: rgba(255, 233, 0, 1);\n  --light-2: rgba(255, 233, 0, .3);\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n}\n\n.plane-switch input {\n  display: none;\n}\n\n.plane-switch input + div {\n  -webkit-mask-image: -webkit-radial-gradient(white, black);\n  position: relative;\n  overflow: hidden;\n  width: 50px;\n  height: 25px;\n  padding: 1px;\n  border-radius: 13px;\n  background: linear-gradient(90deg, var(--street) 0%, var(--street) 25%, var(--sky-1) 75%, var(--sky-2) 100%) left var(--p, 0%) top 0;\n  background-position-x: var(--p, 0%);\n  background-size: 400% auto;\n  transition: background-position 0.6s;\n}\n\n.plane-switch input + div:before, .plane-switch input + div:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  transform: translateX(var(--s, 0));\n  transition: transform 0.3s;\n}\n\n.plane-switch input + div:before {\n  width: 42px;\n  right: 2px;\n  top: 4px;\n  height: 1px;\n  background: var(--street-line);\n  box-shadow: 0 16px 0 0 var(--street-line);\n}\n\n.plane-switch input + div:after {\n  width: 2px;\n  height: 2px;\n  border-radius: 50%;\n  left: 23px;\n  top: 1px;\n  -webkit-animation: lights2 2s linear infinite;\n  animation: lights2 2s linear infinite;\n  box-shadow: inset 0 0 0 2px var(--light-1), 0 21px 0 var(--light-1), 8px 0 0 var(--light-2), 8px 21px 0 var(--light-2), 16px 0 0 var(--light-2), 16px 21px 0 var(--light-2);\n}\n\n.plane-switch input + div span {\n  display: block;\n  position: absolute;\n}\n\n.plane-switch input + div span.street-middle {\n  top: 12px;\n  left: 21px;\n  width: 3px;\n  height: 1px;\n  transform: translateX(var(--s, 0));\n  background: var(--street-line-mid);\n  box-shadow: 5px 0 0 var(--street-line-mid), 10px 0 0 var(--street-line-mid), 15px 0 0 var(--street-line-mid), 20px 0 0 var(--street-line-mid), 25px 0 0 var(--street-line-mid);\n  transition: transform 0.3s;\n}\n\n.plane-switch input + div span.cloud {\n  width: 12px;\n  height: 4px;\n  border-radius: 2px;\n  background: #fff;\n  position: absolute;\n  top: var(--ct, 8px);\n  left: 100%;\n  opacity: var(--co, 0);\n  transition: opacity 0.3s;\n  -webkit-animation: clouds2 2s linear infinite var(--cd, 0s);\n  animation: clouds2 2s linear infinite var(--cd, 0s);\n}\n\n.plane-switch input + div span.cloud:before, .plane-switch input + div span.cloud:after {\n  content: \"\";\n  position: absolute;\n  transform: translateX(var(--cx, 0));\n  border-radius: 50%;\n  width: var(--cs, 5px);\n  height: var(--cs, 5px);\n  background: #fff;\n  bottom: 1px;\n  left: 1px;\n}\n\n.plane-switch input + div span.cloud:after {\n  --cs: 6px;\n  --cx: 4px;\n}\n\n.plane-switch input + div span.cloud.two {\n  --ct: 20px;\n  --cd: 1s;\n  opacity: var(--co-2, 0);\n}\n\n.plane-switch input + div div {\n  display: table;\n  position: relative;\n  z-index: 1;\n  padding: 5px;\n  border-radius: 50%;\n  background: var(--dot);\n  transform: translateX(var(--x, 0));\n  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.35, 1.2);\n}\n\n.plane-switch input + div div svg {\n  width: 13px;\n  height: 13px;\n  display: block;\n  color: var(--c, var(--street));\n  transition: color 0.6s;\n}\n\n.plane-switch input:checked + div {\n  --p: 100%;\n  --x: 25px;\n  --s: -50px;\n  --c: var(--sky-2);\n  --co: .8;\n  --co-2: .6;\n}\n\n@keyframes lights2 {\n  20%, 30% {\n    box-shadow: inset 0 0 0 2px var(--light-2), 0 21px 0 var(--light-2), 8px 0 0 var(--light-1), 8px 21px 0 var(--light-1), 16px 0 0 var(--light-2), 16px 21px 0 var(--light-2);\n  }\n\n  55%, 65% {\n    box-shadow: inset 0 0 0 2px var(--light-2), 0 21px 0 var(--light-2), 8px 0 0 var(--light-2), 8px 21px 0 var(--light-2), 16px 0 0 var(--light-1), 16px 21px 0 var(--light-1);\n  }\n\n  90%, 100% {\n    box-shadow: inset 0 0 0 2px var(--light-1), 0 21px 0 var(--light-1), 8px 0 0 var(--light-2), 8px 21px 0 var(--light-2), 16px 0 0 var(--light-2), 16px 21px 0 var(--light-2);\n  }\n}\n\n@keyframes clouds2 {\n  97% {\n    transform: translateX(-72px);\n    visibility: visible;\n  }\n\n  98%, 100% {\n    visibility: hidden;\n  }\n\n  99% {\n    transform: translateX(-72px);\n  }\n\n  100% {\n    transform: translateX(0);\n  }\n}"
   },
   {
-    "id": "uiverse-cssbuttons-io_short-shrimp-54",
-    "title": "Short Shrimp",
+    "id": "uiverse-sujeet-12_warm-dragonfly-92",
+    "title": "Warm Dragonfly",
     "category": "checkbox",
     "source": "uiverse",
     "author": {
-      "name": "cssbuttons-io",
-      "profileUrl": "https://uiverse.io/cssbuttons-io/short-shrimp-54"
+      "name": "sujeet-12",
+      "profileUrl": "https://uiverse.io/sujeet-12/warm-dragonfly-92"
     },
     "license": "MIT",
-    "description": "Short Shrimp · checkbox by cssbuttons-io",
+    "description": "Warm Dragonfly · checkbox by sujeet-12",
     "tags": [
       "checkbox",
-      "squishy",
+      "fun-check",
+      "circle-checkbox",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 100,
-    "accentColor": null,
-    "html": "<div class=\"cntr\">\n  <input checked=\"\" type=\"checkbox\" id=\"cbx\" class=\"hidden-xs-up\">\n  <label for=\"cbx\" class=\"cbx\"></label>\n</div>",
-    "css": "/* From Uiverse.io by cssbuttons-io - Tags: checkbox, squishy */\n.cbx {\n position: relative;\n top: 1px;\n width: 27px;\n height: 27px;\n border: 1px solid #c8ccd4;\n border-radius: 3px;\n vertical-align: middle;\n transition: background 0.1s ease;\n cursor: pointer;\n display: block;\n}\n\n.cbx:after {\n content: '';\n position: absolute;\n top: 2px;\n left: 8px;\n width: 7px;\n height: 14px;\n opacity: 0;\n transform: rotate(45deg) scale(0);\n border-right: 2px solid #fff;\n border-bottom: 2px solid #fff;\n transition: all 0.3s ease;\n transition-delay: 0.15s;\n}\n\n.lbl {\n margin-left: 5px;\n vertical-align: middle;\n cursor: pointer;\n}\n\n#cbx:checked ~ .cbx {\n border-color: transparent;\n background: #6871f1;\n animation: jelly 0.6s ease;\n}\n\n#cbx:checked ~ .cbx:after {\n opacity: 1;\n transform: rotate(45deg) scale(1);\n}\n\n.cntr {\n position: relative;\n}\n\n@keyframes jelly {\n from {\n  transform: scale(1, 1);\n }\n\n 30% {\n  transform: scale(1.25, 0.75);\n }\n\n 40% {\n  transform: scale(0.75, 1.25);\n }\n\n 50% {\n  transform: scale(1.15, 0.85);\n }\n\n 65% {\n  transform: scale(0.95, 1.05);\n }\n\n 75% {\n  transform: scale(1.05, 0.95);\n }\n\n to {\n  transform: scale(1, 1);\n }\n}\n\n.hidden-xs-up {\n display: none!important;\n}"
-  },
-  {
-    "id": "uiverse-ozgeozkaraa01_curly-rabbit-54",
-    "title": "Curly Rabbit",
-    "category": "checkbox",
-    "source": "uiverse",
-    "author": {
-      "name": "ozgeozkaraa01",
-      "profileUrl": "https://uiverse.io/ozgeozkaraa01/curly-rabbit-54"
-    },
-    "license": "MIT",
-    "description": "Curly Rabbit · checkbox by ozgeozkaraa01",
-    "tags": [
-      "checkbox",
-      "click animation",
-      "cool checkbox",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 200,
-    "accentColor": null,
-    "html": "<div class=\"cntr\">\n  <input class=\"hidden-xs-up\" id=\"cbx\" type=\"checkbox\" checked=\"\">\n  <label class=\"cbx\" for=\"cbx\"></label>\n</div>",
-    "css": "/* From Uiverse.io by ozgeozkaraa01 - Tags: checkbox, click animation, cool checkbox */\n.cbx {\n  position: relative;\n  top: 1px;\n  width: 27px;\n  height: 27px;\n  border: 1px solid #475569;\n  border-radius: 10px;\n  transition: background 0.2s ease;\n  cursor: pointer;\n  display: block;\n  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);\n}\n\n.cbx:after {\n  content: '';\n  position: absolute;\n  top: 2px;\n  left: 8px;\n  width: 7px;\n  height: 14px;\n  opacity: 0;\n  transform: rotate(45deg) scale(0);\n  border-right: 2px solid #fff;\n  border-bottom: 2px solid #fff;\n  transition: all 0.3s ease;\n  transition-delay: 0.15s;\n}\n\n#cbx:checked ~ .cbx {\n  border-color: transparent;\n  background: #ec4899;\n  animation: jelly 0.4s ease;\n}\n\n#cbx:checked ~ .cbx:after {\n  opacity: 1;\n  transform: rotate(45deg) scale(1);\n}\n\n.cntr {\n  position: relative;\n}\n\n@keyframes jelly {\n  from {\n    transform: scale(1, 1);\n  }\n\n  20% {\n    transform: scale(1.3, 0.7);\n  }\n\n  40% {\n    transform: scale(0.7, 1.3);\n  }\n\n  60% {\n    transform: scale(1.1, 0.9);\n  }\n\n  80% {\n    transform: scale(0.9, 1.1);\n  }\n\n  to {\n    transform: scale(1, 1);\n  }\n}\n\n.hidden-xs-up {\n  display: none!important;\n}"
-  },
-  {
-    "id": "uiverse-adamgiebl_proud-donkey-24",
-    "title": "Proud Donkey",
-    "category": "checkbox",
-    "source": "uiverse",
-    "author": {
-      "name": "adamgiebl",
-      "profileUrl": "https://uiverse.io/adamgiebl/proud-donkey-24"
-    },
-    "license": "MIT",
-    "description": "Proud Donkey · checkbox by adamgiebl",
-    "tags": [
-      "checkbox",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
+    "durationMs": 900,
     "accentColor": null,
     "html": "<label class=\"container\">\n  <input type=\"checkbox\" checked=\"checked\">\n  <div class=\"checkmark\"></div>\n</label>",
-    "css": "/* From Uiverse.io by adamgiebl - Tags: checkbox */\n/* Hide the default checkbox */\n.container input {\n position: absolute;\n opacity: 0;\n cursor: pointer;\n height: 0;\n width: 0;\n}\n\n.container {\n display: block;\n position: relative;\n cursor: pointer;\n font-size: 20px;\n user-select: none;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n position: relative;\n top: 0;\n left: 0;\n height: 1.3em;\n width: 1.3em;\n background-color: #ccc;\n transition: all 0.3s;\n border-radius: 5px;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n background-color: #47da99;\n animation: pop 0.5s;\n animation-direction: alternate;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n content: \"\";\n position: absolute;\n display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n left: 0.45em;\n top: 0.25em;\n width: 0.25em;\n height: 0.5em;\n border: solid white;\n border-width: 0 0.15em 0.15em 0;\n transform: rotate(45deg);\n}\n\n@keyframes pop {\n 0% {\n  transform: scale(1);\n }\n\n 50% {\n  transform: scale(0.9);\n }\n\n 100% {\n  transform: scale(1);\n }\n}"
+    "css": "/* From Uiverse.io by sujeet-12 - Tags: checkbox, fun-check, circle-checkbox */\n/* Hide the default checkbox */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n}\n\n.container {\n  display: block;\n  position: relative;\n  cursor: pointer;\n  font-size: 20px;\n  user-select: none;\n  animation: jello-horizontal 0.9s both;\n}\n\n.checkmark:hover {\n  animation: jello-horizontal 0.9s both;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n  position: relative;\n  top: 0;\n  left: 0;\n  height: 1.3em;\n  width: 1.3em;\n  border-radius: 50%;\n  background-color: #eee;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: royalblue;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n  left: 0.45em;\n  top: 0.25em;\n  width: 0.25em;\n  height: 0.5em;\n  border: solid white;\n  border-width: 0 0.15em 0.15em 0;\n  transform: rotate(45deg);\n}\n\n@keyframes jello-horizontal {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n\n  30% {\n    -webkit-transform: scale3d(1.25, 0.75, 1);\n    transform: scale3d(1.25, 0.75, 1);\n  }\n\n  40% {\n    -webkit-transform: scale3d(0.75, 1.25, 1);\n    transform: scale3d(0.75, 1.25, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.15, 0.85, 1);\n    transform: scale3d(1.15, 0.85, 1);\n  }\n\n  65% {\n    -webkit-transform: scale3d(0.95, 1.05, 1);\n    transform: scale3d(0.95, 1.05, 1);\n  }\n\n  75% {\n    -webkit-transform: scale3d(1.05, 0.95, 1);\n    transform: scale3d(1.05, 0.95, 1);\n  }\n\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n}"
   },
   {
     "id": "uiverse-aiviiid_hungry-robin-21",
@@ -2157,6 +1641,28 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by OptX71285225  - Tags: simple, green, checkbox */\n/* Hide the default checkbox */\n.checkbox-container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom checkbox container */\n.checkbox-container {\n  position: relative;\n  display: inline-block;\n  font-size: 18px; /* Make the checkbox slightly bigger */\n  margin-bottom: 12px;\n  cursor: pointer;\n}\n\n/* Style the checkmark */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 30px; /* Make the checkbox slightly bigger */\n  width: 30px; /* Make the checkbox slightly bigger */\n  border: 2px solid #ccc; /* Add border for 3D effect */\n  border-radius: 6px; /* Round the corners */\n  background-color: #fff; /* Default color */\n  transition: all 0.3s ease; /* Add smooth transition */\n}\n\n/* Show the checkmark when checkbox is checked */\n.checkbox-container input:checked ~ .checkmark:after {\n  display: block;\n  animation: checkboxExpand 0.3s ease forwards;\n}\n\n/* Style the checkmark/indicator */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n  top: 50%; /* Center vertically */\n  left: 50%; /* Center horizontally */\n  transform: translate(-50%, -50%) rotate(45deg) scale(0); /* Center and hide initially, then scale to appear */\n  width: 8px; /* Adjust size */\n  height: 15px; /* Adjust size */\n  border: solid #fff; /* Change color of the tick to white */\n  border-width: 0 4px 4px 0; /* Adjust thickness and direction */\n}\n\n/* On hover, add a grey background color */\n.checkbox-container:hover .checkmark {\n  background-color: #ccc;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */\n  transform: scale(1.05); /* Scale up slightly */\n}\n\n/* When the checkbox is checked, add a green background */\n.checkbox-container input:checked ~ .checkmark {\n  background-color: #4caf50;\n  border-color: #4caf50; /* Change border color */\n  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow for 3D effect */\n}\n\n/* Keyframes for expanding animation */\n@keyframes checkboxExpand {\n  0% {\n    transform: translate(-50%, -50%) rotate(45deg) scale(0);\n  }\n  100% {\n    transform: translate(-50%, -50%) rotate(45deg) scale(1);\n  }\n}"
   },
   {
+    "id": "uiverse-cssbuttons-io_short-shrimp-54",
+    "title": "Short Shrimp",
+    "category": "checkbox",
+    "source": "uiverse",
+    "author": {
+      "name": "cssbuttons-io",
+      "profileUrl": "https://uiverse.io/cssbuttons-io/short-shrimp-54"
+    },
+    "license": "MIT",
+    "description": "Short Shrimp · checkbox by cssbuttons-io",
+    "tags": [
+      "checkbox",
+      "squishy",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 100,
+    "accentColor": null,
+    "html": "<div class=\"cntr\">\n  <input checked=\"\" type=\"checkbox\" id=\"cbx\" class=\"hidden-xs-up\">\n  <label for=\"cbx\" class=\"cbx\"></label>\n</div>",
+    "css": "/* From Uiverse.io by cssbuttons-io - Tags: checkbox, squishy */\n.cbx {\n position: relative;\n top: 1px;\n width: 27px;\n height: 27px;\n border: 1px solid #c8ccd4;\n border-radius: 3px;\n vertical-align: middle;\n transition: background 0.1s ease;\n cursor: pointer;\n display: block;\n}\n\n.cbx:after {\n content: '';\n position: absolute;\n top: 2px;\n left: 8px;\n width: 7px;\n height: 14px;\n opacity: 0;\n transform: rotate(45deg) scale(0);\n border-right: 2px solid #fff;\n border-bottom: 2px solid #fff;\n transition: all 0.3s ease;\n transition-delay: 0.15s;\n}\n\n.lbl {\n margin-left: 5px;\n vertical-align: middle;\n cursor: pointer;\n}\n\n#cbx:checked ~ .cbx {\n border-color: transparent;\n background: #6871f1;\n animation: jelly 0.6s ease;\n}\n\n#cbx:checked ~ .cbx:after {\n opacity: 1;\n transform: rotate(45deg) scale(1);\n}\n\n.cntr {\n position: relative;\n}\n\n@keyframes jelly {\n from {\n  transform: scale(1, 1);\n }\n\n 30% {\n  transform: scale(1.25, 0.75);\n }\n\n 40% {\n  transform: scale(0.75, 1.25);\n }\n\n 50% {\n  transform: scale(1.15, 0.85);\n }\n\n 65% {\n  transform: scale(0.95, 1.05);\n }\n\n 75% {\n  transform: scale(1.05, 0.95);\n }\n\n to {\n  transform: scale(1, 1);\n }\n}\n\n.hidden-xs-up {\n display: none!important;\n}"
+  },
+  {
     "id": "uiverse-ercnersoy_rare-robin-39",
     "title": "Rare Robin",
     "category": "checkbox",
@@ -2178,27 +1684,48 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by ercnersoy - Tags: checkbox */\n/* Hide the default checkbox */\n.container input {\n position: absolute;\n opacity: 0;\n cursor: pointer;\n height: 0;\n width: 0;\n}\n\n.container {\n display: block;\n position: relative;\n cursor: pointer;\n font-size: 20px;\n user-select: none;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n position: relative;\n top: 0;\n left: 0;\n height: 1.4em;\n width: 1.4em;\n border: 2px solid #2196F3;\n border-radius: 1rem 0rem 1rem;\n transform: rotate(45deg);\n transition: all .5s ease-in-out;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n box-shadow: 0px 0px 40px 5px #2196F3;\n border-radius: 1rem 0rem 1rem;\n background-color: #2195f31f;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n content: \"\";\n position: absolute;\n display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n left: 0.35em;\n top: 0.20em;\n width: 0.25em;\n height: 0.5em;\n border: solid #2196F3;\n border-width: 0 0.15em 0.15em 0;\n transform: rotate(-5deg);\n animation: upAnimate 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n\n@keyframes upAnimate {\n from {\n  transform: translate(-20px, -20px) rotate(-5deg);\n  opacity: 0;\n }\n\n to {\n  transform: translate(0, 0) rotate(-5deg);\n  opacity: 1;\n }\n}"
   },
   {
-    "id": "uiverse-sujeet-12_warm-dragonfly-92",
-    "title": "Warm Dragonfly",
+    "id": "uiverse-ozgeozkaraa01_curly-rabbit-54",
+    "title": "Curly Rabbit",
     "category": "checkbox",
     "source": "uiverse",
     "author": {
-      "name": "sujeet-12",
-      "profileUrl": "https://uiverse.io/sujeet-12/warm-dragonfly-92"
+      "name": "ozgeozkaraa01",
+      "profileUrl": "https://uiverse.io/ozgeozkaraa01/curly-rabbit-54"
     },
     "license": "MIT",
-    "description": "Warm Dragonfly · checkbox by sujeet-12",
+    "description": "Curly Rabbit · checkbox by ozgeozkaraa01",
     "tags": [
       "checkbox",
-      "fun-check",
-      "circle-checkbox",
+      "click animation",
+      "cool checkbox",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 900,
+    "durationMs": 200,
+    "accentColor": null,
+    "html": "<div class=\"cntr\">\n  <input class=\"hidden-xs-up\" id=\"cbx\" type=\"checkbox\" checked=\"\">\n  <label class=\"cbx\" for=\"cbx\"></label>\n</div>",
+    "css": "/* From Uiverse.io by ozgeozkaraa01 - Tags: checkbox, click animation, cool checkbox */\n.cbx {\n  position: relative;\n  top: 1px;\n  width: 27px;\n  height: 27px;\n  border: 1px solid #475569;\n  border-radius: 10px;\n  transition: background 0.2s ease;\n  cursor: pointer;\n  display: block;\n  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);\n}\n\n.cbx:after {\n  content: '';\n  position: absolute;\n  top: 2px;\n  left: 8px;\n  width: 7px;\n  height: 14px;\n  opacity: 0;\n  transform: rotate(45deg) scale(0);\n  border-right: 2px solid #fff;\n  border-bottom: 2px solid #fff;\n  transition: all 0.3s ease;\n  transition-delay: 0.15s;\n}\n\n#cbx:checked ~ .cbx {\n  border-color: transparent;\n  background: #ec4899;\n  animation: jelly 0.4s ease;\n}\n\n#cbx:checked ~ .cbx:after {\n  opacity: 1;\n  transform: rotate(45deg) scale(1);\n}\n\n.cntr {\n  position: relative;\n}\n\n@keyframes jelly {\n  from {\n    transform: scale(1, 1);\n  }\n\n  20% {\n    transform: scale(1.3, 0.7);\n  }\n\n  40% {\n    transform: scale(0.7, 1.3);\n  }\n\n  60% {\n    transform: scale(1.1, 0.9);\n  }\n\n  80% {\n    transform: scale(0.9, 1.1);\n  }\n\n  to {\n    transform: scale(1, 1);\n  }\n}\n\n.hidden-xs-up {\n  display: none!important;\n}"
+  },
+  {
+    "id": "uiverse-adamgiebl_proud-donkey-24",
+    "title": "Proud Donkey",
+    "category": "checkbox",
+    "source": "uiverse",
+    "author": {
+      "name": "adamgiebl",
+      "profileUrl": "https://uiverse.io/adamgiebl/proud-donkey-24"
+    },
+    "license": "MIT",
+    "description": "Proud Donkey · checkbox by adamgiebl",
+    "tags": [
+      "checkbox",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 300,
     "accentColor": null,
     "html": "<label class=\"container\">\n  <input type=\"checkbox\" checked=\"checked\">\n  <div class=\"checkmark\"></div>\n</label>",
-    "css": "/* From Uiverse.io by sujeet-12 - Tags: checkbox, fun-check, circle-checkbox */\n/* Hide the default checkbox */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n}\n\n.container {\n  display: block;\n  position: relative;\n  cursor: pointer;\n  font-size: 20px;\n  user-select: none;\n  animation: jello-horizontal 0.9s both;\n}\n\n.checkmark:hover {\n  animation: jello-horizontal 0.9s both;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n  position: relative;\n  top: 0;\n  left: 0;\n  height: 1.3em;\n  width: 1.3em;\n  border-radius: 50%;\n  background-color: #eee;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: royalblue;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n  left: 0.45em;\n  top: 0.25em;\n  width: 0.25em;\n  height: 0.5em;\n  border: solid white;\n  border-width: 0 0.15em 0.15em 0;\n  transform: rotate(45deg);\n}\n\n@keyframes jello-horizontal {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n\n  30% {\n    -webkit-transform: scale3d(1.25, 0.75, 1);\n    transform: scale3d(1.25, 0.75, 1);\n  }\n\n  40% {\n    -webkit-transform: scale3d(0.75, 1.25, 1);\n    transform: scale3d(0.75, 1.25, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.15, 0.85, 1);\n    transform: scale3d(1.15, 0.85, 1);\n  }\n\n  65% {\n    -webkit-transform: scale3d(0.95, 1.05, 1);\n    transform: scale3d(0.95, 1.05, 1);\n  }\n\n  75% {\n    -webkit-transform: scale3d(1.05, 0.95, 1);\n    transform: scale3d(1.05, 0.95, 1);\n  }\n\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n}"
+    "css": "/* From Uiverse.io by adamgiebl - Tags: checkbox */\n/* Hide the default checkbox */\n.container input {\n position: absolute;\n opacity: 0;\n cursor: pointer;\n height: 0;\n width: 0;\n}\n\n.container {\n display: block;\n position: relative;\n cursor: pointer;\n font-size: 20px;\n user-select: none;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n position: relative;\n top: 0;\n left: 0;\n height: 1.3em;\n width: 1.3em;\n background-color: #ccc;\n transition: all 0.3s;\n border-radius: 5px;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n background-color: #47da99;\n animation: pop 0.5s;\n animation-direction: alternate;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n content: \"\";\n position: absolute;\n display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n left: 0.45em;\n top: 0.25em;\n width: 0.25em;\n height: 0.5em;\n border: solid white;\n border-width: 0 0.15em 0.15em 0;\n transform: rotate(45deg);\n}\n\n@keyframes pop {\n 0% {\n  transform: scale(1);\n }\n\n 50% {\n  transform: scale(0.9);\n }\n\n 100% {\n  transform: scale(1);\n }\n}"
   },
   {
     "id": "uiverse-smit-prajapati_white-monkey-91",
@@ -2246,29 +1773,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by ahmed150up - Tags: checkbox, star */\ninput[type=\"checkbox\"] {\n  display: none;\n}\n\nlabel svg {\n  width: 44px;\n  height: 44px;\n  fill: none;\n  stroke: #000;\n  stroke-width: 2px;\n}\n\ninput[type=\"checkbox\"]:checked + label svg {\n  fill: #FFC107;\n  animation: pop_42 0.5s ease-out;\n}\n\n@keyframes pop_42 {\n  0% {\n    transform: scale(1);\n  }\n\n  50% {\n    transform: scale(1.5);\n  }\n\n  100% {\n    transform: scale(1);\n  }\n}"
   },
   {
-    "id": "uiverse-danilomgutavo_stupid-mouse-85",
-    "title": "Stupid Mouse",
-    "category": "checkbox",
-    "source": "uiverse",
-    "author": {
-      "name": "DaniloMGutavo",
-      "profileUrl": "https://uiverse.io/DaniloMGutavo/stupid-mouse-85"
-    },
-    "license": "MIT",
-    "description": "Stupid Mouse · checkbox by DaniloMGutavo",
-    "tags": [
-      "checkbox",
-      "cool checkbox",
-      "check",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 300,
-    "accentColor": null,
-    "html": "<label class=\"checkbox-container\">\n    <input class=\"custom-checkbox\" checked=\"\" type=\"checkbox\">\n    <span class=\"checkmark\"></span>\n</label>",
-    "css": "/* From Uiverse.io by DaniloMGutavo - Tags: checkbox, cool checkbox, check */\n.checkbox-container {\n  display: inline-block;\n  position: relative;\n  padding-left: 35px;\n  margin-bottom: 12px;\n  cursor: pointer;\n  font-size: 16px;\n  user-select: none;\n}\n\n.custom-checkbox {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n}\n\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n}\n\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n  left: 9px;\n  top: 5px;\n  width: 5px;\n  height: 10px;\n  border: solid white;\n  border-width: 0 3px 3px 0;\n  transform: rotate(45deg);\n}\n\n.custom-checkbox:checked ~ .checkmark {\n  background-color: #2196F3;\n  box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);\n}\n\n.custom-checkbox:checked ~ .checkmark:after {\n  display: block;\n}\n\n@keyframes checkAnim {\n  0% {\n    height: 0;\n  }\n\n  100% {\n    height: 10px;\n  }\n}\n\n.custom-checkbox:checked ~ .checkmark:after {\n  animation: checkAnim 0.2s forwards;\n}"
-  },
-  {
     "id": "uiverse-bocikond_spotty-elephant-13",
     "title": "Spotty Elephant",
     "category": "checkbox",
@@ -2292,29 +1796,27 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by bociKond - Tags: checkbox, pulse, color */\n/* Hide the default checkbox */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n}\n\n.container {\n  display: block;\n  position: relative;\n  cursor: pointer;\n  font-size: 1.5rem;\n  user-select: none;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n  --clr: #0B6E4F;\n  position: relative;\n  top: 0;\n  left: 0;\n  height: 1.3em;\n  width: 1.3em;\n  background-color: #ccc;\n  border-radius: 50%;\n  transition: 300ms;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: var(--clr);\n  border-radius: .5rem;\n  animation: pulse 500ms ease-in-out;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n  left: 0.45em;\n  top: 0.25em;\n  width: 0.25em;\n  height: 0.5em;\n  border: solid #E0E0E2;\n  border-width: 0 0.15em 0.15em 0;\n  transform: rotate(45deg);\n}\n\n@keyframes pulse {\n  0% {\n    box-shadow: 0 0 0 #0B6E4F90;\n    rotate: 20deg;\n  }\n\n  50% {\n    rotate: -20deg;\n  }\n\n  75% {\n    box-shadow: 0 0 0 10px #0B6E4F60;\n  }\n\n  100% {\n    box-shadow: 0 0 0 13px #0B6E4F30;\n    rotate: 0;\n  }\n}"
   },
   {
-    "id": "uiverse-vishnupprajapat_wicked-catfish-29",
-    "title": "Wicked Catfish",
+    "id": "uiverse-danilomgutavo_stupid-mouse-85",
+    "title": "Stupid Mouse",
     "category": "checkbox",
     "source": "uiverse",
     "author": {
-      "name": "vishnupprajapat",
-      "profileUrl": "https://uiverse.io/vishnupprajapat/wicked-catfish-29"
+      "name": "DaniloMGutavo",
+      "profileUrl": "https://uiverse.io/DaniloMGutavo/stupid-mouse-85"
     },
     "license": "MIT",
-    "description": "Wicked Catfish · checkbox by vishnupprajapat",
+    "description": "Stupid Mouse · checkbox by DaniloMGutavo",
     "tags": [
       "checkbox",
-      "button",
-      "switcher",
-      "click effect",
       "cool checkbox",
+      "check",
       "animated"
     ],
     "previewType": "css",
-    "durationMs": 200,
+    "durationMs": 300,
     "accentColor": null,
-    "html": "<div class=\"checkbox-wrapper-46\">\n  <input type=\"checkbox\" id=\"cbx-46\" class=\"inp-cbx\" />\n  <label for=\"cbx-46\" class=\"cbx\"\n    ><span>\n      <svg viewBox=\"0 0 12 10\" height=\"10px\" width=\"12px\">\n        <polyline points=\"1.5 6 4.5 9 10.5 1\"></polyline></svg></span\n    ><span>Checkbox</span>\n  </label>\n</div>",
-    "css": "/* From Uiverse.io by vishnupprajapat  - Tags: button, checkbox, switcher, click effect, cool checkbox */\n.checkbox-wrapper-46 input[type=\"checkbox\"] {\n  display: none;\n  visibility: hidden;\n}\n\n.checkbox-wrapper-46 .cbx {\n  margin: auto;\n  -webkit-user-select: none;\n  user-select: none;\n  cursor: pointer;\n}\n.checkbox-wrapper-46 .cbx span {\n  display: inline-block;\n  vertical-align: middle;\n  transform: translate3d(0, 0, 0);\n}\n.checkbox-wrapper-46 .cbx span:first-child {\n  position: relative;\n  width: 18px;\n  height: 18px;\n  border-radius: 3px;\n  transform: scale(1);\n  vertical-align: middle;\n  border: 1px solid #9098a9;\n  transition: all 0.2s ease;\n}\n.checkbox-wrapper-46 .cbx span:first-child svg {\n  position: absolute;\n  top: 3px;\n  left: 2px;\n  fill: none;\n  stroke: #ffffff;\n  stroke-width: 2;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-dasharray: 16px;\n  stroke-dashoffset: 16px;\n  transition: all 0.3s ease;\n  transition-delay: 0.1s;\n  transform: translate3d(0, 0, 0);\n}\n.checkbox-wrapper-46 .cbx span:first-child:before {\n  content: \"\";\n  width: 100%;\n  height: 100%;\n  background: #506eec;\n  display: block;\n  transform: scale(0);\n  opacity: 1;\n  border-radius: 50%;\n}\n.checkbox-wrapper-46 .cbx span:last-child {\n  padding-left: 8px;\n}\n.checkbox-wrapper-46 .cbx:hover span:first-child {\n  border-color: #506eec;\n}\n\n.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {\n  background: #506eec;\n  border-color: #506eec;\n  animation: wave-46 0.4s ease;\n}\n.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {\n  stroke-dashoffset: 0;\n}\n.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {\n  transform: scale(3.5);\n  opacity: 0;\n  transition: all 0.6s ease;\n}\n\n@keyframes wave-46 {\n  50% {\n    transform: scale(0.9);\n  }\n}"
+    "html": "<label class=\"checkbox-container\">\n    <input class=\"custom-checkbox\" checked=\"\" type=\"checkbox\">\n    <span class=\"checkmark\"></span>\n</label>",
+    "css": "/* From Uiverse.io by DaniloMGutavo - Tags: checkbox, cool checkbox, check */\n.checkbox-container {\n  display: inline-block;\n  position: relative;\n  padding-left: 35px;\n  margin-bottom: 12px;\n  cursor: pointer;\n  font-size: 16px;\n  user-select: none;\n}\n\n.custom-checkbox {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n}\n\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n}\n\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n  left: 9px;\n  top: 5px;\n  width: 5px;\n  height: 10px;\n  border: solid white;\n  border-width: 0 3px 3px 0;\n  transform: rotate(45deg);\n}\n\n.custom-checkbox:checked ~ .checkmark {\n  background-color: #2196F3;\n  box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);\n}\n\n.custom-checkbox:checked ~ .checkmark:after {\n  display: block;\n}\n\n@keyframes checkAnim {\n  0% {\n    height: 0;\n  }\n\n  100% {\n    height: 10px;\n  }\n}\n\n.custom-checkbox:checked ~ .checkmark:after {\n  animation: checkAnim 0.2s forwards;\n}"
   },
   {
     "id": "uiverse-umangladha_big-sheep-9",
@@ -2341,6 +1843,31 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"checkbox-wrapper\">\n  <input style=\"display: none;\" type=\"checkbox\" id=\"cbx\" class=\"inp-cbx\" />\n  <label for=\"cbx\" class=\"cbx\">\n    <span>\n      <svg viewBox=\"0 0 12 9\" height=\"9px\" width=\"12px\">\n        <polyline points=\"1 5 4 8 11 1\"></polyline>\n      </svg>\n    </span>\n    <span>To-do</span>\n  </label>\n</div>",
     "css": "/* From Uiverse.io by UmangLadha  - Tags: tooltip, action, checkbox, code, box, cool checkbox */\n.checkbox-wrapper .cbx {\n  -webkit-user-select: none;\n  user-select: none;\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer;\n}\n.checkbox-wrapper .cbx span {\n  display: inline-block;\n  vertical-align: middle;\n  transform: translate3d(0, 0, 0);\n}\n.checkbox-wrapper .cbx span:first-child {\n  position: relative;\n  width: 24px;\n  height: 24px;\n  border-radius: 50%;\n  transform: scale(1);\n  vertical-align: middle;\n  border: 1px solid #b9b8c3;\n  transition: all 0.2s ease;\n}\n.checkbox-wrapper .cbx span:first-child svg {\n  position: absolute;\n  z-index: 1;\n  top: 8px;\n  left: 6px;\n  fill: none;\n  stroke: white;\n  stroke-width: 2;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-dasharray: 16px;\n  stroke-dashoffset: 16px;\n  transition: all 0.3s ease;\n  transition-delay: 0.1s;\n  transform: translate3d(0, 0, 0);\n}\n.checkbox-wrapper .cbx span:first-child:before {\n  content: \"\";\n  width: 100%;\n  height: 100%;\n  background: #506eec;\n  display: block;\n  transform: scale(0);\n  opacity: 1;\n  border-radius: 50%;\n  transition-delay: 0.2s;\n}\n.checkbox-wrapper .cbx span:last-child {\n  margin-left: 8px;\n}\n.checkbox-wrapper .cbx span:last-child:after {\n  content: \"\";\n  position: absolute;\n  top: 8px;\n  left: 0;\n  height: 1px;\n  width: 100%;\n  background: #b9b8c3;\n  transform-origin: 0 0;\n  transform: scaleX(0);\n}\n.checkbox-wrapper .cbx:hover span:first-child {\n  border-color: #3c53c7;\n}\n\n.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child {\n  border-color: #3c53c7;\n  background: #3c53c7;\n  animation: check-15 0.6s ease;\n}\n.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child svg {\n  stroke-dashoffset: 0;\n}\n.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child:before {\n  transform: scale(2.2);\n  opacity: 0;\n  transition: all 0.6s ease;\n}\n.checkbox-wrapper .inp-cbx:checked + .cbx span:last-child {\n  color: #b9b8c3;\n  transition: all 0.3s ease;\n}\n.checkbox-wrapper .inp-cbx:checked + .cbx span:last-child:after {\n  transform: scaleX(1);\n  transition: all 0.3s ease;\n}\n\n@keyframes check-15 {\n  50% {\n    transform: scale(1.2);\n  }\n}"
+  },
+  {
+    "id": "uiverse-vishnupprajapat_wicked-catfish-29",
+    "title": "Wicked Catfish",
+    "category": "checkbox",
+    "source": "uiverse",
+    "author": {
+      "name": "vishnupprajapat",
+      "profileUrl": "https://uiverse.io/vishnupprajapat/wicked-catfish-29"
+    },
+    "license": "MIT",
+    "description": "Wicked Catfish · checkbox by vishnupprajapat",
+    "tags": [
+      "checkbox",
+      "button",
+      "switcher",
+      "click effect",
+      "cool checkbox",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 200,
+    "accentColor": null,
+    "html": "<div class=\"checkbox-wrapper-46\">\n  <input type=\"checkbox\" id=\"cbx-46\" class=\"inp-cbx\" />\n  <label for=\"cbx-46\" class=\"cbx\"\n    ><span>\n      <svg viewBox=\"0 0 12 10\" height=\"10px\" width=\"12px\">\n        <polyline points=\"1.5 6 4.5 9 10.5 1\"></polyline></svg></span\n    ><span>Checkbox</span>\n  </label>\n</div>",
+    "css": "/* From Uiverse.io by vishnupprajapat  - Tags: button, checkbox, switcher, click effect, cool checkbox */\n.checkbox-wrapper-46 input[type=\"checkbox\"] {\n  display: none;\n  visibility: hidden;\n}\n\n.checkbox-wrapper-46 .cbx {\n  margin: auto;\n  -webkit-user-select: none;\n  user-select: none;\n  cursor: pointer;\n}\n.checkbox-wrapper-46 .cbx span {\n  display: inline-block;\n  vertical-align: middle;\n  transform: translate3d(0, 0, 0);\n}\n.checkbox-wrapper-46 .cbx span:first-child {\n  position: relative;\n  width: 18px;\n  height: 18px;\n  border-radius: 3px;\n  transform: scale(1);\n  vertical-align: middle;\n  border: 1px solid #9098a9;\n  transition: all 0.2s ease;\n}\n.checkbox-wrapper-46 .cbx span:first-child svg {\n  position: absolute;\n  top: 3px;\n  left: 2px;\n  fill: none;\n  stroke: #ffffff;\n  stroke-width: 2;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-dasharray: 16px;\n  stroke-dashoffset: 16px;\n  transition: all 0.3s ease;\n  transition-delay: 0.1s;\n  transform: translate3d(0, 0, 0);\n}\n.checkbox-wrapper-46 .cbx span:first-child:before {\n  content: \"\";\n  width: 100%;\n  height: 100%;\n  background: #506eec;\n  display: block;\n  transform: scale(0);\n  opacity: 1;\n  border-radius: 50%;\n}\n.checkbox-wrapper-46 .cbx span:last-child {\n  padding-left: 8px;\n}\n.checkbox-wrapper-46 .cbx:hover span:first-child {\n  border-color: #506eec;\n}\n\n.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {\n  background: #506eec;\n  border-color: #506eec;\n  animation: wave-46 0.4s ease;\n}\n.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {\n  stroke-dashoffset: 0;\n}\n.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {\n  transform: scale(3.5);\n  opacity: 0;\n  transition: all 0.6s ease;\n}\n\n@keyframes wave-46 {\n  50% {\n    transform: scale(0.9);\n  }\n}"
   },
   {
     "id": "uiverse-ke1221_dangerous-puma-90",
@@ -2640,28 +2167,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Galahhad - Tags: input */\n.input {\n  max-width: 190px;\n  padding: 12px;\n  border: none;\n  border-radius: 4px;\n  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);\n  outline: none;\n  color: dimgray;\n}\n\n.input:invalid {\n  animation: justshake 0.3s forwards;\n  color: red;\n}\n\n@keyframes justshake {\n  25% {\n    transform: translateX(5px);\n  }\n\n  50% {\n    transform: translateX(-5px);\n  }\n\n  75% {\n    transform: translateX(5px);\n  }\n\n  100% {\n    transform: translateX-(5px);\n  }\n}"
   },
   {
-    "id": "uiverse-sonusng_lovely-bulldog-50",
-    "title": "Lovely Bulldog",
-    "category": "hover",
-    "source": "uiverse",
-    "author": {
-      "name": "sonusng",
-      "profileUrl": "https://uiverse.io/sonusng/lovely-bulldog-50"
-    },
-    "license": "MIT",
-    "description": "Lovely Bulldog · hover by sonusng",
-    "tags": [
-      "hover",
-      "input",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 140,
-    "accentColor": null,
-    "html": "<input required=\"\" type=\"text\" placeholder=\"Your Name\">",
-    "css": "/* From Uiverse.io by sonusng - Tags: input */\ninput {\n  width: 210px;\n  height: 50px;\n  padding: 0 16px;\n  background: transparent;\n  border-radius: 4px;\n  border: 1px solid #fe4567;\n  color: #f9f9f9;\n  animation: shake_541 0.14s 3;\n}\n\ninput:valid {\n  border-color: #45feaf;\n  animation: none;\n}\n\n@keyframes shake_541 {\n  0%, 100% {\n    translate: 0;\n  }\n\n  25% {\n    translate: 8px 0;\n  }\n\n  75% {\n    translate: -8px 0;\n  }\n}"
-  },
-  {
     "id": "uiverse-tiagoadag1203_fat-parrot-54",
     "title": "Fat Parrot",
     "category": "hover",
@@ -2686,6 +2191,28 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<input placeholder=\"type it\" class=\"input\" name=\"text\" type=\"text\" />",
     "css": "/* From Uiverse.io by tiagoadag1203  - Tags: animation, blue, purple, input, shadow */\n.input {\n  max-width: 190px;\n  background-color: #1a1a1a;\n  border: none;\n  padding: 10px;\n  border-radius: 10px;\n  outline: none;\n  color: white;\n}\n\n.input:focus {\n  animation: rotateShadow 2s infinite linear;\n}\n\n@keyframes rotateShadow {\n  0% {\n    box-shadow: -2px -2px 8px 1px #aa00ff, 2px 2px 8px 1px #3700ff;\n  }\n  25% {\n    box-shadow: -2px 2px 8px 1px #aa00ff, 2px -2px 8px 1px #3700ff;\n  }\n  50% {\n    box-shadow: 2px 2px 8px 1px #aa00ff, -2px -2px 8px 1px #3700ff;\n  }\n  75% {\n    box-shadow: 2px -2px 8px 1px #aa00ff, -2px 2px 8px 1px #3700ff;\n  }\n  100% {\n    box-shadow: -2px -2px 8px 1px #aa00ff, 2px 2px 8px 1px #3700ff;\n  }\n}"
+  },
+  {
+    "id": "uiverse-sonusng_lovely-bulldog-50",
+    "title": "Lovely Bulldog",
+    "category": "hover",
+    "source": "uiverse",
+    "author": {
+      "name": "sonusng",
+      "profileUrl": "https://uiverse.io/sonusng/lovely-bulldog-50"
+    },
+    "license": "MIT",
+    "description": "Lovely Bulldog · hover by sonusng",
+    "tags": [
+      "hover",
+      "input",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 140,
+    "accentColor": null,
+    "html": "<input required=\"\" type=\"text\" placeholder=\"Your Name\">",
+    "css": "/* From Uiverse.io by sonusng - Tags: input */\ninput {\n  width: 210px;\n  height: 50px;\n  padding: 0 16px;\n  background: transparent;\n  border-radius: 4px;\n  border: 1px solid #fe4567;\n  color: #f9f9f9;\n  animation: shake_541 0.14s 3;\n}\n\ninput:valid {\n  border-color: #45feaf;\n  animation: none;\n}\n\n@keyframes shake_541 {\n  0%, 100% {\n    translate: 0;\n  }\n\n  25% {\n    translate: 8px 0;\n  }\n\n  75% {\n    translate: -8px 0;\n  }\n}"
   },
   {
     "id": "uiverse-priyanshugupta28_bitter-bulldog-63",
@@ -2779,6 +2306,28 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"container\">\n        <input type=\"text\" required=\"required\">\n        <label>You'r name</label>\n        <i></i>\n    </div>",
     "css": "/* From Uiverse.io by Akshdeep74644 - Tags: input */\n.container {\n  position: relative;\n  width: 200px;\n}\n\n.container input {\n  width: 100%;\n  background: transparent;\n  outline: none;\n  border: none;\n  color: #222;\n  padding: 8px;\n}\n\n.container label {\n  position: absolute;\n  left: 0;\n  top: 0;\n  color: rgba(105, 105, 105, 0.7);\n  text-transform: uppercase;\n  pointer-events: none;\n  transition: .5s;\n  font-weight: bold;\n}\n\n.container input:valid ~ label,\n.container input:focus ~ label {\n  color: rgb(10, 131, 212);\n  transform: translateY(-15px);\n  font-size: .6rem;\n}\n\n.container i {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  height: 2px;\n  background: #222;\n}\n\n.container i:before {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(90deg, #ff1b69, #ff0, #2196f3, #9c27b0, #ff1b69);\n  animation: animate 3s linear infinite;\n}"
+  },
+  {
+    "id": "uiverse-marcos700x_hot-dragonfly-100",
+    "title": "Hot Dragonfly",
+    "category": "hover",
+    "source": "uiverse",
+    "author": {
+      "name": "marcos700x",
+      "profileUrl": "https://uiverse.io/marcos700x/hot-dragonfly-100"
+    },
+    "license": "MIT",
+    "description": "Hot Dragonfly · hover by marcos700x",
+    "tags": [
+      "hover",
+      "input",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2500,
+    "accentColor": null,
+    "html": "<div class=\"containerInput\">\n    <input placeholder=\"Type for validate\" type=\"text\">\n</div>",
+    "css": "/* From Uiverse.io by marcos700x - Tags: input */\n.containerInput {\n  background-color: #000;\n  position: relative;\n  overflow: hidden;\n  margin: 0;\n  padding: 0 0 4px 0;\n  z-index: 1;\n  font-size: 15px;\n}\n\n.containerInput::before {\n  content: '';\n  width: 110%;\n  aspect-ratio: 1;\n  position: absolute;\n  inset: 0 0 0 0;\n  margin: auto;\n  animation: rotate6234 2.5s ease-in-out infinite;\n  z-index: -1;\n  background-image: conic-gradient(from 0deg at 50% 50%, #073AFF00 0%, #FF0000FF 25%, #073AFF00 25%);\n}\n\n.containerInput > input {\n  width: 210px;\n  height: 50px;\n  font-size: inherit;\n  color: #fff;\n  border: none;\n  padding: 12px;\n  background-color: #0a0a0a;\n  outline: 5px solid #0a0a0a;\n}\n\n.containerInput > input:focus {\n  outline: none;\n}\n\n.containerInput > input:not(:placeholder-shown) {\n  outline: none;\n}\n\n.containerInput > input:not(:placeholder-shown):valid {\n  outline: 4px solid rgb(0, 255, 183);\n  border-radius: 0;\n}\n\n@keyframes rotate6234 {\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n}"
   },
   {
     "id": "uiverse-devkatyall_smart-lionfish-91",
@@ -3266,28 +2815,6 @@ export const CATALOG = [
     "css": "/* From Uiverse.io by Gianluks90 - Tags: notification */\n.notification {\n  width: 255px;\n  height: 60px;\n  background: white;\n  border-radius: 25px;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n}\n\n.icon {\n  height: 40px;\n  width: 40px;\n  border-radius: 20px;\n  background-color: rgb(236, 236, 236);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding-top: 2px;\n}\n\n.message-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.title {\n  padding: 2px;\n  text-transform: uppercase;\n  color: black;\n  font-weight: 600;\n}\n\n.message {\n  padding: 2px;\n  color: black;\n  font-size: small;\n}\n\n.gradient-border {\n  --borderSize: 3px;\n  position: relative;\n  border-radius: var(--borderSize);\n}\n\n.gradient-border:after {\n  content: '';\n  position: absolute;\n  top: calc(-1 * var(--borderSize));\n  left: calc(-1 * var(--borderSize));\n  height: calc(100% + var(--borderSize) * 2);\n  width: calc(100% + var(--borderSize) * 2);\n  background: linear-gradient(75deg, #E50000, #FF8D00, #FFEE00, #008121, #004CFF, #760188);\n  border-radius: calc(2 * var(--borderSize));\n  z-index: -1;\n  animation: gradientAnimation 4s ease alternate infinite;\n  background-size: 300% 300%;\n}\n\n@keyframes gradientAnimation {\n  0% {\n    background-position: 0% 50%;\n  }\n\n  50% {\n    background-position: 100% 50%;\n  }\n\n  100% {\n    background-position: 0% 50%;\n  }\n}"
   },
   {
-    "id": "uiverse-fujitawa_slimy-vampirebat-16",
-    "title": "Slimy Vampirebat",
-    "category": "card",
-    "source": "uiverse",
-    "author": {
-      "name": "Fujitawa",
-      "profileUrl": "https://uiverse.io/Fujitawa/slimy-vampirebat-16"
-    },
-    "license": "MIT",
-    "description": "Slimy Vampirebat · card by Fujitawa",
-    "tags": [
-      "card",
-      "notification",
-      "animated"
-    ],
-    "previewType": "css",
-    "durationMs": 1000,
-    "accentColor": null,
-    "html": "<div class=\"notification\"> <div class=\"txt\"> Mission passed! <div class=\"lvl\"> 10</div> </div> <button class=\"ff3\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z\" fill=\"currentColor\"></path>\n  <path d=\"M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z\" fill=\"currentColor\"></path>\n  <path d=\"M19.7121 11.2929C19.3216 10.9024 18.6885 10.9024 18.2979 11.2929C17.9074 11.6834 17.9074 12.3166 18.2979 12.7071C18.6885 13.0976 19.3216 13.0976 19.7121 12.7071C20.1027 12.3166 20.1027 11.6834 19.7121 11.2929Z\" fill=\"currentColor\"></path>\n  <path d=\"M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z\" fill=\"currentColor\"></path>\n  <path d=\"M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z\" fill=\"currentColor\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z\" fill=\"currentColor\"></path>\n</svg> Next </button> </div>",
-    "css": "/* From Uiverse.io by Fujitawa - Tags: notification */\n.notification {\n  width: 250px;\n  height: 60px;\n  color: black;\n  background: white;\n  border-radius: 3px;\n  display: grid;\n  grid-auto-flow: column;\n  align-items: center;\n  justify-items: center;\n  -webkit-animation-name: pulse;\n  animation-name: pulse;\n  -webkit-animation-duration: 1s;\n  animation-duration: 1s;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n  animation-iteration-count: infinite;\n  border: 3px solid #ece0b4;\n}\n\n.notification:hover  button.ff3 {\n  background-color: #f4e0a6;\n}\n\n.notification:hover {\n  border-color: #f4e0a6;\n}\n\n.notification:hover .lvl {\n  border-color: #f4e0a6;\n}\n\nbutton.ff3 {\n  background-color: #ece0b4;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  width: 100%;\n  justify-content: center;\n  flex-direction: column;\n  gap: 3px;\n  cursor: pointer;\n  border: 0;\n  transition: .5s;\n  font-weight: bold;\n}\n\n.lvl {\n  background: white;\n  padding: 6px;\n  border-radius: 100px;\n  border: 3px solid #ece0b4;\n  position: absolute;\n  left: -10px;\n  transform: scale(.8);\n  top: -10px;\n}\n\n@-webkit-keyframes pulse {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n    transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n}\n\n@keyframes pulse {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n    transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n}"
-  },
-  {
     "id": "uiverse-alexruix_gentle-octopus-87",
     "title": "Gentle Octopus",
     "category": "card",
@@ -3308,6 +2835,28 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"box-avatar\">\n  <div class=\"avatar\">\n      <svg class=\"avatar-icon\" viewBox=\"0 0 17 15\">\n        <path d=\"M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z\"></path>\n      </svg>\n    </div>\n</div>\n  <div class=\"notification\">    \n    <div class=\"notification-info\">\n      <p class=\"notification-text\"> <span class=\"highlight\">Player</span> reached <b>level 15!</b> </p>\n    </div>\n  </div>",
     "css": "/* From Uiverse.io by alexruix - Tags: notification */\n.notification {\n  display: flex;\n  width: 0;\n  background: #ddd;\n  border-radius: 10px;\n  animation: slideIn 1s ease-in-out 1.25s forwards;\n}\n\n.notification-info {\n  display: inline-flex;\n  overflow: hidden;\n  background-color: #181818;\n  color: #fff;\n  width: 100%;\n  border-radius: 12px 8px 8px 12px;\n  padding-left: 16px;\n  align-items: center;\n}\n\n.notification-text {\n  opacity: 0;\n  padding: 10px 8px;\n  white-space: nowrap;\n  animation: textInfo 1s ease-in-out 1.5s forwards;\n}\n\n.highlight {\n  color: #ffc300;\n}\n\n.box-avatar {\n  background-color: #181818;\n  padding: 6px;\n  width: 4.5em;\n  height: 4.5em;\n  border-radius: 50%;\n  margin-right: -20px;\n  box-shadow: 6.2px 3.1px 38.2px -6px rgba(0, 0, 0, 0.2), 63px 32px 176px -6px rgba(0, 0, 0, 0.1);\n  z-index: 1;\n}\n\n.avatar {\n  background-color: #FDA203;\n  padding: .6em;\n  border-radius: 50%;\n}\n\n.avatar-icon {\n  width: 100%;\n  height: 100%;\n  fill: white;\n  animation: grow 2s ease-in-out 3;\n}\n\n/*Animations*/\n@keyframes slideIn {\n  0% {\n    width: 0;\n    padding: 2px;\n  }\n\n  100% {\n    width: 250px;\n    padding: 2px;\n  }\n}\n\n@keyframes textInfo {\n  0% {\n    opacity: 0%;\n    margin-left: -20em;\n  }\n\n  100% {\n    opacity: 100%;\n    margin-left: 0;\n  }\n}\n\n@keyframes grow {\n  0% {\n    transform: scale(100%) translateY(0%);\n  }\n\n  50% {\n    transform: scale(100%) translateY(-10%);\n  }\n\n  100% {\n    transform: scale(100%) translateY(0%);\n  }\n}"
+  },
+  {
+    "id": "uiverse-fujitawa_slimy-vampirebat-16",
+    "title": "Slimy Vampirebat",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Fujitawa",
+      "profileUrl": "https://uiverse.io/Fujitawa/slimy-vampirebat-16"
+    },
+    "license": "MIT",
+    "description": "Slimy Vampirebat · card by Fujitawa",
+    "tags": [
+      "card",
+      "notification",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"notification\"> <div class=\"txt\"> Mission passed! <div class=\"lvl\"> 10</div> </div> <button class=\"ff3\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z\" fill=\"currentColor\"></path>\n  <path d=\"M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z\" fill=\"currentColor\"></path>\n  <path d=\"M19.7121 11.2929C19.3216 10.9024 18.6885 10.9024 18.2979 11.2929C17.9074 11.6834 17.9074 12.3166 18.2979 12.7071C18.6885 13.0976 19.3216 13.0976 19.7121 12.7071C20.1027 12.3166 20.1027 11.6834 19.7121 11.2929Z\" fill=\"currentColor\"></path>\n  <path d=\"M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z\" fill=\"currentColor\"></path>\n  <path d=\"M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z\" fill=\"currentColor\"></path>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z\" fill=\"currentColor\"></path>\n</svg> Next </button> </div>",
+    "css": "/* From Uiverse.io by Fujitawa - Tags: notification */\n.notification {\n  width: 250px;\n  height: 60px;\n  color: black;\n  background: white;\n  border-radius: 3px;\n  display: grid;\n  grid-auto-flow: column;\n  align-items: center;\n  justify-items: center;\n  -webkit-animation-name: pulse;\n  animation-name: pulse;\n  -webkit-animation-duration: 1s;\n  animation-duration: 1s;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n  animation-iteration-count: infinite;\n  border: 3px solid #ece0b4;\n}\n\n.notification:hover  button.ff3 {\n  background-color: #f4e0a6;\n}\n\n.notification:hover {\n  border-color: #f4e0a6;\n}\n\n.notification:hover .lvl {\n  border-color: #f4e0a6;\n}\n\nbutton.ff3 {\n  background-color: #ece0b4;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  width: 100%;\n  justify-content: center;\n  flex-direction: column;\n  gap: 3px;\n  cursor: pointer;\n  border: 0;\n  transition: .5s;\n  font-weight: bold;\n}\n\n.lvl {\n  background: white;\n  padding: 6px;\n  border-radius: 100px;\n  border: 3px solid #ece0b4;\n  position: absolute;\n  left: -10px;\n  transform: scale(.8);\n  top: -10px;\n}\n\n@-webkit-keyframes pulse {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n    transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n}\n\n@keyframes pulse {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n    transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n    transform: scale3d(1, 1, 1);\n  }\n}"
   },
   {
     "id": "uiverse-devsleonardo_red-goat-27",
@@ -3418,5 +2967,554 @@ export const CATALOG = [
     "accentColor": null,
     "html": "<div class=\"notification\">\n  <div class=\"notification-top\">\n    <span class=\"level-up\">Level Up!</span>\n  </div>\n  <div class=\"notification-bottom\">\n    <span class=\"level\">Level 5</span>\n    <button class=\"next-level-button\">Next Level</button>\n  </div>\n</div>",
     "css": "/* From Uiverse.io by WittyHydra - Tags: notification */\n.notification {\n  --bg-color: #fff;\n  --text-color: #1c1f2b;\n  --highlight-color: #fc9a32;\n  --button-color: #3d3f4e;\n  --button-color-hover: #27282f;\n  position: relative;\n  width: 300px;\n  height: 100px;\n  background-color: var(--bg-color);\n  border-radius: 10px;\n  -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);\n  overflow: hidden;\n}\n\n@media (prefers-color-scheme: dark) {\n  .notification {\n    --bg-color: #1c1f2b;\n    --text-color: #fff;\n    --highlight-color: #fc9a32;\n    --button-color: #3d3f4e;\n    --button-color-hover: #27282f;\n  }\n}\n\n.notification-top {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 50%;\n  background-color: var(--highlight-color);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-transform: translateY(-100%);\n  -ms-transform: translateY(-100%);\n  transform: translateY(-100%);\n  -webkit-animation: slide-down 1s ease-out forwards;\n  animation: slide-down 1s ease-out forwards;\n}\n\n.notification-bottom {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 50%;\n  background-color: var(--bg-color);\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  padding: 20px;\n}\n\n.level-up {\n  color: var(--text-color);\n  font-size: 24px;\n  font-weight: bold;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  -webkit-animation: rotate-text 1s ease-in-out;\n  animation: rotate-text 1s ease-in-out;\n}\n\n.level {\n  color: var(--text-color);\n  font-size: 20px;\n  font-weight: bold;\n  margin-right: 10px;\n}\n\n.next-level-button {\n  background-color: var(--button-color);\n  color: var(--text-color);\n  border: none;\n  border-radius: 5px;\n  padding: 8px 16px;\n  cursor: pointer;\n  -webkit-transition: background-color 0.3s ease-out;\n  transition: background-color 0.3s ease-out;\n}\n\n.next-level-button {\n  background-color: #efefef;\n  color: #000;\n  font-weight: 600;\n  padding: 5px 10px;\n  border: none;\n  border-radius: 5px;\n  -webkit-transition: all 0.3s ease-in-out;\n  transition: all 0.3s ease-in-out;\n  -webkit-box-shadow: 0px 0px 10px #888888;\n  box-shadow: 0px 0px 10px #888888;\n}\n\n@-webkit-keyframes slide-down {\n  from {\n    -webkit-transform: translateY(-100%);\n    transform: translateY(-100%);\n  }\n\n  to {\n    -webkit-transform: translateY(0);\n    transform: translateY(0);\n  }\n}\n\n@keyframes slide-down {\n  from {\n    -webkit-transform: translateY(-100%);\n    transform: translateY(-100%);\n  }\n\n  to {\n    -webkit-transform: translateY(0);\n    transform: translateY(0);\n  }\n}\n\n@-webkit-keyframes rotate-text {\n  0% {\n    -webkit-transform: rotateX(90deg);\n    transform: rotateX(90deg);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: rotateX(0);\n    transform: rotateX(0);\n    opacity: 1;\n  }\n}\n\n@keyframes rotate-text {\n  0% {\n    -webkit-transform: rotateX(90deg);\n    transform: rotateX(90deg);\n    opacity: 0;\n  }\n\n  100% {\n    -webkit-transform: rotateX(0);\n    transform: rotateX(0);\n    opacity: 1;\n  }\n}\n\n.next-level-button:hover {\n  background-color: aqua;\n  color: #000;\n  -webkit-transform: scale(1.1);\n  -ms-transform: scale(1.1);\n  transform: scale(1.1);\n  -webkit-box-shadow: 0px 0px 15px #888888;\n  box-shadow: 0px 0px 15px #888888;\n}\n\n.notification {\n  background-color: #1e2b3c;\n  color: #c3daf6;\n}\n\n.notification:hover {\n  background-color: #c3daf6;\n  color: #1e2b3c;\n}\n\n.next-level-button:hover {\n  background-color: #1e2b3c;\n  color: #c3daf6;\n}\n\n/* Light Mode */\n.notification {\n  background-color: #c3daf6;\n  color: #1e2b3c;\n}\n\n.notification:hover {\n  background-color: #1e2b3c;\n  color: #c3daf6;\n}\n\n.next-level-button:hover {\n  background-color: #c3daf6;\n  color: #1e2b3c;\n}"
+  },
+  {
+    "id": "uiverse-khelvers_spicy-impala-38",
+    "title": "Spicy Impala",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "KhelVers",
+      "profileUrl": "https://uiverse.io/KhelVers/spicy-impala-38"
+    },
+    "license": "MIT",
+    "description": "Spicy Impala · card by KhelVers",
+    "tags": [
+      "card",
+      "form",
+      "animated",
+      "submit",
+      "log in",
+      "3d form",
+      "3d cool effect",
+      "3d login form"
+    ],
+    "previewType": "css",
+    "durationMs": 4000,
+    "accentColor": null,
+    "html": "<form class=\"form\"> \n    <span id=\"login-lable\">Login</span> \n    <input class=\"input\" type=\"text\" placeholder=\"UserName\"> \n    <input class=\"input\" type=\"text\" placeholder=\"PassWord\" minlength=\"8\" maxlength=\"15\">\n    <button id=\"btn\">Submit</button> \n</form>",
+    "css": "/* From Uiverse.io by KhelVers - Tags: form, animated, submit, log in, 3d form , 3d cool effect, 3d login form */\n.form {\n  height: 18em;\n  width: 16em;\n  padding: 4%;\n  border-radius: 16px;\n  background: #e8e8e8;\n  box-shadow: 12px 12px 18px #bababa,\n              -12px -12px 18px #ffffff;\n  display: flex;\n  flex-direction: column;\n  align-items: stretch;\n  justify-content: space-evenly;\n}\n\n#login-lable {\n  height: 15%;\n  text-align: center;\n  font-size: 34px;\n  letter-spacing: 3px;\n  font-weight: 600;\n  text-shadow: -2px -2px 3px #ffffff ,\n              2px 2px 3px #bababa;\n  position: relative;\n  top: -14px;\n}\n\n.input {\n  height: 16%;\n  padding: 1px 8px;\n  border: none;\n  font-size: 1em;\n  letter-spacing: 2px;\n  border-radius: 8px;\n  background: #f3f3f3;\n  box-shadow: inset -2px -2px 4px #ffffff,\n              inset 2px 2px 4px rgba(0, 0, 0, 0.356);\n  text-decoration: none;\n  background: linear-gradient(to right,white, #80808010, white);\n  background-size: 200% 200%;\n  animation: input 4s infinite;\n}\n\n.input:focus-visible {\n  outline: none;\n  background: rgb(241, 241, 241);\n}\n\n#btn {\n  font-size: x-large;\n  letter-spacing: 3px;\n  color: white;\n  font-weight: 700;\n  height: 18%;\n  background: linear-gradient(144deg,#af40ff,\n              #5b42f3 50%,#00ddeb);\n  border-radius: 8px;\n  border: none;\n  box-shadow: inset 1px 3px 3px #ffffffbd,\n               inset -4px -4px 3px #00000046;\n  background-size: 150% 150%;\n  animation: input 5s infinite;\n  transition: all 900ms ease-in;\n}\n\n#btn:hover {\n  position: relative;\n  bottom: 3px;\n  background: linear-gradient(144deg,#9706ff,\n              #2f0fff 50%,#18f0ff);\n}\n\n@keyframes input {\n  0% {\n    background-position: 0% 50%;\n  }\n\n  50% {\n    background-position: 100% 50%;\n  }\n\n  100% {\n    background-position: 0% 50%;\n  }\n}"
+  },
+  {
+    "id": "uiverse-aboalsim114_selfish-fly-63",
+    "title": "Selfish Fly",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "aboalsim114",
+      "profileUrl": "https://uiverse.io/aboalsim114/selfish-fly-63"
+    },
+    "license": "MIT",
+    "description": "Selfish Fly · card by aboalsim114",
+    "tags": [
+      "card",
+      "3d",
+      "form",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 300,
+    "accentColor": null,
+    "html": "<form class=\"form\">\n  <input placeholder=\"Enter your name\" class=\"input\" type=\"text\">\n  <input placeholder=\"Enter your email\" class=\"input\" type=\"text\">\n    <input placeholder=\"*********\" class=\"input\" type=\"password\">\n\n  <button>Submit</button>\n</form>",
+    "css": "/* From Uiverse.io by aboalsim114 - Tags: 3d, form */\n.form {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  padding: 20px;\n  background: linear-gradient(to bottom, #0077be, #3b8df2);\n  border-radius: 10px;\n  overflow: hidden;\n  perspective: 1000px;\n  transform-style: preserve-3d;\n  transform: rotateX(-10deg);\n  transition: all 0.3s ease-in-out;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;\n  animation: form-animation 0.5s ease-in-out;\n}\n\n@keyframes form-animation {\n  from {\n    transform: rotateX(-30deg);\n    opacity: 0;\n  }\n\n  to {\n    transform: rotateX(0deg);\n    opacity: 1;\n  }\n}\n\n.input {\n  padding: 10px;\n  border-radius: 5px;\n  background-color: transparent;\n  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  transform-style: preserve-3d;\n  backface-visibility: hidden;\n  color: rgb(255, 255, 255);\n  border: 2px solid #3b8df2;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;\n}\n\n.input::placeholder {\n  color: #fff;\n}\n\n.input:hover,\n.input:focus {\n  border-color: #3b8df2;\n  background-color: rgba(255, 255, 255, 0.2);\n  transform: scale(1.05) rotateY(20deg);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);\n  outline: none;\n}\n\nbutton {\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  background-color: #3b8df2;\n  color: #fff;\n  font-size: 16px;\n  cursor: pointer;\n  transform-style: preserve-3d;\n  backface-visibility: hidden;\n  transform: rotateX(-10deg);\n  transition: all 0.3s ease-in-out;\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;\n}\n\nbutton:hover {\n  background-color: #0077be;\n  font-size: 17px;\n  transform: scale(1.05) rotateY(20deg) rotateX(10deg);\n  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;\n}"
+  },
+  {
+    "id": "uiverse-guilhermeyohan_warm-mule-6",
+    "title": "Warm Mule",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "guilhermeyohan",
+      "profileUrl": "https://uiverse.io/guilhermeyohan/warm-mule-6"
+    },
+    "license": "MIT",
+    "description": "Warm Mule · card by guilhermeyohan",
+    "tags": [
+      "card",
+      "form",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<div class=\"login-box\">\n \n  <form>\n    <div class=\"user-box\">\n      <input type=\"text\" name=\"\" required=\"\">\n      <label>Username</label>\n    </div>\n    <div class=\"user-box\">\n      <input type=\"password\" name=\"\" required=\"\">\n      <label>Password</label>\n    </div><center>\n    <a href=\"#\">\n           SEND\n       <span></span>\n    </a></center>\n  </form>\n</div>",
+    "css": "/* From Uiverse.io by guilhermeyohan - Tags: form */\n.login-box {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 400px;\n  padding: 40px;\n  transform: translate(-50%, -50%);\n  background: rgba(24, 20, 20, 0.987);\n  box-sizing: border-box;\n  box-shadow: 0 15px 25px rgba(0,0,0,.6);\n  border-radius: 10px;\n}\n\n.login-box .user-box {\n  position: relative;\n}\n\n.login-box .user-box input {\n  width: 100%;\n  padding: 10px 0;\n  font-size: 16px;\n  color: #fff;\n  margin-bottom: 30px;\n  border: none;\n  border-bottom: 1px solid #fff;\n  outline: none;\n  background: transparent;\n}\n\n.login-box .user-box label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  padding: 10px 0;\n  font-size: 16px;\n  color: #fff;\n  pointer-events: none;\n  transition: .5s;\n}\n\n.login-box .user-box input:focus ~ label,\n.login-box .user-box input:valid ~ label {\n  top: -20px;\n  left: 0;\n  color: #bdb8b8;\n  font-size: 12px;\n}\n\n.login-box form a {\n  position: relative;\n  display: inline-block;\n  padding: 10px 20px;\n  color: #ffffff;\n  font-size: 16px;\n  text-decoration: none;\n  text-transform: uppercase;\n  overflow: hidden;\n  transition: .5s;\n  margin-top: 40px;\n  letter-spacing: 4px\n}\n\n.login-box a:hover {\n  background: #03f40f;\n  color: #fff;\n  border-radius: 5px;\n  box-shadow: 0 0 5px #03f40f,\n              0 0 25px #03f40f,\n              0 0 50px #03f40f,\n              0 0 100px #03f40f;\n}\n\n.login-box a span {\n  position: absolute;\n  display: block;\n}\n\n@keyframes btn-anim1 {\n  0% {\n    left: -100%;\n  }\n\n  50%,100% {\n    left: 100%;\n  }\n}\n\n.login-box a span:nth-child(1) {\n  bottom: 2px;\n  left: -100%;\n  width: 100%;\n  height: 2px;\n  background: linear-gradient(90deg, transparent, #03f40f);\n  animation: btn-anim1 2s linear infinite;\n}"
+  },
+  {
+    "id": "uiverse-mikeandrewdesigner_pink-duck-8",
+    "title": "Pink Duck",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "MikeAndrewDesigner",
+      "profileUrl": "https://uiverse.io/MikeAndrewDesigner/pink-duck-8"
+    },
+    "license": "MIT",
+    "description": "Pink Duck · card by MikeAndrewDesigner",
+    "tags": [
+      "card",
+      "animation",
+      "form",
+      "login form",
+      "hover button",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"login wrap\">\n  <div class=\"h1\">Login</div>\n  <input pattern=\"^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$\" placeholder=\"Email\" id=\"email\" name=\"email\" type=\"text\">\n  <input placeholder=\"Password\" id=\"password\" name=\"password\" type=\"password\">\n  <input value=\"Login\" class=\"btn\" type=\"submit\">\n</div>",
+    "css": "/* From Uiverse.io by MikeAndrewDesigner - Tags: animation, form, login form, hover button */\n.login {\n  width: 340px;\n  height: 400px;\n  background: #2c2c2c;\n  padding: 47px;\n  padding-bottom: 57px;\n  color: #fff;\n  border-radius: 17px;\n  padding-bottom: 50px;\n  font-size: 1.3em;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n}\n\n.login input[type=\"text\"],\n.login input[type=\"password\"] {\n  opacity: 1;\n  display: block;\n  border: none;\n  outline: none;\n  width: 100%;\n  padding: 13px 18px;\n  margin: 20px 0 0 0;\n  font-size: 0.8em;\n  border-radius: 100px;\n  background: #3c3c3c;\n  color: #fff;\n}\n\n.login input:focus {\n  animation: bounce 1s;\n  -webkit-appearance: none;\n}\n\n.login input[type=submit],\n.login input[type=button],\n.h1 {\n  border: 0;\n  outline: 0;\n  width: 100%;\n  padding: 13px;\n  margin: 40px 0 0 0;\n  border-radius: 500px;\n  font-weight: 600;\n  animation: bounce2 1.6s;\n}\n\n.h1 {\n  padding: 0;\n  position: relative;\n  top: -35px;\n  display: block;\n  margin-bottom: -0px;\n  font-size: 1.3em;\n}\n\n.btn {\n  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);\n  color: #fff;\n  padding: 16px !important;\n}\n\n.btn:hover {\n  background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );\n  color: rgb(255, 255, 255);\n  padding: 16px !important;\n  cursor: pointer;\n  transition: all 0.4s ease;\n}\n\n.login input[type=text] {\n  animation: bounce 1s;\n  -webkit-appearance: none;\n}\n\n.login input[type=password] {\n  animation: bounce1 1.3s;\n}\n\n.ui {\n  font-weight: bolder;\n  background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  border-bottom: 4px solid transparent;\n  border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);\n  border-image-slice: 1;\n  display: inline;\n}\n\n@media only screen and (max-width: 600px) {\n  .login {\n    width: 70%;\n    padding: 3em;\n  }\n}\n\n@keyframes bounce {\n  0% {\n    transform: translateY(-250px);\n    opacity: 0;\n  }\n}\n\n@keyframes bounce1 {\n  0% {\n    opacity: 0;\n  }\n\n  40% {\n    transform: translateY(-100px);\n    opacity: 0;\n  }\n}\n\n@keyframes bounce2 {\n  0% {\n    opacity: 0;\n  }\n\n  70% {\n    transform: translateY(-20px);\n    opacity: 0;\n  }\n}"
+  },
+  {
+    "id": "uiverse-ahmed150up_quiet-goat-67",
+    "title": "Quiet Goat",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "ahmed150up",
+      "profileUrl": "https://uiverse.io/ahmed150up/quiet-goat-67"
+    },
+    "license": "MIT",
+    "description": "Quiet Goat · card by ahmed150up",
+    "tags": [
+      "card",
+      "form",
+      "spotify",
+      "music",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 6000,
+    "accentColor": null,
+    "html": "<div class=\"audio-player\">\n  <div class=\"album-cover\"></div>\n  <div class=\"player-controls\">\n    <div class=\"song-info\">\n      <div class=\"song-title\">Song Title</div>\n      <p class=\"artist\">Artist</p>\n    </div>\n    <div class=\"progress-bar\">\n      <div class=\"progress\"></div>\n    </div>\n    <div class=\"buttons\">\n      <button class=\"play-btn\"><svg viewBox=\"0 0 16 16\" class=\"bi bi-play-fill\" fill=\"currentColor\" height=\"16\" width=\"16\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: white\"> <path fill=\"white\" d=\"m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z\"></path> </svg></button>\n      <button class=\"pause-btn\"><svg viewBox=\"0 0 16 16\" class=\"bi bi-pause-fill\" fill=\"currentColor\" height=\"16\" width=\"16\" xmlns=\"http://www.w3.org/2000/svg\" style=\"color: white\"> <path fill=\"white\" d=\"M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z\"></path> </svg></button>\n    </div>\n  </div>\n</div>",
+    "css": "/* From Uiverse.io by ahmed150up - Tags: form, spotify, music */\n.audio-player {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 300px;\n  height: 80px;\n  background-color: #282828;\n  border-radius: 8px;\n  padding: 8px;\n  box-sizing: border-box;\n}\n\n.album-cover {\n  width: 64px;\n  height: 64px;\n  background-color: #fff;\n  border-radius: 50%;\n  margin-right: 12px;\n}\n\n.player-controls {\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.song-info {\n  margin-bottom: 4px;\n}\n\n.song-title {\n  font-size: 16px;\n  color: #fff;\n  margin: 0;\n}\n\n.artist {\n  font-size: 12px;\n  color: #b3b3b3;\n  margin: 0;\n}\n\n.progress-bar {\n  width: 100%;\n  height: 4px;\n  background-color: #4f4f4f;\n  border-radius: 2px;\n  overflow: hidden;\n}\n\n.progress {\n  width: 50%;\n  height: 100%;\n  background-color: #1db954;\n  transform-origin: left;\n  animation: progress-animation 10s linear infinite;\n}\n\n.buttons {\n  display: flex;\n}\n\nbutton {\n  background: none;\n  border: none;\n  cursor: pointer;\n  outline: none;\n}\n\n.play-btn,\n.pause-btn {\n  font-size: 16px;\n  color: #fff;\n  margin-right: 8px;\n  transition: transform 0.2s ease-in-out;\n}\n\n.play-btn:hover,\n.pause-btn:hover {\n  transform: scale(1.2);\n}\n\n@keyframes progress-animation {\n  0% {\n    transform: scaleX(0);\n  }\n\n  100% {\n    transform: scaleX(1);\n  }\n}"
+  },
+  {
+    "id": "uiverse-zombie223_soft-rabbit-58",
+    "title": "Soft Rabbit",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "zombie223",
+      "profileUrl": "https://uiverse.io/zombie223/soft-rabbit-58"
+    },
+    "license": "MIT",
+    "description": "Soft Rabbit · card by zombie223",
+    "tags": [
+      "card",
+      "login",
+      "form",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 200,
+    "accentColor": null,
+    "html": "<form class=\"form\">\n  <p>Login</p>\n  <div class=\"group\">\n    <input required=\"true\" class=\"main-input\" type=\"text\">\n    <span class=\"highlight-span\"></span>\n    <label class=\"lebal-email\">Email</label>\n  </div>\n  <div class=\"container-1\">\n    <div class=\"group\">\n      <input required=\"true\" class=\"main-input\" type=\"text\">\n      <span class=\"highlight-span\"></span>\n      <label class=\"lebal-email\">password</label>\n    </div>\n  </div>\n  <button class=\"submit\">submit</button>\n</form>",
+    "css": "/* From Uiverse.io by zombie223 - Tags: login, form */\n.group {\n  position: relative;\n}\n\n.form {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  border: 1px solid white;\n  padding: 120px 40px;\n  padding-top: 60px;\n  padding-bottom: 90px;\n  padding-right: 40px;\n  padding-left: 40px;\n  background-color: black;\n  border-radius: 20px;\n  position: relative;\n}\n\n.form p {\n  padding-bottom: 20px;\n  font-size: 24px;\n  font-weight: bold;\n  letter-spacing: .5px;\n  color: white;\n}\n\n.container-1 {\n  padding-top: 30px;\n}\n\n.main-input {\n  font-size: 16px;\n  padding: 10px 10px 10px 5px;\n  display: block;\n  width: 185px;\n  border: none;\n  border-bottom: 1px solid #6c6c6c;\n  background: transparent;\n  color: #ffffff;\n}\n\n.main-input:focus {\n  outline: none;\n  border-bottom-color: #42ff1c;\n}\n\n.lebal-email {\n  color: #999999;\n  font-size: 18px;\n  font-weight: normal;\n  position: absolute;\n  pointer-events: none;\n  left: 5px;\n  top: 10px;\n  transition: 0.2s ease all;\n  -moz-transition: 0.2s ease all;\n  -webkit-transition: 0.2s ease all;\n}\n\n.main-input:focus ~ .lebal-email,\n.main-input:valid ~ .lebal-email {\n  top: -20px;\n  font-size: 14px;\n  color: #42ff1c;\n}\n\n.highlight-span {\n  position: absolute;\n  height: 60%;\n  width: 0px;\n  top: 25%;\n  left: 0;\n  pointer-events: none;\n  opacity: 0.5;\n}\n\n.main-input:focus ~ .highlight-span {\n  -webkit-animation: input-focus 0.3s ease;\n  animation: input-focus 0.3s ease;\n}\n\n@keyframes input-focus {\n  from {\n    background: #42ff1c;\n  }\n\n  to {\n    width: 185px;\n  }\n}\n\n.submit {\n  margin-top: 1.2rem;\n  padding: 10px 20px;\n  border-radius: 10px;\n}"
+  },
+  {
+    "id": "uiverse-reshades_pink-bobcat-64",
+    "title": "Pink Bobcat",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "reshades",
+      "profileUrl": "https://uiverse.io/reshades/pink-bobcat-64"
+    },
+    "license": "MIT",
+    "description": "Pink Bobcat · card by reshades",
+    "tags": [
+      "card",
+      "otp",
+      "form",
+      "animated",
+      "clean",
+      "verify",
+      "verification"
+    ],
+    "previewType": "css",
+    "durationMs": 3000,
+    "accentColor": null,
+    "html": "<form class=\"form\">\n  <div class=\"content\">\n    <p align=\"center\">OTP Verification</p>\n    <div class=\"inp\">\n    <input placeholder=\"\" type=\"text\" class=\"input\" maxlength=\"1\">\n    <input placeholder=\"\" type=\"text\" class=\"input\" maxlength=\"1\"> \n    <input placeholder=\"\" type=\"text\" class=\"input\" maxlength=\"1\"> \n    <input placeholder=\"\" type=\"text\" class=\"input\" maxlength=\"1\"> \n    </div>\n    <button>Verify</button>\n    <svg class=\"svg\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill=\"#4073ff\" d=\"M56.8,-23.9C61.7,-3.2,45.7,18.8,26.5,31.7C7.2,44.6,-15.2,48.2,-35.5,36.5C-55.8,24.7,-73.9,-2.6,-67.6,-25.2C-61.3,-47.7,-30.6,-65.6,-2.4,-64.8C25.9,-64.1,51.8,-44.7,56.8,-23.9Z\" transform=\"translate(100 100)\" class=\"path\"></path>\n  </svg>\n  </div>\n  \n</form>",
+    "css": "/* From Uiverse.io by reshades - Tags: OTP, form, animated, clean, verify, Verification */\n.form {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  background: #00000000;\n  border-radius: 16px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  backdrop-filter: blur(8.2px);\n  -webkit-backdrop-filter: blur(8.2px);\n  border: 1px solid #369eff66;\n  width: 14em;\n  height: 14em;\n}\n\n.content {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  margin-top: auto;\n  margin-bottom: auto;\n}\n\n.form p {\n  color: #fff;\n  font-weight: bolder;\n}\n\n.path {\n  fill: #369eff\n}\n\n.svg {\n  filter: blur(20px);\n  z-index: -1;\n  position: absolute;\n  opacity: 50%;\n  animation: anim 3s infinite;\n}\n\n.inp {\n  margin-left: auto;\n  margin-right: auto;\n  white-space: 4px;\n}\n\n.input + .input {\n  margin-left: 0.3em\n}\n\n.input {\n  color: #fff;\n  height: 2em;\n  width: 2em;\n  float: left;\n  text-align: center;\n  background: #00000000;\n  outline: none;\n  border: 1px #369eff solid;\n  border-radius: 10px;\n  transition: all 0.6s ease;\n}\n\n.input:focus {\n  outline: none;\n  border: 1px #fff solid;\n}\n\n.input:not(:placeholder-shown) {\n  opacity: 40%\n}\n\n.form button {\n  margin-left: auto;\n  margin-right: auto;\n  background-color: #00000000;\n  color: #fff;\n  width: 8.5em;\n  height: 2.3em;\n  border: #369eff 0.2em solid;\n  border-radius: 11px;\n  transition: all 0.5s ease;\n}\n\n.form button:hover {\n  background-color: #369eff;\n}\n\n@keyframes anim {\n  0% {\n    transform: translateY(-70px);\n  }\n\n  50% {\n    transform: translateY(-19px);\n  }\n\n  100% {\n    transform: translateY(-70px);\n  }\n}"
+  },
+  {
+    "id": "uiverse-yaya12085_short-turtle-53",
+    "title": "Short Turtle",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Yaya12085",
+      "profileUrl": "https://uiverse.io/Yaya12085/short-turtle-53"
+    },
+    "license": "MIT",
+    "description": "Short Turtle · card by Yaya12085",
+    "tags": [
+      "card",
+      "form",
+      "input",
+      "sign-up",
+      "register",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<form class=\"form\">\n    <p class=\"title\">Register </p>\n    <p class=\"message\">Signup now and get full access to our app. </p>\n        <div class=\"flex\">\n        <label>\n            <input required=\"\" placeholder=\"\" type=\"text\" class=\"input\">\n            <span>Firstname</span>\n        </label>\n\n        <label>\n            <input required=\"\" placeholder=\"\" type=\"text\" class=\"input\">\n            <span>Lastname</span>\n        </label>\n    </div>  \n            \n    <label>\n        <input required=\"\" placeholder=\"\" type=\"email\" class=\"input\">\n        <span>Email</span>\n    </label> \n        \n    <label>\n        <input required=\"\" placeholder=\"\" type=\"password\" class=\"input\">\n        <span>Password</span>\n    </label>\n    <label>\n        <input required=\"\" placeholder=\"\" type=\"password\" class=\"input\">\n        <span>Confirm password</span>\n    </label>\n    <button class=\"submit\">Submit</button>\n    <p class=\"signin\">Already have an acount ? <a href=\"#\">Signin</a> </p>\n</form>",
+    "css": "/* From Uiverse.io by Yaya12085 - Tags: form, input, sign-up, register */\n.form {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  max-width: 350px;\n  background-color: #fff;\n  padding: 20px;\n  border-radius: 20px;\n  position: relative;\n}\n\n.title {\n  font-size: 28px;\n  color: royalblue;\n  font-weight: 600;\n  letter-spacing: -1px;\n  position: relative;\n  display: flex;\n  align-items: center;\n  padding-left: 30px;\n}\n\n.title::before,.title::after {\n  position: absolute;\n  content: \"\";\n  height: 16px;\n  width: 16px;\n  border-radius: 50%;\n  left: 0px;\n  background-color: royalblue;\n}\n\n.title::before {\n  width: 18px;\n  height: 18px;\n  background-color: royalblue;\n}\n\n.title::after {\n  width: 18px;\n  height: 18px;\n  animation: pulse 1s linear infinite;\n}\n\n.message, .signin {\n  color: rgba(88, 87, 87, 0.822);\n  font-size: 14px;\n}\n\n.signin {\n  text-align: center;\n}\n\n.signin a {\n  color: royalblue;\n}\n\n.signin a:hover {\n  text-decoration: underline royalblue;\n}\n\n.flex {\n  display: flex;\n  width: 100%;\n  gap: 6px;\n}\n\n.form label {\n  position: relative;\n}\n\n.form label .input {\n  width: 100%;\n  padding: 10px 10px 20px 10px;\n  outline: 0;\n  border: 1px solid rgba(105, 105, 105, 0.397);\n  border-radius: 10px;\n}\n\n.form label .input + span {\n  position: absolute;\n  left: 10px;\n  top: 15px;\n  color: grey;\n  font-size: 0.9em;\n  cursor: text;\n  transition: 0.3s ease;\n}\n\n.form label .input:placeholder-shown + span {\n  top: 15px;\n  font-size: 0.9em;\n}\n\n.form label .input:focus + span,.form label .input:valid + span {\n  top: 30px;\n  font-size: 0.7em;\n  font-weight: 600;\n}\n\n.form label .input:valid + span {\n  color: green;\n}\n\n.submit {\n  border: none;\n  outline: none;\n  background-color: royalblue;\n  padding: 10px;\n  border-radius: 10px;\n  color: #fff;\n  font-size: 16px;\n  transform: .3s ease;\n}\n\n.submit:hover {\n  background-color: rgb(56, 90, 194);\n}\n\n@keyframes pulse {\n  from {\n    transform: scale(0.9);\n    opacity: 1;\n  }\n\n  to {\n    transform: scale(1.8);\n    opacity: 0;\n  }\n}"
+  },
+  {
+    "id": "uiverse-vikas7754_fat-monkey-43",
+    "title": "Fat Monkey",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "vikas7754",
+      "profileUrl": "https://uiverse.io/vikas7754/fat-monkey-43"
+    },
+    "license": "MIT",
+    "description": "Fat Monkey · card by vikas7754",
+    "tags": [
+      "card",
+      "bubble",
+      "drop",
+      "water drop",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"one-div\"></div>",
+    "css": "/* From Uiverse.io by vikas7754 - Tags: bubble, drop, water drop */\n.one-div {\n  position: relative;\n  width: 150px;\n  height: 150px;\n  background: transparent;\n  border-radius: 57% 43% 37% 63% / 45% 52% 48% 52%;\n  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), \n                      15px 25px 10px rgba(0, 0, 0, 0.1), \n                      15px 20px 20px rgba(0, 0, 0, 0.05), \n                inset -10px -10px 15px rgba(237, 237, 237, 0.9);\n  animation: anim 1s infinite alternate;\n}\n\n.one-div:before {\n  content: '';\n  position: absolute;\n  left: 25px;\n  top: 35px;\n  width: 20px;\n  height: 20px;\n  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;\n  background: #FFF\n}\n\n.one-div:after {\n  content: '';\n  position: absolute;\n  left: 60px;\n  top: 25px;\n  width: 10px;\n  height: 10px;\n  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;\n  background: #ffffff\n}\n\n@keyframes anim {\n  0% {\n    transform: translateY(0);\n    height: 150px;\n    width: 150px;\n  }\n\n  100% {\n    transform: translateY(40px);\n    height: 135px;\n    width: 160px;\n  }\n}"
+  },
+  {
+    "id": "uiverse-ahmedgamal-hub_popular-starfish-56",
+    "title": "Popular Starfish",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "ahmedgamal-hub",
+      "profileUrl": "https://uiverse.io/ahmedgamal-hub/popular-starfish-56"
+    },
+    "license": "MIT",
+    "description": "Popular Starfish · card by ahmedgamal-hub",
+    "tags": [
+      "card",
+      "about me",
+      "blur filter",
+      "animated",
+      "circle loader",
+      "border",
+      "advanced",
+      "box-shadow"
+    ],
+    "previewType": "css",
+    "durationMs": 6000,
+    "accentColor": null,
+    "html": "<div class=\"one-div\"></div>",
+    "css": "/* From Uiverse.io by ahmedgamal-hub - Tags: card, about me, blur filter, animated, circle loader, border, advanced, box-shadow */\n@-webkit-keyframes spinner-border {\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes spinner-border {\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n\n.one-div {\n  position: relative;\n  font-size: 20px;\n  color: #fff;\n  text-align: center;\n  display: inline-block;\n  width: 15rem;\n  height: 15rem;\n  vertical-align: text-center;\n}\n\n.one-div::after {\n  content: '';\n  position: absolute;\n  left: 0;\n  top: -10px;\n  width: 100%;\n  height: 100%;\n  border: 0.25em solid currentColor;\n  border-right-color: #2AE4FF;\n  border-top-color: #2AE4FF;\n  border-bottom-color: #2AE4FF;\n  border-radius: 50%;\n  box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,\n  0 0 110px #ED306F, 0 0 80px #0ba9ca;\n  -webkit-animation: spinner-border 7s linear infinite;\n  animation: spinner-border 7s linear infinite;\n}"
+  },
+  {
+    "id": "uiverse-dylanharriscameron_stupid-mole-90",
+    "title": "Stupid Mole",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "dylanharriscameron",
+      "profileUrl": "https://uiverse.io/dylanharriscameron/stupid-mole-90"
+    },
+    "license": "MIT",
+    "description": "Stupid Mole · card by dylanharriscameron",
+    "tags": [
+      "card",
+      "neumorphism",
+      "glassmorphism",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 5000,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n  <div class=\"bg\"></div>\n  <div class=\"blob\"></div>\n</div>",
+    "css": "/* From Uiverse.io by dylanharriscameron - Tags: neumorphism, glassmorphism, card, animated */\n.card {\n  position: relative;\n  width: 200px;\n  height: 250px;\n  border-radius: 14px;\n  z-index: 1111;\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;\n  ;\n}\n\n.bg {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n  width: 190px;\n  height: 240px;\n  z-index: 2;\n  background: rgba(255, 255, 255, .95);\n  backdrop-filter: blur(24px);\n  border-radius: 10px;\n  overflow: hidden;\n  outline: 2px solid white;\n}\n\n.blob {\n  position: absolute;\n  z-index: 1;\n  top: 50%;\n  left: 50%;\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n  background-color: #ff0000;\n  opacity: 1;\n  filter: blur(12px);\n  animation: blob-bounce 5s infinite ease;\n}\n\n@keyframes blob-bounce {\n  0% {\n    transform: translate(-100%, -100%) translate3d(0, 0, 0);\n  }\n\n  25% {\n    transform: translate(-100%, -100%) translate3d(100%, 0, 0);\n  }\n\n  50% {\n    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);\n  }\n\n  75% {\n    transform: translate(-100%, -100%) translate3d(0, 100%, 0);\n  }\n\n  100% {\n    transform: translate(-100%, -100%) translate3d(0, 0, 0);\n  }\n}"
+  },
+  {
+    "id": "uiverse-bhaveshxrawat_dangerous-quail-58",
+    "title": "Dangerous Quail",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "bhaveshxrawat",
+      "profileUrl": "https://uiverse.io/bhaveshxrawat/dangerous-quail-58"
+    },
+    "license": "MIT",
+    "description": "Dangerous Quail · card by bhaveshxrawat",
+    "tags": [
+      "card",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 3000,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n    <h2>CARD</h2>\n</div>",
+    "css": "/* From Uiverse.io by bhaveshxrawat - Tags: card */\n.card {\n  width: 190px;\n  height: 254px;\n  background: #07182E;\n  position: relative;\n  display: flex;\n  place-content: center;\n  place-items: center;\n  overflow: hidden;\n  border-radius: 20px;\n}\n\n.card h2 {\n  z-index: 1;\n  color: white;\n  font-size: 2em;\n}\n\n.card::before {\n  content: '';\n  position: absolute;\n  width: 100px;\n  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));\n  height: 130%;\n  animation: rotBGimg 3s linear infinite;\n  transition: all 0.2s linear;\n}\n\n@keyframes rotBGimg {\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.card::after {\n  content: '';\n  position: absolute;\n  background: #07182E;\n  ;\n  inset: 5px;\n  border-radius: 15px;\n}  \n/* .card:hover:before {\n  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);\n  animation: rotBGimg 3.5s linear infinite;\n} */"
+  },
+  {
+    "id": "uiverse-mrhyddenn_warm-wasp-21",
+    "title": "Warm Wasp",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "mrhyddenn",
+      "profileUrl": "https://uiverse.io/mrhyddenn/warm-wasp-21"
+    },
+    "license": "MIT",
+    "description": "Warm Wasp · card by mrhyddenn",
+    "tags": [
+      "card",
+      "placeholder",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n    <div class=\"card_load\"></div>\n    <div class=\"card_load_extreme_title\"></div>\n    <div class=\"card_load_extreme_descripion\"></div>\n</div>",
+    "css": "/* From Uiverse.io by mrhyddenn - Tags: card, placeholder */\n.card {\n  width: 190px;\n  height: 90px;\n  background: #ffff;\n  box-shadow: 0 1px 25px rgba(0,0,0,0.2);\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n  padding: 12px 10px;\n}\n\n.card_load {\n  width: 70px;\n  height: 70px;\n  position: relative;\n  float: left;\n  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 \n  40%, #e5e5e5 48%);\n  border-radius: 50%;\n  background-size: 200% 100%;\n  background-position: 100% 0;\n  animation: load89234 2s infinite;\n}\n\n.card_load_extreme_title {\n  width: 90px;\n  height: 10px;\n  position: relative;\n  float: right;\n  border-radius: 5px;\n  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 \n  40%, #e5e5e5 48%);\n  background-size: 200% 100%;\n  background-position: 100% 0;\n  animation: load89234 2s infinite;\n}\n\n.card_load_extreme_descripion {\n  width: 90px;\n  height: 47px;\n  position: relative;\n  float: right;\n  border-radius: 5px;\n  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 \n  40%, #e5e5e5 48%);\n  margin-top: 10px;\n  background-size: 200% 100%;\n  background-position: 100% 0;\n  animation: load89234 2s infinite;\n}\n\n@keyframes load89234 {\n  100% {\n    background-position: -100% 0;\n  }\n}"
+  },
+  {
+    "id": "uiverse-devkatyall_gentle-fly-78",
+    "title": "Gentle Fly",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "devkatyall",
+      "profileUrl": "https://uiverse.io/devkatyall/gentle-fly-78"
+    },
+    "license": "MIT",
+    "description": "Gentle Fly · card by devkatyall",
+    "tags": [
+      "card",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n  <div class=\"emojis\">\n    <button>😄</button>\n    <button>😁</button>\n    <button>😆</button>\n    <button>😂</button>\n  </div>\n  <div class=\"emojis\">\n    <button>😄</button>\n    <button>😁</button>\n    <button>😆</button>\n    <button>😂</button>\n  </div>\n</div>",
+    "css": "/* From Uiverse.io by devkatyall  - Tags: card */\n.card {\n  width: 354px;\n  background: rgba(41, 41, 41, 0.07);\n  white-space: nowrap;\n  overflow: hidden;\n  border-radius: 50px;\n  -webkit-box-shadow: -10px 0px 13px -7px #0000003a,\n    10px 0px 13px -7px #0000003a, 5px 5px 15px 5px rgba(0, 0, 0, 0);\n  box-shadow: -10px 0px 33px -7px #0000003a, 10px 0px 33px -7px #0000003a,\n    5px 5px 35px 5px rgba(0, 0, 0, 0);\n}\n\nbutton {\n  font-size: 70px;\n  margin: 0 5px;\n  border: none;\n  background-color: transparent;\n  cursor: grab;\n}\nbutton:hover {\n  transform: scale(1.1);\n  transition: 0.5s ease;\n}\n.emojis {\n  display: inline-block;\n  animation: 5s sliding infinite linear;\n}\n\n/* to pause on hover  */\n/* .card:hover .emojis{\n  animation-play-state: paused;\n} */\n\n@keyframes sliding {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-101%);\n  }\n}"
+  },
+  {
+    "id": "uiverse-lmickk2_brown-sheep-53",
+    "title": "Brown Sheep",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Lmickk2",
+      "profileUrl": "https://uiverse.io/Lmickk2/brown-sheep-53"
+    },
+    "license": "MIT",
+    "description": "Brown Sheep · card by Lmickk2",
+    "tags": [
+      "card",
+      "hover",
+      "light&dark",
+      "one-div",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 300,
+    "accentColor": null,
+    "html": "<div class=\"one-div\"></div>",
+    "css": "/* From Uiverse.io by Lmickk2 - Tags: card, hover, light&dark, one-div */\n.one-div {\n  width: 8em;\n  height: 12em;\n  background-color: rgb(69, 152, 201);\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.one-div::before {\n  content: \"One\";\n  position: absolute;\n  top: 0;\n  width: 8em;\n  height: 12em;\n  background-color: rgb(235, 110, 101);\n  transition: opacity 0.3s ease-in-out;\n  z-index: -1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.one-div::after {\n  content: \"Div\";\n  position: absolute;\n  top: 0;\n  width: 8em;\n  height: 12em;\n  background-color: rgb(230, 190, 10);\n  transition: opacity 0.3s ease-in-out;\n  z-index: -1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.one-div:hover:before {\n  left: -7em;\n  margin-top: 1em;\n  transform: rotate(-15deg);\n  animation: slide-left 0.8s;\n  transition: 0.5s ease-in-out;\n}\n\n.one-div:hover:after {\n  right: -7em;\n  margin-top: 1em;\n  transform: rotate(15deg);\n  animation: slide-right 0.8s;\n  transition: 0.5s ease-in-out;\n}\n\n@keyframes slide-left {\n  0% {\n    left: 0;\n  }\n\n  100% {\n    left: -3em;\n  }\n\n  100% {\n    left: -7em;\n  }\n}\n\n@keyframes slide-right {\n  0% {\n    right: 0;\n  }\n\n  100% {\n    right: -3em;\n  }\n\n  100% {\n    right: -7em;\n  }\n}\n\n.one-div:hover {\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);\n}\n\n.one-div:hover::after {\n  box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.596);\n}\n\n.one-div:hover::before {\n  box-shadow: -3px 1px 10px rgba(0, 0, 0, 0.596);\n}"
+  },
+  {
+    "id": "uiverse-aadium_fast-pig-0",
+    "title": "Fast Pig",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "aadium",
+      "profileUrl": "https://uiverse.io/aadium/fast-pig-0"
+    },
+    "license": "MIT",
+    "description": "Fast Pig · card by aadium",
+    "tags": [
+      "card",
+      "dark",
+      "reactjs",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 200,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n  <svg class=\"App-logo\" viewBox=\"0 0 841.9 595.3\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#61DAFB\"><path d=\"M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z\"></path><circle r=\"45.7\" cy=\"296.5\" cx=\"420.9\"></circle><path d=\"M520.5 78.1z\"></path></g></svg>\n  <div class=\"header\">Welcome to React</div>\n  <button class=\"App-button\">Start learning now</button>\n</div>",
+    "css": "/* From Uiverse.io by aadium - Tags: card, dark, reactjs */\n.card {\n  background-color: #1e2127;\n  border: 3px solid #61dafb;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  font-size: 26px;\n  font-weight: 700;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n  padding: 30px 20px;\n  color: #61dafb;\n  border-radius: 45px;\n}\n\n.App-logo {\n  pointer-events: none;\n  margin-top: -10px\n}\n\n.App-button {\n  padding: 10px 20px;\n  background-color: transparent;\n  color: #61dafb;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n  font-size: 15px;\n  border: 3px solid #61dafb;\n  border-radius: 5em;\n  margin-top: 20px;\n  transition: 0.2s;\n}\n\n.App-button:hover {\n  color: #1e2127;\n  background-color: #61dafb;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  .App-logo {\n    animation: App-logo-spin infinite 5s linear;\n  }\n}\n\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n}"
+  },
+  {
+    "id": "uiverse-spacious74_spotty-crab-93",
+    "title": "Spotty Crab",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Spacious74",
+      "profileUrl": "https://uiverse.io/Spacious74/spotty-crab-93"
+    },
+    "license": "MIT",
+    "description": "Spotty Crab · card by Spacious74",
+    "tags": [
+      "card",
+      "animation",
+      "3d",
+      "social",
+      "3d card",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n  <div class=\"shadow\">⚠ Always follow traffic rules.</div>\n</div>",
+    "css": "/* From Uiverse.io by Spacious74  - Tags: animation, 3d, social, card, 3d card */\n.card {\n  width: 500px;\n  height: 120px;\n  background: #353535;\n  transform-style: preserve-3d;\n  transform: perspective(30rem) rotateX(30deg);\n  position: relative;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.card::before {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  left: 0;\n  width: 100%;\n  height: 10px;\n  background: linear-gradient(\n    90deg,\n    #fff 0%,\n    #fff 70%,\n    #353535 70%,\n    #353535 100%\n  );\n  background-size: 120px;\n  animation: animateRoad 0.5s linear infinite;\n}\n@keyframes animateRoad {\n  0% {\n    background-position: 0px;\n  }\n  100% {\n    background-position: -120px;\n  }\n}\n\n.card::after {\n  content: \"\";\n  width: 100%;\n  height: 20px;\n  position: absolute;\n  bottom: -20px;\n  background-color: #272727;\n  transform-origin: top;\n  transform: perspective(30rem) rotateX(-30deg);\n  box-shadow: 0 10px 20px -2px #272727;\n  border-bottom-left-radius: 6px;\n  border-bottom-right-radius: 6px;\n}\n.shadow {\n  color: #fff;\n  padding: 10px;\n  letter-spacing: 1px;\n}"
+  },
+  {
+    "id": "uiverse-clenio21_stale-sloth-57",
+    "title": "Stale Sloth",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Clenio21",
+      "profileUrl": "https://uiverse.io/Clenio21/stale-sloth-57"
+    },
+    "license": "MIT",
+    "description": "Stale Sloth · card by Clenio21",
+    "tags": [
+      "card",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 500,
+    "accentColor": null,
+    "html": "<div class=\"card\"></div>",
+    "css": "/* From Uiverse.io by Clenio21 - Tags: card */\n.card {\n width: 190px;\n height: 254px;\n --border-radius: 15px;\n --border-width: 4px;\n appearance: none;\n position: relative;\n padding: 1em 2em;\n border: 0;\n background: rgb(5, 5, 22);\n font-size: 18px;\n font-weight: 500;\n color: #fff;\n z-index: 2;\n border-radius: 15px;\n}\n\n.card::after {\n --m-i: linear-gradient(#000, #000);\n --m-o: content-box, padding-box;\n content: \"\";\n position: absolute;\n left: 0;\n top: 0;\n width: 100%;\n height: 100%;\n padding: var(--border-width);\n border-radius: var(--border-radius);\n background-image: conic-gradient(\n\t\t#488cfb,\n\t\t#29dbbc,\n\t\t#ddf505,\n\t\t#ff9f0e,\n\t\t#e440bb,\n\t\t#655adc,\n\t\t#488cfb\n\t);\n -webkit-mask-image: var(--m-i), var(--m-i);\n mask-image: var(--m-i), var(--m-i);\n -webkit-mask-origin: var(--m-o);\n mask-origin: var(--m-o);\n -webkit-mask-clip: var(--m-o);\n mask-composite: exclude;\n -webkit-mask-composite: destination-out;\n filter: hue-rotate(0);\n animation: rotate-hue linear 500ms infinite;\n animation-play-state: paused;\n}\n\n.card:hover::after {\n animation-play-state: running;\n}\n\n@keyframes rotate-hue {\n to {\n  filter: hue-rotate(1turn);\n }\n}\n\n.card,\n.card::after {\n box-sizing: border-box;\n}\n\n.card:active {\n --border-width: 5px;\n}"
+  },
+  {
+    "id": "uiverse-0xnihilism_average-mole-62",
+    "title": "Average Mole",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "0xnihilism",
+      "profileUrl": "https://uiverse.io/0xnihilism/average-mole-62"
+    },
+    "license": "MIT",
+    "description": "Average Mole · card by 0xnihilism",
+    "tags": [
+      "card",
+      "3d",
+      "clean",
+      "brutalism",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 300,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n  <div class=\"banner\">\n    <span class=\"banner-text\">SUBSCRIBE</span>\n    <span class=\"banner-text\">JOIN US</span>\n  </div>\n  <span class=\"card__title\">Nihilism</span>\n  <p class=\"card__subtitle\">Get fresh void to your inbox every week.</p>\n  <form class=\"card__form\">\n    <input placeholder=\"Your Email\" type=\"email\" required=\"\" />\n    <button class=\"sign-up\">Sign up</button>\n  </form>\n</div>",
+    "css": "/* From Uiverse.io by 0xnihilism  - Tags: 3d, card, clean, Brutalism */\n.card {\n  width: 320px;\n  padding: 30px;\n  background: #fff;\n  border: 8px solid #000;\n  box-shadow: 15px 15px 0 #000;\n  transform: rotate(-2deg);\n  transition: all 0.3s ease;\n  position: relative;\n  overflow: hidden;\n}\n.card:active {\n  animation: shake 0.5s ease-in-out;\n}\n.card:hover {\n  transform: rotate(0deg) scale(1.02);\n  box-shadow: 20px 20px 0 #000;\n}\n.banner {\n  position: absolute;\n  top: 3px;\n  right: -95px;\n  background: #000;\n  color: #fff;\n  padding: 15px;\n  width: 350px;\n  text-align: center;\n  transform: rotate(45deg);\n  font-weight: bold;\n  font-size: 18px;\n  letter-spacing: 2px;\n  overflow: hidden;\n  transition: background 0.5s ease;\n}\n.banner-text {\n  display: inline-block;\n  transition: opacity 0.5s ease, transform 0.5s ease;\n  width: 100%;\n  position: absolute;\n  left: 13%;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.banner:hover .banner-text:first-child {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.banner:hover .banner-text:last-child {\n  opacity: 1;\n  transform: translateY(-40%);\n}\n.banner-text:last-child {\n  opacity: 0;\n  transform: translateY(60%);\n}\n.banner:hover {\n  background: red;\n}\n.card__title {\n  font-size: 24px;\n  font-weight: 700;\n  color: #000;\n  text-transform: uppercase;\n  margin-bottom: 10px;\n  display: block;\n  border-bottom: 2px solid #000;\n  width: 50%; /* or any other percentage or pixel value */\n}\n.card__subtitle {\n  font-size: 16px;\n  line-height: 1.4;\n  color: #333;\n  margin-bottom: 20px;\n  padding-bottom: 10px;\n}\n.card__form {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n.card__form input {\n  padding: 12px;\n  border: 4px solid #000;\n  font-size: 16px;\n  font-family: \"Proxima Nova\", sans-serif;\n  transition: all 0.3s ease;\n  background-color: #fff;\n}\n.card__form input:focus {\n  outline: none;\n  transform: scale(1.05);\n}\n.sign-up {\n  border: 4px solid #000;\n  background: #000;\n  color: #fff;\n  padding: 12px;\n  font-size: 18px;\n  font-weight: bold;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n.sign-up:hover {\n  background: #fff;\n  color: #000;\n  transform: translateY(-5px);\n  box-shadow: 0 5px 0 #000;\n}\n.sign-up:active {\n  animation: shake 0.5s ease-in-out;\n  transform: translateY(0);\n  box-shadow: none;\n}\n@keyframes shake {\n  0% {\n    transform: translateX(0);\n  }\n  25% {\n    transform: translateX(-5px);\n  }\n  50% {\n    transform: translateX(5px);\n  }\n  75% {\n    transform: translateX(-5px);\n  }\n  100% {\n    transform: translateX(0);\n  }\n}"
+  },
+  {
+    "id": "uiverse-mrez321_slippery-owl-0",
+    "title": "Slippery Owl",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "MRez321",
+      "profileUrl": "https://uiverse.io/MRez321/slippery-owl-0"
+    },
+    "license": "MIT",
+    "description": "Slippery Owl · card by MRez321",
+    "tags": [
+      "card",
+      "hover",
+      "animated",
+      "floating",
+      "div",
+      "eye"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"one-div\"></div>",
+    "css": "/* From Uiverse.io by MRez321 - Tags: hover, animated, floating, div, eye */\n.one-div {\n  background-color: #322e2e;\n  width: 20rem;\n  height: 15rem;\n  position: relative;\n  border: solid 1.2rem #dacfcf;\n  border-radius: 50% 50% 44% 44% / 55% 55% 40% 40%;\n}\n\n.one-div::before,\n.one-div::after {\n  content: '';\n  width: 6rem;\n  height: 6rem;\n  position: absolute;\n  top: 35%;\n  background-image: repeating-linear-gradient(0deg, #474bff, #474bff 3.5px, transparent 3.5px, transparent);\n  background-size: .4rem .4rem;\n  background-color: #31abd1;\n  border: solid 2px #00adcc;\n  filter: drop-shadow(0 1px 6px #04d9ff);\n}\n\n.one-div::before {\n  left: 1.4rem;\n  border-radius: 25% 75% 25% 75% / 25% 75% 25% 75%;\n}\n\n.one-div::after {\n  right: 1.4rem;\n  border-radius: 75% 25% 75% 25% / 75% 25% 75% 25%;\n}\n\n.one-div:hover {\n  animation: float 2s infinite;\n}\n\n.one-div:hover::before,\n.one-div:hover::after {\n  animation: blink 2.5s infinite;\n}\n\n@keyframes float {\n  0% {\n    bottom: 0;\n  }\n\n  50% {\n    bottom: -.4rem;\n  }\n\n  100% {\n    bottom: 0;\n  }\n}\n\n@keyframes blink {\n  90% {\n    transform: none;\n    animation-timing-function: ease-in;\n  }\n\n  93% {\n    transform: translateY(15px) scaleY(0)\n  }\n\n  100% {\n    animation-timing-function: ease-out;\n  }\n}"
+  },
+  {
+    "id": "uiverse-saad3092003_itchy-starfish-99",
+    "title": "Itchy Starfish",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Saad3092003",
+      "profileUrl": "https://uiverse.io/Saad3092003/itchy-starfish-99"
+    },
+    "license": "MIT",
+    "description": "Itchy Starfish · card by Saad3092003",
+    "tags": [
+      "card",
+      "animation",
+      "hover",
+      "shadow",
+      "animated",
+      "hover effect",
+      "css effect",
+      "box-shadow"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"one-div\"></div>",
+    "css": "/* From Uiverse.io by Saad3092003 - Tags: animation, card, hover, shadow, animated, hover effect, css effect, box-shadow, one-div */\n.one-div {\n  position: relative;\n  height: 250px;\n  width: 200px;\n  background-color: rgb(15, 15, 15);\n  transform-style: preserve-3d;\n  animation: rot 2s infinite ease;\n  border-radius: 20px;\n  box-shadow: 0 0 50px 0px white ,inset 0 0 50px 0px white;\n  transition: 1s;\n}\n\n.one-div::after {\n  content: 'D I V';\n  font-size: 30px;\n  text-shadow: 5px 5px 1px black;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: all 0.5s;\n  color: white;\n}\n\n.one-div:hover.one-div::after {\n  font-size: 40px;\n}\n\n.one-div::before {\n  content: 'UIVERSE';\n  color: white;\n  font-size: 25px;\n  letter-spacing: 7px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: -20px;\n  left: 40px;\n  background-color: rgb(25, 25, 25);\n  width: 220px;\n  height: 270px;\n  transform: translateY(50px) translateZ(50px);\n  border-radius: 20px;\n  filter: blur(0px);\n  transition: 0.5s;\n  box-shadow: 0 0 5px 0px black, -3px -3px 10px 3px rgb(25,25,25),inset 0px 0px 40px -20px black;\n}\n\n.one-div:active.one-div::after {\n  text-shadow: 0 0 0 black;\n  transition: 0.5s;\n  transform: translateY(5px) translateZ(5px);\n}\n\n.one-div:hover.one-div::before {\n  font-size: 10px;\n  width: 250px;\n  height: 300px;\n  transform: translateZ(-50px) translateY(50px);\n  box-shadow: 0 0 5px 0px black, -3px -3px 10px 3px rgb(25,25,25),inset 0px 0px 40px -20px;\n}\n\n.one-div:hover {\n  height: 300px;\n  width: 250px;\n  box-shadow: 0 0 5px 0px black,inset -3px -3px 10px 3px rgb(25,25,25),inset 3px 3px 20px 3px black;\n  cursor: pointer;\n}\n\n@keyframes rot {\n  0% {\n    transform: rotateX(-15deg) translateY(0px);\n  }\n\n  50% {\n    transform: rotateX(-15deg) translateY(-10px);\n  }\n\n  100% {\n    transform: rotateX(-15deg) translateY(0px);\n  }\n}"
+  },
+  {
+    "id": "uiverse-yaya12085_curvy-otter-58",
+    "title": "Curvy Otter",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "Yaya12085",
+      "profileUrl": "https://uiverse.io/Yaya12085/curvy-otter-58"
+    },
+    "license": "MIT",
+    "description": "Curvy Otter · card by Yaya12085",
+    "tags": [
+      "card",
+      "animation",
+      "loading",
+      "placeholder",
+      "animated"
+    ],
+    "previewType": "css",
+    "durationMs": 2000,
+    "accentColor": null,
+    "html": "<div class=\"card\">\n    <div class=\"card-1\">\n    </div>\n    <div class=\"right\">\n            <div class=\"card-2\">\n            </div>\n            <div class=\"card-3\">\n            </div>\n            <div class=\"card-3\">\n            </div>\n            <div class=\"card-3\">\n            </div>\n            <div class=\"card-3\">\n        </div>\n        <div class=\"bottom\">\n            <div class=\"card-4\">\n            </div>\n            <div class=\"card-4\">\n            </div>\n            <div class=\"card-4\">\n            </div>\n        </div>\n    </div>\n</div>",
+    "css": "/* From Uiverse.io by Yaya12085 - Tags: animation, loading, card, placeholder */\n.card {\n  --gray: rgba(229, 231, 235, 1);\n  width: 350px;\n  height: 13rem;\n  display: flex;\n  grid-gap: 1.25rem;\n  gap: 1.25rem;\n  border-radius: 1rem;\n  background-color: rgba(255, 255, 255, 1);\n  padding: 1.5rem;\n}\n\n.card-1 {\n  width: 40%;\n  border-radius: 0.75rem;\n  background-color: var(--gray);\n  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) alternate-reverse infinite;\n}\n\n.right {\n  display: flex;\n  flex: 1 1 0%;\n  flex-direction: column;\n  grid-gap: 1.25rem;\n  gap: 1.25rem;\n}\n\n.card-2 {\n  height: 3.5rem;\n  width: 100%;\n  border-radius: 1rem;\n  background-color: var(--gray);\n  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) alternate-reverse infinite;\n}\n\n.card-3 {\n  height: 0.75rem;\n  width: 100%;\n  border-radius: 1rem;\n  background-color: var(--gray);\n  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) alternate-reverse infinite;\n}\n\n.bottom {\n  margin-top: auto;\n  display: flex;\n  grid-gap: 0.75rem;\n  gap: 0.75rem;\n}\n\n.card-4 {\n  height: 2rem;\n  width: 33%;\n  border-radius: 9999px;\n  background-color: var(--gray);\n  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) alternate-reverse infinite;\n}\n\n@keyframes pulse {\n  to {\n    opacity: .2;\n  }\n}"
+  },
+  {
+    "id": "uiverse-dhruv465_spotty-cow-20",
+    "title": "Spotty Cow",
+    "category": "card",
+    "source": "uiverse",
+    "author": {
+      "name": "dhruv465",
+      "profileUrl": "https://uiverse.io/dhruv465/spotty-cow-20"
+    },
+    "license": "MIT",
+    "description": "Spotty Cow · card by dhruv465",
+    "tags": [
+      "card",
+      "animated",
+      "spin",
+      "loader circle"
+    ],
+    "previewType": "css",
+    "durationMs": 1000,
+    "accentColor": null,
+    "html": "<div class=\"one-div\"></div>",
+    "css": "/* From Uiverse.io by dhruv465 - Tags: animated, spin, loader circle */\n.one-div {\n  width: 40px;\n  height: 40px;\n  border: 8px solid #fff;\n  border-top-color: #8c8eff;\n  border-radius: 50%;\n  animation: spin 1s linear infinite;\n}\n\n@keyframes spin {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}"
   }
 ];

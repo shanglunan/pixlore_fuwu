@@ -28,8 +28,6 @@ const OUT = join(ROOT, '_data', 'catalog.mjs');
 const REPO = 'uiverse-io/galaxy';
 const BRANCH = 'main';
 const UA = 'pixlore-catalog-builder';
-// git-tree 接口响应体 ~640KB，需要更长超时；单文件下载通常更快。
-const TREE_TIMEOUT_MS   = 60000; // 60s：拉整库文件树
 const REQUEST_TIMEOUT_MS = 30000; // 30s：单文件下载
 const POOL_SIZE = 10;
 
@@ -42,65 +40,77 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 //
 // 策略：优先选「简单」分类（loaders / toggle / inputs / notifications），
 // 减少视觉复杂的 Cards / Tooltips 配额。
+// Buttons 分类已移除：按钮动效依赖 :hover / click 交互，
+// 在 Figma 插件嵌套 iframe 环境中鼠标事件无法可靠传递，预览与导出均无效。
+// 用同等数量补充三个天然不依赖交互的分类。
 const SOURCES = [
-  { dir: 'loaders',          category: 'loader',   target: 35 },
-  { dir: 'Buttons',          category: 'button',   target: 30 },
+  { dir: 'loaders',          category: 'loader',   target: 45 }, // loader 最简洁
   { dir: 'Toggle-switches',  category: 'toggle',   target: 25 },
   { dir: 'Checkboxes',       category: 'checkbox', target: 15 },
   { dir: 'Radio-buttons',    category: 'checkbox', target: 10 }, // 并入 checkbox
-  { dir: 'Inputs',           category: 'hover',    target: 20 }, // 输入框动效，天然简洁
-  { dir: 'Notifications',    category: 'card',     target: 15 }, // 通知动效，轻量
+  { dir: 'Inputs',           category: 'hover',    target: 30 }, // 输入框动效
+  { dir: 'Notifications',    category: 'card',     target: 15 }, // 通知动效
+  { dir: 'Forms',            category: 'card',     target: 10 }, // 表单动效
+  { dir: 'Cards',            category: 'card',     target: 15 }, // 补充缺口（Inputs/Forms 高质量素材有限）
 ];
 
-// 文件列表用 GitHub git tree API（Node.js 内置 fetch，走系统代理；支持 GITHUB_TOKEN）；
-// 文件下载用 jsDelivr CDN 镜像（curl execFile，无限流、国内访问更稳）。
-const GIT_TREE = `https://api.github.com/repos/${REPO}/git/trees/${BRANCH}?recursive=1`;
+// 文件列表：先取根目录 tree（~5KB），再按各目录 SHA 分别拉 tree（每次 ~100KB）。
+// 比全量 recursive tree（640KB，HTTP/2 流经常断）稳定得多。
 const JSDELIVR_CDN = `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}`;
 
 function rawUrl(dir, name) {
   return `${JSDELIVR_CDN}/${encodeURIComponent(dir)}/${encodeURIComponent(name)}`;
 }
 
-// 一次性拉取整库文件树，各 collect 复用。
-// GitHub API 用 curl --noproxy 直连（绕过本地代理的 TLS 拦截问题）；
-// 支持 GITHUB_TOKEN 提升限额（匿名 60/h → 认证 5000/h）。
-let fileIndexPromise = null;
-function loadFileIndex() {
-  if (!fileIndexPromise) {
-    fileIndexPromise = (async () => {
-      const args = [
-        '-fsL', '--max-time', String(Math.round(TREE_TIMEOUT_MS / 1000)),
-        '--noproxy', 'api.github.com',
-        '-A', UA,
-        '-H', 'Accept: application/vnd.github+json',
-      ];
-      if (GITHUB_TOKEN) args.push('-H', `Authorization: Bearer ${GITHUB_TOKEN}`);
-      args.push(GIT_TREE);
-      const { stdout } = await execFileP('curl', args, { maxBuffer: 64 * 1024 * 1024 });
-      const data = JSON.parse(stdout);
-      if (data.truncated) console.warn('  (注意：文件树较大被截断，使用可见部分取样)');
-      return (data.tree || []).filter(n => n.type === 'blob').map(n => n.path); // "Buttons/xxx.html"
-    })();
-  }
-  return fileIndexPromise;
+/** 用 curl 调 GitHub tree API，返回解析后的 JSON（内含错误时抛出）。 */
+async function fetchGithubTree(sha) {
+  const url = `https://api.github.com/repos/${REPO}/git/trees/${sha}`;
+  const args = [
+    '-fsL', '--max-time', '30', '--http1.1',
+    '--noproxy', 'api.github.com',
+    '-A', UA,
+    '-H', 'Accept: application/vnd.github+json',
+  ];
+  if (GITHUB_TOKEN) args.push('-H', `Authorization: Bearer ${GITHUB_TOKEN}`);
+  args.push(url);
+  const { stdout } = await execFileP('curl', args, { maxBuffer: 16 * 1024 * 1024 });
+  return JSON.parse(stdout);
 }
 
-// 用系统 curl 下载 jsDelivr CDN 文件内容。
-// -f：HTTP 错误返回非 0；-sL：静默 + 跟随跳转。
+/** 根目录 tree（一次，缓存）：key=目录名，value=SHA。 */
+let rootTreePromise = null;
+function loadRootTree() {
+  if (!rootTreePromise) {
+    rootTreePromise = fetchGithubTree(BRANCH).then(data =>
+      Object.fromEntries((data.tree || []).filter(n => n.type === 'tree').map(n => [n.path, n.sha])),
+    );
+  }
+  return rootTreePromise;
+}
+
+// 按目录单独拉取文件名列表（分目录 tree，每次 ~100KB，稳定）。
+const dirIndexCache = new Map();
+async function listDir(dir) {
+  if (dirIndexCache.has(dir)) return dirIndexCache.get(dir);
+
+  const rootTree = await loadRootTree();
+  const sha = rootTree[dir];
+  if (!sha) throw new Error(`dir "${dir}" not found in root tree`);
+
+  const data = await fetchGithubTree(sha);
+  const names = (data.tree || [])
+    .filter(n => n.type === 'blob' && n.path.toLowerCase().endsWith('.html'))
+    .map(n => n.path);
+  dirIndexCache.set(dir, names);
+  return names;
+}
+
+/** 用系统 curl 下载 jsDelivr CDN 文件内容（单文件，30s 超时）。 */
 async function fetchText(url) {
   const args = ['-fsL', '--max-time', String(Math.round(REQUEST_TIMEOUT_MS / 1000)), '-A', UA];
   args.push(url);
   const { stdout } = await execFileP('curl', args, { maxBuffer: 64 * 1024 * 1024 });
   return stdout;
-}
-
-async function listDir(dir) {
-  const index = await loadFileIndex();
-  const prefix = `${dir}/`;
-  return index
-    .filter(p => p.startsWith(prefix) && p.toLowerCase().endsWith('.html'))
-    .map(p => p.slice(prefix.length))
-    .filter(name => !name.includes('/')); // 只取该目录的直接子文件
 }
 
 function shuffle(a) {
